@@ -1,9 +1,32 @@
 header.header
     .container 
-        | test header
+        .header__top
+            ul.submenu
+                li
+                    a(href='#') Новости
+                li
+                    a(href='#') Блог
+                li
+                    a(href='#') Контакты
+            .header__action-list
+                a(href='#').header__action.compare-link
+                a(href='#').header__action.favorite-link
+                .header__auth.auth
+                    a(href='#').auth-link Вход
+                    a(href='#').auth-link Регистрация
+        .header__middle
+            a(href='#').logo
+                img(src='img/logo.svg')
+            .header__search.search
+                input.search__input(name='q' placeholder='Поиск...')
+                button(type='submit').button-search
+            .header__contanct
+                a(href='tel:83833755505').phone-city
+                    span 8 (383)
+                    |375-55-05
+                a(href='tel:+79231455505').phone-social
+                    span + 7 (923) 145-55-05
+    include ../../components/menu/menu
 
 
 
-section.card
-    .container
-        

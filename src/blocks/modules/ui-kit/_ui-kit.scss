@@ -1,0 +1,74 @@
+.compare-link {
+  display: inline-block;
+  @extend .icon-compare;
+}
+
+.favorite-link {
+  display: inline-block;
+  @extend .icon-favorite;
+}
+
+.button {
+  border: none;
+  display: inline-block;
+}
+
+.button-search {
+  @extend .button;
+  @extend .icon-search;
+  @include reset-focus();
+}
+
+.phone-city {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 26px;
+  color: #0E398C;
+  text-decoration: none;
+  padding-left: 40px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+    @extend .icon-phone-fill;
+  }
+}
+
+.phone-social {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7A8496;
+  text-decoration: none;
+  padding-left: 50px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+    @extend .icon-telegram;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+    @extend .icon-whatsapp;
+  }
+}
