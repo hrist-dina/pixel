@@ -3,9 +3,14 @@ include ../utils/mixins
 block variables
 
 doctype html
-html(lang="en")
+html(lang="ru")
 	head
 		include ../includes/head
 	body
+		block header
+			include ../../blocks/modules/header/header
 		block content
-		include ../includes/scripts
+
+		block footer
+			include ../../blocks/modules/footer/footer
+	include ../includes/scripts

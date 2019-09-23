@@ -1,7 +1,12 @@
-extends layouts/default
+extends layouts/pages
 block variables
-	- var title = "gulp-pug-starter"
+	- var title = "Pixel  - Список страниц"
 
 block content
 	.container
 		include ../blocks/modules/main/main
+		ul
+			li
+				a(href="home.html") Главная
+			li
+				a(href="ui-kit.html") Ui-kit
