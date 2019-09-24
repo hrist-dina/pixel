@@ -7,10 +7,13 @@ html(lang="ru")
 	head
 		include ../includes/head
 	body
-		block header
-			include ../../blocks/modules/header/header
-		block content
+		.wrapper
+			.main-content
+				block header
+					include ../../blocks/modules/header/header
+				main
+					block content
 
-		block footer
-			include ../../blocks/modules/footer/footer
+			block footer
+				include ../../blocks/modules/footer/footer
 	include ../includes/scripts

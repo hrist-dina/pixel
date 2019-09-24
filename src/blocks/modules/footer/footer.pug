@@ -1,0 +1,51 @@
+include ../../components/logo/logo
+include data.pug
+
+mixin footer-menu-link(name)
+    li.footer__item
+        a(href='#')=name
+
+footer.footer
+    .container
+        .footer__inner
+            .footer__info
+                +logo-footer()
+
+                .footer__copyrights
+                    .footer__copy
+                        | 2018 © - Pixel-House интернет-магазин электроники в Новосибирске.
+                    .footer__rights
+                        | Все права защищены. Не является публичной офертой
+            .footer__contacts
+                .footer__title Контакты
+                .footer__block
+                    .footer__item.footer__placemark
+                        | 6300091, г.Новосибирск Красный проспект, 62
+                    .footer__item.footer__phone
+                        a(href='tel:+73833755505') + 7 (383) 375-55-05
+                        a(href='tel:+79231455505') + 7 (923) 145-55-05
+                    .footer__item.footer__time
+                        span пн-пт: 9:00 - 20:00
+                        span сб-вс: 11:00 - 17:00
+                    .footer__item.footer__mail
+                        a(href='mailto:info@pixel-house.ru') info@pixel-house.ru
+            .footer__menu
+                .footer__title Информация
+                ul.footer__block
+                    for item in informationMenu
+                        +footer-menu-link(item)
+            .footer__menu
+                .footer__title Ассортимент
+                ul.footer__block
+                    for item in assortmentMenu
+                        +footer-menu-link(item)
+            .footer__subscribe
+                .footer__title Подписаться на новостную рассылку
+                .footer__block
+                    .footer__form-wrap
+                        p Зарегистрируйтесь, чтобы быть в курсе всех новинок
+                        form(action='/' method='post').footer__form
+                            input(type='text' name='subscribe' placeholder='Введите свой e-mail')
+                            button(type='submit').button.button-arrow-right
+                include ../../components/social/social
+

@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  &__item {
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+  }
+}

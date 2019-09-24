@@ -48,12 +48,12 @@
   background: url(icon-basket()) no-repeat center;
 }
 
-.icon-burger {
+@mixin icon-burger($color: #fff) {
   display: inline-block;
   position: relative;
   width: 15px;
   height: 1px;
-  background: #fff;
+  background: $color;
 
   &:before,
   &:after {
@@ -61,7 +61,7 @@
     position: absolute;
     width: 15px;
     height: 1px;
-    background: #fff;
+    background: $color;
   }
 
   &:before {
@@ -72,4 +72,70 @@
     bottom: 5px;
   }
 }
+.icon-burger {
+  @include icon-burger();
+}
+
+.icon-placemark {
+  width: 13px;
+  height: 16px;
+  background: url(icon-placemark()) no-repeat center;
+}
+
+.icon-phone {
+  width: 17px;
+  height: 17px;
+  background: url(icon-phone()) no-repeat center;
+}
+
+.icon-time {
+  width: 14px;
+  height: 14px;
+  background: url(icon-time()) no-repeat center;
+}
+
+.icon-mail {
+  width: 18px;
+  height: 13px;
+  background: url(icon-mail()) no-repeat center;
+}
+
+.icon-arrow-right {
+  width: 27px;
+  height: 10px;
+  background: url(icon-arrow-right()) no-repeat center;
+}
+
+.icon-vk {
+  width: 24px;
+  height: 14px;
+  background: url(icon-vk()) no-repeat center;
+}
+
+.icon-insta {
+  width: 15px;
+  height: 15px;
+  background: url(icon-insta()) no-repeat center;
+}
+
+.icon-fb {
+  width: 15px;
+  height: 15px;
+  background: url(icon-fb()) no-repeat center;
+}
+
+.icon-tw {
+  width: 17px;
+  height: 17px;
+  background: url(icon-tw()) no-repeat center;
+}
+
+.icon-flamp {
+  width: 21px;
+  height: 18px;
+  background: url(icon-flamp()) no-repeat center;
+}
+
+
+
 

@@ -1,3 +1,14 @@
+.row {
+  @include row-flex();
+}
+
+.col {
+  @include col();
+  @include size(1);
+  height: 150px;
+  background-color: #00ffff;
+}
+
 .compare-link {
   display: inline-block;
   @extend .icon-compare;
@@ -71,4 +82,10 @@
     margin: auto;
     @extend .icon-whatsapp;
   }
+}
+
+.button-arrow-right {
+  @extend .icon-arrow-right;
+  @include reset-focus();
+  cursor: pointer;
 }

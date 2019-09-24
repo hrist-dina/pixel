@@ -9,6 +9,7 @@
   }
 
   &__list {
+    height: 100%;
     list-style: none;
     display: flex;
     align-items: center;
@@ -17,6 +18,7 @@
   }
 
   &__item {
+    height: 100%;
     position: relative;
     box-sizing: border-box;
 
@@ -28,7 +30,7 @@
       background: #495E88;
       top: 0;
       bottom: 0;
-      left: 0;
+      left: -0.5px;
       right: auto;
       margin: auto;
     }
@@ -46,6 +48,8 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       max-width: 2010px;
+      position: relative;
+      z-index: 10;
     }
   }
 
@@ -61,6 +65,7 @@
     color: #fff;
     background: #0FA0D9;
     text-decoration: none;
+    transition: .5s linear;
 
     & span {
       box-sizing: border-box;
@@ -97,6 +102,11 @@
   }
 
   &_catalog {
+    &:hover {
+      & .icon-burger {
+        @include icon-burger(#0E398C)
+      }
+    }
     & > a {
       display: flex;
       align-items: center;
@@ -108,4 +118,62 @@
     }
   }
 
+  &__child {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    width: 240px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s ease-in-out;
+    list-style: none;
+    background: #fff;
+    padding: 17px;
+    box-sizing: border-box;
+    box-shadow: 0 4.05186px 49px rgba(32, 42, 91, 0.07);
+
+    &-item {
+      position: relative;
+      border-bottom: 1px solid #F4F4F4;
+      box-sizing: border-box;
+      padding: 8px 0 15px;
+
+      &:last-child {
+        border: none;
+        padding-bottom: 5px;
+      }
+
+      & a {
+        font-size: 12px;
+        line-height: 14px;
+        color: #474747;
+        text-decoration: none;
+      }
+    }
+
+    &-item &-item {
+      position: absolute;
+      top: 0;
+      left: 200px;
+    }
+  }
+
+  &__item:hover {
+    box-shadow: 0 4.05186px 49px rgba(32, 42, 91, 0.07);
+    & > a {
+      background: #fff;
+      font-size: 14px;
+      line-height: 19px;
+      color: #0E398C;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__item:hover > &__child {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
