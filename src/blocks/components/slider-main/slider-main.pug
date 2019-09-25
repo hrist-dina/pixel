@@ -1,0 +1,18 @@
+include data
+
+mixin slider-main(item)
+    .slider-main__item(style=`background-image: url('${item.bg}')`)
+        .slider-main__item-inner
+            .slider-main__item-text
+                .slider-main__item-title !{item.title}
+                .slider-main__item-desc=item.desc
+                a(href='#').slider-main__item-more Подробнее
+            if item.img
+                .slider-main__item-pic
+                    img(src=item.img)
+
+.slider-main.js-slider-main
+    for item in slider
+        +slider-main(item)
+
+

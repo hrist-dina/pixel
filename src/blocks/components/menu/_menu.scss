@@ -65,7 +65,7 @@
     color: #fff;
     background: #0FA0D9;
     text-decoration: none;
-    transition: .5s linear;
+    @include transition(.5s, linear, all);
 
     & span {
       box-sizing: border-box;
@@ -126,7 +126,7 @@
     visibility: hidden;
     opacity: 0;
     transform: translateY(10px);
-    transition: .5s ease-in-out;
+    @include transition(.5s, ease-in-out, all);
     list-style: none;
     background: #fff;
     padding: 17px;
@@ -137,7 +137,6 @@
       position: relative;
       border-bottom: 1px solid #F4F4F4;
       box-sizing: border-box;
-      padding: 8px 0 15px;
 
       &:last-child {
         border: none;
@@ -145,17 +144,19 @@
       }
 
       & a {
+        display: block;
         font-size: 12px;
         line-height: 14px;
         color: #474747;
         text-decoration: none;
-      }
-    }
+        padding: 12px 0 12px;
+        box-sizing: border-box;
+        @include transition(.5s, ease-in-out, all);
 
-    &-item &-item {
-      position: absolute;
-      top: 0;
-      left: 200px;
+        &:hover {
+          color: #0E398C;
+        }
+      }
     }
   }
 
@@ -171,9 +172,57 @@
     }
   }
 
-  &__item:hover > &__child {
+  &__item:hover > &__child,
+  &__child-item:hover > &__child {
     visibility: visible;
     opacity: 1;
     transform: translateY(0px);
+
+  }
+
+  &__child-item:hover {
+    z-index: -1;
+  }
+
+  &__child-item > &__child {
+    top: -17px; // с учетом padding родителя
+    left: 223px; // с учетом padding родителя
+    z-index: -1;
+    box-shadow: inset 4px 0 25px -7px rgba(32, 42, 91, 0.07);
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      box-shadow: 10px 0 30px rgba(32, 42, 91, 0.07);
+      z-index: -1;
+    }
+  }
+
+  & .has-child {
+    & > a {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        @extend .icon-arrow-triangle;
+        right: 0;
+        left: auto;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include transition(.5s, ease-in-out, all);
+      }
+    }
+    &:hover {
+      & > a {
+        &:before {
+          background-image: url(icon-arrow-triangle('0E398C'));
+        }
+      }
+    }
   }
 }

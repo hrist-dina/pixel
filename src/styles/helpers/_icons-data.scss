@@ -68,3 +68,7 @@
 @function icon-flamp($fill: 'fff') {
   @return "data:image/svg+xml,%3Csvg width='21' height='18' viewBox='0 0 21 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.88636 11.0308C2.66559 10.4154 1 8.63077 1 6.04615C1 2.84615 3.6526 1 6.49026 1H20V4.87692H12.1039V7.89231H18.211V11.6462H12.1039V17H7.90909V4.75385H6.42857C5.75 4.75385 4.94805 5.18462 4.94805 6.04615C4.94805 6.72308 5.37987 7.15385 5.93506 7.4L4.88636 11.0308Z' stroke='%23#{$fill}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
 }
+
+@function icon-arrow-triangle($fill: 'DEDEDE') {
+  @return "data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5.5L1 10' stroke='%23#{$fill}'/%3E%3C/svg%3E%0A"
+}
