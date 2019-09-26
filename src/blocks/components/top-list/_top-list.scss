@@ -1,0 +1,55 @@
+.top-list {
+  margin-top: 58px;
+
+  & .tab {
+    margin-right: 35px;
+
+    & > a {
+      font-weight: 600;
+      font-size: 16px;
+      color: #474747;
+      text-decoration: none;
+    }
+
+    &.active {
+      & > a {
+        color: #31AAE1;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &-title {
+      display: none;
+    }
+
+    &-more {
+      position: absolute;
+      right: 0;
+      top: -40px;
+      font-size: 14px;
+      line-height: 19px;
+      color: #0D398C;
+      text-decoration: none;
+    }
+  }
+
+  &__product {
+    &-list {
+      @include row-flex();
+      margin-top: 20px;
+
+      & .product {
+        @include u-size(3, 9, $offset)
+      }
+    }
+  }
+}

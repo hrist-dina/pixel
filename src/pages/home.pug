@@ -1,7 +1,13 @@
 extends ../views/layouts/default
 block variables
 	- var title = "New Page";
+	include ../data/home
 
 block content
 	.container
 		include ../blocks/components/slider-main/slider-main
+		include ../blocks/components/feature/feature
+		section.content-sidebar
+			.content__box
+				include ../blocks/components/top-list/top-list
+			.sidebar__box

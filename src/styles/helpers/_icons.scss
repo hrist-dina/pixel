@@ -72,6 +72,7 @@
     bottom: 5px;
   }
 }
+
 .icon-burger {
   @include icon-burger();
 }
@@ -140,6 +141,30 @@
   width: 6px;
   height: 11px;
   background: url(icon-arrow-triangle()) no-repeat center;
+}
+
+.icon-basket-mini {
+  width: 18px;
+  height: 16px;
+  background: url(icon-basket-mini()) no-repeat center;
+}
+
+.icon-pseudo-arrow-right {
+  position: relative;
+  padding-right: 37px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 15px;
+    height: 7px;
+    background: url(icon-arrow-right-mini(0D398C)) no-repeat center;
+  }
 }
 
 

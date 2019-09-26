@@ -1,0 +1,27 @@
+-
+    var featureList = [
+        {
+        	icon: 'img/icons/icon-rocket.svg',
+            title: 'Доставка в день заказа',
+            desc: 'для Новосибирска'
+        },
+        {
+            icon: 'img/icons/icon-guarantee.svg',
+            title: 'Гарантия',
+            desc: 'на все товары'
+        },
+        {
+            icon: 'img/icons/icon-product-return.svg',
+            title: 'Возврат товара',
+            desc: 'в течение 2 недель'
+        }
+    ]
+
+.feature
+    for item in featureList
+        .feature__item
+            .feature__icon
+                img(src=item.icon alt=item.title)
+            .feature__text
+                .feature__title=item.title
+                .feature__desc=item.desc

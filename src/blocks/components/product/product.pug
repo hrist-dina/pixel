@@ -1,0 +1,44 @@
+mixin product(item)
+    .product
+        .product__img
+            a(href='#')
+                img(src=item.img alt=item.title title=item.title)
+        .product__middle
+            .product__top
+                .product__article
+                    span=item.article
+                a(href='#').product__title=item.title
+                if item.options
+                    ul.product__option-list
+                        for option in item.options
+                            li.product__option
+                                span=option
+            .product__mark-list
+                for mark in item.marks
+                    case mark
+                        when 'discount'
+                            .product__mark.product__mark-discount 50%
+                        when 'new'
+                            .product__mark.product__mark-new new
+                        when 'hit'
+                            .product__mark.product__mark-hit хит
+                        when 'recommend'
+                            .product__mark Рекомендуем
+        .product__bottom
+            .product__price
+                span.product__price-old 1999 ₽
+                span 999 ₽
+            .product__actions
+                a(href='javascript:void(0)').product__compare
+                a(href='javascript:void(0)').product__favorite
+                a(href='javascript:void(0)').product__basket
+
+
+mixin product-list(products)
+    .product__list(class=products.type ? products.type : 'cards')
+        for item in products.list
+            +product(item)
+
+mixin product-section
+    section.product-section
+        +product-list(products)

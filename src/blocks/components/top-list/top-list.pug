@@ -1,0 +1,22 @@
+include ../product/product
+
+.top-list
+    ul.tab-list
+        li.tab(data-tab='discounts').active
+            a(href='javascript:void(0)') Скидки дня
+        li.tab(data-tab='new-items')
+            a(href='javascript:void(0)') Новинки
+        li.tab(data-tab='bestsellers')
+            a(href='javascript:void(0)') Хиты продаж
+        li.tab(data-tab='recommend')
+            a(href='javascript:void(0)') Рекомендуем
+    .top-list__content
+        .top-list__item(data-tab='discounts')
+            .top-list__item-head
+                .top-list__item-title Скидки
+                a(href='#').top-list__item-more.icon-pseudo-arrow-right Смотреть все
+            .top-list__product-list(class=products.type)
+                for item in products.list
+                    +product(item)
+
+
