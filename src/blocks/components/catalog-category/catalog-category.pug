@@ -1,0 +1,12 @@
+mixin catalog-category-item(item)
+    a(href="#").catalog-category__item
+        .catalog-category__img
+            img(src=item.img, alt=item.title title=item.title)
+        .catalog-category__bottom
+            span=item.title
+            span=item.quantity
+
+section.catalog-category
+    .catalog-category__list
+        for item in catalogCategory
+            +catalog-category-item(item)

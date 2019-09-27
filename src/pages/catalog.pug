@@ -1,0 +1,8 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Каталог";
+	include ../data/catalog
+
+block content
+	.container
+		include ../blocks/components/catalog-category/catalog-category

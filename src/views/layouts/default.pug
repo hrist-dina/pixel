@@ -1,6 +1,7 @@
 include ../utils/mixins
 
 block variables
+	include ../utils/variables
 
 doctype html
 html(lang="ru")
@@ -12,6 +13,11 @@ html(lang="ru")
 				block header
 					include ../../blocks/modules/header/header
 				main.main
+					if !isMain
+						.container
+							include ../../blocks/components/breadcrumbs/breadcrumbs
+							+breadcrumbs(breadcrumbs)
+							h1.h1=title
 					block content
 
 			block footer

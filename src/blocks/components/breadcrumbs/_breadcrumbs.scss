@@ -1,0 +1,29 @@
+.breadcrumbs {
+  list-style-type: none;
+  margin-bottom: 15px;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item,
+  &__item &__link {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A8496;
+
+  }
+
+  &__item:not(:last-child):after {
+    content: "/";
+    padding: 0 3px;
+  }
+
+  &__item:last-child span,
+  &__item:last-child &__link,
+  &__item:nth-last-child(-n + 2):after {
+    color: #7A8496;
+  }
+}
