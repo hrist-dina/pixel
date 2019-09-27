@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6, ul {
 
 
 .content-sidebar {
+	margin-top: 58px;
 	@include row-flex();
 
 	& .content__box {
@@ -55,4 +56,12 @@ h1, h2, h3, h4, h5, h6, ul {
 		@include col();
 		@include size(3);
 	}
+}
+
+h3,
+.h3 {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 25px;
+	color: #474747;
 }

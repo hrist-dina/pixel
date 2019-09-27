@@ -1,4 +1,6 @@
 extends ../views/layouts/default
+
+include ../blocks/components/sidebar-block/sidebar-block
 block variables
 	- var title = "New Page";
 	include ../data/home
@@ -11,3 +13,13 @@ block content
 			.content__box
 				include ../blocks/components/top-list/top-list
 			.sidebar__box
+				include ../blocks/components/slider-sidebar/slider-sidebar
+		section.content-sidebar
+			.content__box
+				include ../blocks/components/catalog-main/catalog-main
+			.sidebar__box
+				+sidebar-block(sidebarBlockNews)
+				+sidebar-block(sidebarBlockBlog)
+
+		include ../blocks/components/slider-brands/slider-brands
+		include ../blocks/components/about/about

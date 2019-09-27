@@ -1,0 +1,15 @@
+include data
+
+mixin slider-sidebar(item)
+    a(href='#').slider-sidebar__item
+        .slider-sidebar__item-inner
+            .slider-sidebar__item-title !{item.title}
+            .slider-sidebar__item-pic
+                img(src=item.img)
+            .slider-sidebar__item-desc=item.desc
+
+.slider-sidebar.slider-sidebar_mt.js-slider-sidebar
+    for item in slider
+        +slider-sidebar(item)
+
+

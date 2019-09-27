@@ -90,54 +90,47 @@
   cursor: pointer;
 }
 
-.about {
-  display: flex;
-  margin-top: 30px;
+.link-arrow-right {
+  font-size: 14px;
+  line-height: 19px;
+  color: #0D398C;
+  text-decoration: none;
+  @extend .icon-pseudo-arrow-right;
+}
 
-  &__img {
-    display: flex;
-    max-width: 717px;
-    height: 508px;
 
-    & img {
-      width: 100%;
+.slider-button {
+  position: absolute;
+  width: 12px;
+  height: 24px;
+  z-index: 1;
+  background: url(icon-arrow-triangle('fff')) no-repeat center;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
 
+  &.prev {
+    right: auto;
+    left: 20px;
+    @include rotate();
+    @include to(1440px) {
+      left: 20px;
     }
-
   }
 
-  &__info {
-    position: relative;
-    width: 100%;
-    max-width: 522px;
-    height: 508px;
-    margin-left: 5px;
-  }
-
-  &__title {
-    padding-bottom: 70px;
-    color: #474747;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 0px;
-
-  }
-
-  &__text {
-    position: absolute;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-    color: #474747;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+  &.next {
+    left: auto;
+    right: 20px;
+    @include to(1440px) {
+      right: 20px;
+    }
   }
 }
+
+
+
 
 .catalog-card {
 

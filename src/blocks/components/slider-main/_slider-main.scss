@@ -113,6 +113,7 @@
       box-sizing: border-box;
       margin-right: 10px;
       @include transition(.3s);
+      cursor: pointer;
 
       &:last-child {
         margin-right: 0;
@@ -127,42 +128,4 @@
       display: none;
     }
   }
-
-  & .slider-button {
-    position: absolute;
-    width: 12px;
-    height: 24px;
-    z-index: 1;
-    background: url(icon-arrow-triangle('fff')) no-repeat center;
-    background-size: cover;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    cursor: pointer;
-
-    &.prev {
-      right: auto;
-      left: 20px;
-      @include rotate();
-      @include to(1440px) {
-        left: 20px;
-      }
-    }
-
-    &.next {
-      left: auto;
-      right: 20px;
-      @include to(1440px) {
-        right: 20px;
-      }
-    }
-  }
-
-  //& .slick-list {
-  //  @include to($break_md) {
-  //    background-color: #f9f9f9;
-  //    padding-bottom: 40px;
-  //    margin-bottom: -30px;
-  //  }
-  //}
 }

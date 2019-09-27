@@ -1,0 +1,11 @@
+mixin sidebar-block(data)
+    .sidebar-block(class=data.type?data.type:'')
+        .sidebar-block__inner
+            h3.sidebar-block__title=data.title
+            ul.sidebar-block__list
+                for item in data.list
+                    li.sidebar-block__item
+                        a(href='#')=item.name
+                        span=item.date
+        a(href='#').sidebar-block__all.link-arrow-right=data.linkAllName
+

@@ -1,5 +1,4 @@
 .top-list {
-  margin-top: 58px;
 
   & .tab {
     margin-right: 35px;
@@ -26,6 +25,11 @@
 
   &__item {
     position: relative;
+    display: none;
+
+    &.active {
+      display: block;
+    }
 
     &-title {
       display: none;
@@ -35,10 +39,6 @@
       position: absolute;
       right: 0;
       top: -40px;
-      font-size: 14px;
-      line-height: 19px;
-      color: #0D398C;
-      text-decoration: none;
     }
   }
 

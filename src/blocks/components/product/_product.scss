@@ -8,7 +8,9 @@
     height: 400px;
     margin-bottom: 28px;
     @include transition();
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &:hover {
       box-shadow: 0 4px 59px rgba(34, 46, 98, 0.132);
     }
@@ -22,7 +24,7 @@
 
   &__middle {
     padding: 15px 19px 9px;
-    min-height: 65px;
+    min-height: 90px;
     box-sizing: border-box;
   }
 
@@ -85,6 +87,7 @@
     &-list {
       display: flex;
       align-items: center;
+      min-height: 19px;
     }
 
     &-new,
@@ -142,11 +145,25 @@
     width: 60%;
 
     &-old {
+      position: relative;
       font-size: 12px;
       line-height: 14px;
       color: #474747;
-      text-decoration:line-through;
       margin-right: 14px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 1px;
+        background-color: #474747;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        @include rotate(-45deg)
+      }
 
       & ~ span {
         color: #AD0404;

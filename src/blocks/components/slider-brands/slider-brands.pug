@@ -1,0 +1,12 @@
+include data
+
+mixin slider-brands(item)
+    a(href='#').slider-brands__item
+        .slider-brands__item-pic
+            img(src=item alt='' title='')
+
+section.slider-brands.js-slider-brands
+    for item in slider
+        +slider-brands(item)
+
+

@@ -1,5 +1,5 @@
 -
-    var products = {
+    var productsDiscount = {
     	type: 'cards',
         list: [
             {
@@ -13,9 +13,6 @@
                 ],
                 marks: [
                     'discount',
-                    'new',
-                    'hit',
-                    'recommend'
                 ],
                 price: 999,
                 priceOld: 1999
@@ -31,9 +28,6 @@
                 ],
                 marks: [
                     'discount',
-                    'new',
-                    'hit',
-                    'recommend'
                 ],
                 price: 999,
                 priceOld: 1999
@@ -49,12 +43,193 @@
                 ],
                 marks: [
                     'discount',
-                    'new',
-                    'hit',
-                    'recommend'
                 ],
                 price: 999,
                 priceOld: 1999
             }
         ]
+    }
+    var productsNew = {
+    	type: 'cards',
+        list: [
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'new',
+                    'hit',
+                    'recommend'
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'new',
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'new',
+                    'recommend'
+                ],
+                price: 999
+            }
+        ]
+    }
+
+    var productsHit = {
+    	type: 'cards',
+        list: [
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'hit'
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'hit'
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'hit'
+                ],
+                price: 999
+            }
+        ]
+    }
+
+    var productsRecommend = {
+    	type: 'cards',
+        list: [
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'recommend'
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'hit',
+                    'recommend'
+                ],
+                price: 999
+            },
+            {
+                img: 'img/home/card-image.jpg',
+                article: 'Артикул: A2097',
+                title: 'Держатель-ремень для наушников, синий',
+                options: [
+                    'Гарантия: 1 год',
+                    'Тип разъема зарядки: Lightning',
+                    'Версия ОС: iOs 10'
+                ],
+                marks: [
+                    'new',
+                    'recommend'
+                ],
+                price: 999
+            }
+        ]
+    }
+
+    var sidebarBlockNews = {
+        type: 'news',
+        title: 'Новости',
+        list: [
+            {
+                name: 'Новое поступление Xioami',
+                date: '19.02.2018'
+            },
+            {
+                name: 'Поступление электрогрилей',
+                date: '19.02.2018'
+            },
+            {
+                name: 'Поступление детских часов',
+                date: '19.02.2018'
+            }
+        ],
+        linkAllName: 'Все новости'
+    }
+
+    var sidebarBlockBlog = {
+        type: 'blog',
+        title: 'Блог',
+        list: [
+            {
+                name: 'Беспроводная VR-гарнитура',
+                date: '13.12.2018'
+            },
+            {
+                name: 'Презентация нового “яблочка” iPhone',
+                date: '19.02.2018'
+            }
+        ],
+        linkAllName: 'Все статьи'
     }

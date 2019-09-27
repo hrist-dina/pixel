@@ -26,8 +26,9 @@ mixin product(item)
                             .product__mark Рекомендуем
         .product__bottom
             .product__price
-                span.product__price-old 1999 ₽
-                span 999 ₽
+                if item.priceOld
+                    span.product__price-old !{item.priceOld} ₽
+                span !{item.price} ₽
             .product__actions
                 a(href='javascript:void(0)').product__compare
                 a(href='javascript:void(0)').product__favorite

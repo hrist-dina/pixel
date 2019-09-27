@@ -1,0 +1,36 @@
+.about {
+  @include row-flex();
+  align-items: center;
+  margin-top: 30px;
+
+  &__img {
+    @include col();
+    @include size(7);
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    @include col();
+    @include size(5);
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 25px;
+    color: #474747;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    color: #474747;
+
+    & p {
+      margin-bottom: 22px;
+    }
+  }
+}

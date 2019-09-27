@@ -80,3 +80,11 @@
 @function icon-arrow-right-mini($fill: '0D398C') {
   @return "data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.5H15M15 4.5L11.1864 8M15 4.5L11.1864 1' stroke='%23#{$fill}'/%3E%3C/svg%3E%0A"
 }
+
+@function icon-arrow-triangle-mini($fill: 'D9D9D9') {
+  @return "data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L1 9' stroke='%23#{$fill}'/%3E%3C/svg%3E%0A"
+}
+
+@function icon-arrow-triangle-square($fill: '474747') {
+  @return "data:image/svg+xml,%3Csvg width='10' height='14' viewBox='0 0 10 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.903449 12.9776L9 6.69915L0.903449 0.420685' stroke='%23#{$fill}'/%3E%3C/svg%3E%0A"
+}

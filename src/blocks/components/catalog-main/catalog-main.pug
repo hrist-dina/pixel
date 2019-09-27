@@ -1,0 +1,17 @@
+include data
+
+mixin catalog-main-item(item)
+    a(href='#' class=item.type ? item.type : '').catalog-main__item
+        .catalog-main__pic
+            img(src=item.img alt=item.title title=item.title)
+        .catalog-main__bottom
+            .catalog-main__name=item.title
+            span.catalog-main__icon
+
+section.catalog-main
+    .catalog-main__haed
+        h3.h3.catalog-main__title Каталог
+        a(href='#').link-arrow-right Перейти в каталог
+    .catalog-main__list
+        for item in catalogMain
+            +catalog-main-item(item)
