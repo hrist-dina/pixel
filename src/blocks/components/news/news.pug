@@ -1,0 +1,24 @@
+mixin news-item(item)
+    if item.group
+        .news__group
+            .news__group-inner
+                for itemGroup in item.group
+                    +news-item(itemGroup)
+    else
+        a(href="#" class=item.type ? item.type : '').news__item
+            .news__img
+                img(src=item.img alt=item.title title=item.title)
+            .news__bottom
+                .news__title=item.title
+                if item.desc
+                    .news__desc=item.desc
+                if item.date
+                    .news__date=item.date
+                if item.tags
+                    for tag in item.tags
+                        a(href='#')=tag
+section.news
+    .news__list
+        if news
+            for item in news
+                +news-item(item)

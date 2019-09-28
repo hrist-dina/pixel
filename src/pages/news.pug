@@ -1,0 +1,9 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Новости";
+	include ../data/news
+
+block content
+	.container
+		include ../blocks/components/news/news
+
