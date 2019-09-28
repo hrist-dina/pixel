@@ -3,11 +3,11 @@ extends ../views/layouts/default
 include ../blocks/components/news/news
 
 block variables
-	- var title = "Новости";
-	include ../data/news
+	- var title = "Блог";
+	include ../data/blog
 
 block content
 	.container
-		+news(news)
+		+news(news, true)
 
 

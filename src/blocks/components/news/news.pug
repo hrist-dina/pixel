@@ -15,10 +15,21 @@ mixin news-item(item)
                 if item.date
                     .news__date=item.date
                 if item.tags
-                    for tag in item.tags
-                        a(href='#')=tag
-section.news
-    .news__list
-        if news
-            for item in news
-                +news-item(item)
+                    .news__tags
+                        for tag in item.tags
+                            span=tag
+
+mixin news(news, needCategory=false)
+    section.news
+        if needCategory && news.category
+            .news__category.js-news-category
+                a(href='javascript:void(0)').news__category-open.js-news-category-open Поиск по категориям
+                ul.news__category-list
+                    for category in news.category
+                        li.news__category-item
+                            a(href='#')=category
+
+        .news__list
+            if news.list
+                for item in news.list
+                    +news-item(item)
