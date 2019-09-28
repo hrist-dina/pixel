@@ -1,0 +1,12 @@
+mixin pagination(needShowMore = true)
+    if needShowMore
+        a(href='javascript:void(0)').button-show-more Показать еще
+    .pagination
+        a.pagination__back(href='#')
+        ul
+            - var i = 1;
+            while i <= 5
+                li
+                    a(href='#' class=i===1 ? 'active' : '')=i
+                - i++;
+        a.pagination__next(href='#')

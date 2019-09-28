@@ -1,0 +1,656 @@
+// Блок со старыми стилями. В сборке их нет
+#filter.filter_catalog_hide
+    .bx-filter
+        .bx-filter-section.container-fluid
+            form.smartfilter(name='_form', action='/catalog/apple/', method='get')
+                .row
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Розничная цена
+                                i.right.fa.fa-angle-down(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .row.bx-filter-parameters-box-container
+                                .bx-filter-parameters-box-container-block.bx-left
+                                    i.bx-ft-sub От
+                                    .bx-filter-input-container
+                                        input#arrFilter_P1_MIN.min-price(type='text', name='arrFilter_P1_MIN', value='', size='5', onkeyup='smartFilter.keyup(this)')
+                                .bx-filter-parameters-box-container-block.bx-right
+                                    i.bx-ft-sub До
+                                    .bx-filter-input-container
+                                        input#arrFilter_P1_MAX.max-price(type='text', name='arrFilter_P1_MAX', value='', size='5', onkeyup='smartFilter.keyup(this)')
+                                .bx-ui-slider-track-container
+                                    #drag_track_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-track
+                                        #colorUnavailableActive_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-pricebar-vd.solid_element(style='left: 0;right: 0;')
+                                        #colorAvailableInactive_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-pricebar-vn(style='left: 0;right: 0;')
+                                        #colorAvailableActive_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-pricebar-v.solid_element(style='left: 0;right: 0;')
+                                        #drag_tracker_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-range(style='left: 0%; right: 0%;')
+                                            a#left_slider_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-handle.left(style='left:0;', href='javascript:void(0)')
+                                            a#right_slider_c4ca4238a0b923820dcc509a6f75849b.bx-ui-slider-handle.right(style='right:0;', href='javascript:void(0)')
+                    .col-lg-12.bx-filter-parameters-box
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Производитель
+                                i.right.fa.fa-angle-down(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_136_3421137111', for='arrFilter_136_3421137111')
+                                        input#arrFilter_136_3421137111(type='checkbox', value='Y', name='arrFilter_136_3421137111', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple') Apple
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Модель Смартфона
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_1363113721', for='arrFilter_501_1363113721')
+                                        input#arrFilter_501_1363113721(type='checkbox', value='Y', name='arrFilter_501_1363113721', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone XS Max ') Apple iPhone XS Max
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_3207665621', for='arrFilter_501_3207665621')
+                                        input#arrFilter_501_3207665621(type='checkbox', value='Y', name='arrFilter_501_3207665621', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone XS') Apple iPhone XS
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_559252086', for='arrFilter_501_559252086')
+                                        input#arrFilter_501_559252086(type='checkbox', value='Y', name='arrFilter_501_559252086', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone 7') Apple iPhone 7
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_2497458933', for='arrFilter_501_2497458933')
+                                        input#arrFilter_501_2497458933(type='checkbox', value='Y', name='arrFilter_501_2497458933', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone X') Apple iPhone X
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_4256036667', for='arrFilter_501_4256036667')
+                                        input#arrFilter_501_4256036667(type='checkbox', value='Y', name='arrFilter_501_4256036667', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone XR') Apple iPhone XR
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_2326448045', for='arrFilter_501_2326448045')
+                                        input#arrFilter_501_2326448045(type='checkbox', value='Y', name='arrFilter_501_2326448045', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone 8') Apple iPhone 8
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_329487895', for='arrFilter_501_329487895')
+                                        input#arrFilter_501_329487895(type='checkbox', value='Y', name='arrFilter_501_329487895', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone 8 Plus') Apple iPhone 8 Plus
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_1688512129', for='arrFilter_501_1688512129')
+                                        input#arrFilter_501_1688512129(type='checkbox', value='Y', name='arrFilter_501_1688512129', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone 7 Plus') Apple iPhone 7 Plus
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_501_4206900002', for='arrFilter_501_4206900002')
+                                        input#arrFilter_501_4206900002(type='checkbox', value='Y', name='arrFilter_501_4206900002', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Apple iPhone 6s') Apple iPhone 6s
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Количество SIM-карт
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_471_3093091276', for='arrFilter_471_3093091276')
+                                        input#arrFilter_471_3093091276(type='checkbox', value='Y', name='arrFilter_471_3093091276', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1') 1
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_471_2495193261', for='arrFilter_471_2495193261')
+                                        input#arrFilter_471_2495193261(type='checkbox', value='Y', name='arrFilter_471_2495193261', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2') 2
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Размер изображения
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_478_838401820', for='arrFilter_478_838401820')
+                                        input#arrFilter_478_838401820(type='checkbox', value='Y', name='arrFilter_478_838401820', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2688x1242') 2688x1242
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_478_1191169930', for='arrFilter_478_1191169930')
+                                        input#arrFilter_478_1191169930(type='checkbox', value='Y', name='arrFilter_478_1191169930', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2436x1125') 2436x1125
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_478_336471277', for='arrFilter_478_336471277')
+                                        input#arrFilter_478_336471277(type='checkbox', value='Y', name='arrFilter_478_336471277', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1334x750') 1334x750
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_478_3263599987', for='arrFilter_478_3263599987')
+                                        input#arrFilter_478_3263599987(type='checkbox', value='Y', name='arrFilter_478_3263599987', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1792х828') 1792х828
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_478_747172959', for='arrFilter_478_747172959')
+                                        input#arrFilter_478_747172959(type='checkbox', value='Y', name='arrFilter_478_747172959', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1920х1080') 1920х1080
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Тыловая фотокамера
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_483_2018810723', for='arrFilter_483_2018810723')
+                                        input#arrFilter_483_2018810723(type='checkbox', value='Y', name='arrFilter_483_2018810723', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='12 МП') 12 МП
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_483_1684328546', for='arrFilter_483_1684328546')
+                                        input#arrFilter_483_1684328546(type='checkbox', value='Y', name='arrFilter_483_1684328546', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='двойная 12/12 МП') двойная 12/12 МП
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Объем встроенной памяти
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_493_3963669011', for='arrFilter_493_3963669011')
+                                        input#arrFilter_493_3963669011(type='checkbox', value='Y', name='arrFilter_493_3963669011', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='64 Гб') 64 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_493_2097141634', for='arrFilter_493_2097141634')
+                                        input#arrFilter_493_2097141634(type='checkbox', value='Y', name='arrFilter_493_2097141634', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='32 Гб') 32 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_493_2484880406', for='arrFilter_493_2484880406')
+                                        input#arrFilter_493_2484880406(type='checkbox', value='Y', name='arrFilter_493_2484880406', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='256 Гб') 256 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_493_175690165', for='arrFilter_493_175690165')
+                                        input#arrFilter_493_175690165(type='checkbox', value='Y', name='arrFilter_493_175690165', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='512 Гб') 512 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_493_1733079363', for='arrFilter_493_1733079363')
+                                        input#arrFilter_493_1733079363(type='checkbox', value='Y', name='arrFilter_493_1733079363', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='128 Гб') 128 Гб
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Объем оперативной памяти
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_494_473456231', for='arrFilter_494_473456231')
+                                        input#arrFilter_494_473456231(type='checkbox', value='Y', name='arrFilter_494_473456231', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='4 Гб') 4 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_494_2234585053', for='arrFilter_494_2234585053')
+                                        input#arrFilter_494_2234585053(type='checkbox', value='Y', name='arrFilter_494_2234585053', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='3 Гб') 3 Гб
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_494_4063641419', for='arrFilter_494_4063641419')
+                                        input#arrFilter_494_4063641419(type='checkbox', value='Y', name='arrFilter_494_4063641419', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2 Гб') 2 Гб
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Емкость аккумулятора
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_2105532707', for='arrFilter_495_2105532707')
+                                        input#arrFilter_495_2105532707(type='checkbox', value='Y', name='arrFilter_495_2105532707', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1960 мА⋅ч') 1960 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_3819134701', for='arrFilter_495_3819134701')
+                                        input#arrFilter_495_3819134701(type='checkbox', value='Y', name='arrFilter_495_3819134701', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='3174 мА⋅ч') 3174 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_2057965399', for='arrFilter_495_2057965399')
+                                        input#arrFilter_495_2057965399(type='checkbox', value='Y', name='arrFilter_495_2057965399', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2942 мА⋅ч') 2942 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_229457857', for='arrFilter_495_229457857')
+                                        input#arrFilter_495_229457857(type='checkbox', value='Y', name='arrFilter_495_229457857', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2658 мА⋅ч') 2658 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_2479467106', for='arrFilter_495_2479467106')
+                                        input#arrFilter_495_2479467106(type='checkbox', value='Y', name='arrFilter_495_2479467106', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2716 мА⋅ч') 2716 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_3838745332', for='arrFilter_495_3838745332')
+                                        input#arrFilter_495_3838745332(type='checkbox', value='Y', name='arrFilter_495_3838745332', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2675 мА⋅ч') 2675 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_2110245710', for='arrFilter_495_2110245710')
+                                        input#arrFilter_495_2110245710(type='checkbox', value='Y', name='arrFilter_495_2110245710', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1624 мА⋅ч') 1624 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_180419544', for='arrFilter_495_180419544')
+                                        input#arrFilter_495_180419544(type='checkbox', value='Y', name='arrFilter_495_180419544', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='2900 мА⋅ч') 2900 мА⋅ч
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_495_2592073289', for='arrFilter_495_2592073289')
+                                        input#arrFilter_495_2592073289(type='checkbox', value='Y', name='arrFilter_495_2592073289', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='1715 мА⋅ч') 1715 мА⋅ч
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box.bx-active
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Тип разъема для зарядки
+                                i.right.fa.fa-angle-up(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_496_3832983705', for='arrFilter_496_3832983705')
+                                        input#arrFilter_496_3832983705(type='checkbox', value='Y', name='arrFilter_496_3832983705', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='Lightning') Lightning
+                            div(style='clear: both;')
+                    .col-lg-12.bx-filter-parameters-box
+                        span.bx-filter-container-modef
+                        .bx-filter-parameters-box-title(onclick='smartFilter.hideFilterProps(this)')
+                            .bx-filter-parameters-box-hint
+                                | Функция быстрой зарядки
+                                i.right.fa.fa-angle-down(data-role='prop_angle')
+                        .bx-filter-block(data-role='bx_filter_block')
+                            .bx-filter-parameters-box-container
+                                .checkbox
+                                    label.bx-filter-param-label.uni-button-checkbox(data-role='label_arrFilter_497_63872414', for='arrFilter_497_63872414')
+                                        input#arrFilter_497_63872414(type='checkbox', value='Y', name='arrFilter_497_63872414', onclick='smartFilter.click(this)')
+                                        .selector
+                                        .bx-filter-param-text.text(title='есть') есть
+                            div(style='clear: both;')
+                // //row
+                .row.buttons-row
+                    .bx-filter-parameters-box-container
+                        .bx-left(style='padding: 0px; padding-right: 6px;')
+                            input#set_filter.uni-button.solid_button.btn-themes(type='submit', name='set_filter', value='Показать')
+                        .bx-right(style='padding: 0px; padding-left: 6px;')
+                            input#del_filter.uni-button.btn-reset(type='submit', name='del_filter', value='Cбросить')
+                        #modef.bx-filter-popup-result.solid_element.right(style='display:none;')
+                            .selected-text.solid_element
+                                | Выбрано:
+                                span#modef_num 0
+                            span.arrow
+                            br
+                            a(href='/catalog/apple/filter/clear/apply/', target='') Показать
+                .clb
+#uni-filter-show.uni-filter.uni-btn-hide.uni-btn-show
+    | Фильтр
+    i.right.fa.fa-angle-down(data-role='prop_angle')
+#uni-filter-hide.uni-filter.uni-btn-hide
+    | Скрыть фильтр
+    i.right.fa.fa-angle-up(data-role='prop_angle')
+script.
+    $("#uni-filter-show").click(function() {
+        $('#filter').slideDown(600);
+        $('#uni-filter-hide').show();
+        $('#uni-filter-show').hide();
+    });
+    $("#uni-filter-hide").click(function() {
+        $('#filter').slideUp(600);
+        $('#uni-filter-hide').hide();
+        $('#uni-filter-show').show();
+    });
+.clear
+.uni-indents-vertical.indent-25
+
+#menu.menu_catalog_hide
+    #catalog_menu_g8taYv.bx_vertical_menu_advanced.hover_shadow.bx_blue
+        ul#ul_catalog_menu_g8taYv.standart_block.hide_catalog
+            // first level
+            li.bx_hma_one_lvl.hover_shadow.current
+                a.hover_link.catalog-left-item(href='/catalog/smartfony/')
+                    | Смартфоны
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/apple/')
+                                    | Apple
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/xiaomi/')
+                                    | Xiaomi
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/aksessuary_dlya_smartfonov/')
+                                    | Аксессуары для смартфонов
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/huawei/')
+                                    | Huawei
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/smart_chasy_i_braslety/')
+                                    | Смарт часы и браслеты
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/bytovaya_tekhnika_dom/')
+                    | Бытовая техника, дом
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/instrumenty/')
+                                    | Инструменты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/klimaticheskaya_tekhnika/')
+                                    | Климатическая техника
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/umnyy_dom/')
+                                    | Умный дом
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/pylesosy/')
+                                    | Пылесосы
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/prigotovlenie_kofe/')
+                                    | Приготовление кофе
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tovary_dlya_pitomtsev/')
+                                    | Товары для питомцев
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/wi_fi_oborudovanie/')
+                                    | Wi-Fi Оборудование
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tekhnika_dlya_kukhni/')
+                                    | Техника для кухни
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tekhnika_dlya_krasoty/')
+                                    | Техника для красоты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tekhnika_i_tovary_dlya_ukhoda_za_odezhdoy_/')
+                                    | Техника и товары для ухода за одеждой
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/televizory_i_audio/')
+                    | Телевизоры и аудио
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/igrovye_pristavki_i_aksessuary/')
+                                    | Игровые приставки и аксессуары
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/akustika/')
+                                    | Акустика
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/televizory/')
+                                    | Телевизоры
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/naushniki/')
+                                    | Наушники
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/aksessuary_dlya_naushnikov/')
+                                    | Аксессуары для наушников
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tv_pristavki/')
+                                    | ТВ приставки
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/foto_i_video/')
+                    | Фото и видео
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/fotoapparaty/')
+                                    | Фотоаппараты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/mikrofony/')
+                                    | Микрофоны
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/karty_pamyati/')
+                                    | Карты памяти
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/ip_kamery/')
+                                    | IP-Камеры
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/stabilizatory/')
+                                    | Стабилизаторы
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/ekshn_kamery_1/')
+                                    | Экшн камеры
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/videoregistratory/')
+                                    | Видеорегистраторы
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/kvadrokoptery_i_aksessuary/')
+                    | Квадрокоптеры
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/aksessuary_dlya_kvadrokopterov/')
+                                    | Аксессуары для квадрокоптеров
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/kvadrokoptery_1/')
+                                    | Квадрокоптеры
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/gadzhety/')
+                    | Гаджеты
+                    span.bx_shadow_fix
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/igry_i_razvlecheniya/')
+                    | Игры и развлечения
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/detskie_samokaty/')
+                                    | Детские самокаты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/elektrosamokaty/')
+                                    | Электросамокаты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/detskie_igrushki/')
+                                    | Детские игрушки
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/fitnes_i_zdorove_1/')
+                    | Фитнес и здоровье
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/dlya_mam_i_detey/')
+                                    | Для мам и детей
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/termosy_i_kruzhki/')
+                                    | Термосы и кружки
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/zashchita_zreniya/')
+                                    | Защита зрения
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/obuv/')
+                                    | Обувь
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tovary_dlya_zdorovya/')
+                                    | Товары для здоровья
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tovary_dlya_ukhoda_za_telom/')
+                                    | Товары для ухода за телом
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/tovary_dlya_fitnesa/')
+                                    | Товары для фитнеса
+                    div(style='clear: both;')
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/puteshestviya/')
+                    | Путешествия
+                    span.bx_shadow_fix
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/aksessuary/')
+                    | Аксессуары
+                    span.bx_shadow_fix
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/samsung/')
+                    | Samsung
+                    span.bx_shadow_fix
+            // first level
+            li.bx_hma_one_lvl.hover_shadow
+                a.hover_link.catalog-left-item(href='/catalog/noutbuki_i_planshety/')
+                    | Ноутбуки и планшеты
+                    span.bx_shadow_fix
+                .bx_children_container.hover_shadow.b2
+                    .bx_children_block.hover_shadow
+                        ul
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/planshety/')
+                                    | Планшеты
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/noutbuki/')
+                                    | Ноутбуки
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/aksessuary_dlya_noutbukov/')
+                                    | Аксессуары для ноутбуков
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/aksessuary_dlya_planshetov/')
+                                    | Аксессуары для планшетов
+                            // second level
+                            li.parent
+                                a.hover_link(href='/catalog/kovriki_myshi_klaviatury/')
+                                    | Коврики, мыши, клавиатуры
+                    div(style='clear: both;')
+        div(style='clear: both;')
+    div
+        style.
+            /*hide_catalog*/
+            .bx_vertical_menu_advanced ul.hide_catalog li.bx_hma_one_lvl {
+                display: none;
+            }
+
+            .bx_vertical_menu_advanced ul.hide_catalog li.bx_hma_one_lvl:nth-child(-n+8) {
+                display: block;
+            }
+
+            .bx_vertical_menu_advanced ul.hide_catalog:hover li.bx_hma_one_lvl {
+                display: block;
+                -webkit-transition: all 0.5s ease;
+                -webkit-transition-delay: 0.5s;
+            }
+#uni-menu-show.uni-menu.uni-btn-hide.uni-btn-show
+    | Каталог
+    i.right.fa.fa-angle-down(data-role='prop_angle')
+#uni-menu-hide.uni-menu.uni-btn-hide
+    | Скрыть каталог
+    i.right.fa.fa-angle-up(data-role='prop_angle')
+script.
+    $("#uni-menu-show").click(function () {
+        $('#menu').slideDown(600);
+        $('#uni-menu-hide').show();
+        $('#uni-menu-show').hide();
+    });
+    $("#uni-menu-hide").click(function () {
+        $('#menu').slideUp(600);
+        $('#uni-menu-hide').hide();
+        $('#uni-menu-show').show();
+    });
+// left_col_index
+

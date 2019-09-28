@@ -54,6 +54,20 @@ const webpackConfig = require("./webpack.config.js"),
 				"./src/styles/**/*.scss"
 			]
 		},
+		stylesOld: {
+			src: "./src/styles/old/**",
+			dist: "./dist/styles/old/",
+			watch: [
+				"./src/styles/**/*.css"
+			]
+		},
+		old: {
+			src: "./src/old/**",
+			dist: "./dist/",
+			watch: [
+				"./src/old/**/*"
+			]
+		},
 		scripts: {
 			src: "./src/js/index.js",
 			dist: "./dist/js/",
@@ -103,6 +117,8 @@ export const server = () => {
 
 	gulp.watch(paths.views.watch, views);
 	gulp.watch(paths.styles.watch, styles);
+	gulp.watch(paths.stylesOld.watch, stylesOld());
+	gulp.watch(paths.stylesOld.watch, old());
 	gulp.watch(paths.scripts.watch, scripts);
 	gulp.watch(paths.svg.watch, svgsprites);
 	gulp.watch(paths.images.watch, images);
@@ -204,6 +220,18 @@ export const styles = () => gulp.src(paths.styles.src)
 	}))
 	.pipe(browsersync.stream());
 
+export const stylesOld = () => gulp.src(paths.stylesOld.src)
+	.pipe(gulp.dest(paths.stylesOld.dist))
+	.pipe(debug({
+		"title": "Copy old styles"
+	}));
+
+export const old = () => gulp.src(paths.old.src)
+	.pipe(gulp.dest(paths.old.dist))
+	.pipe(debug({
+		"title": "Copy old files"
+	}));
+
 export const scripts = () => gulp.src(paths.scripts.src)
 	.pipe(webpackStream(webpackConfig), webpack)
 	.pipe(gulpif(production, rename({
@@ -295,9 +323,9 @@ export const favs = () => gulp.src(paths.favicons.src)
 	}));
 
 export const development = gulp.series(cleanFiles, smartGrid,
-	gulp.parallel(views, styles, scripts, svgsprites, images, fonts, favs),
+	gulp.parallel(views, styles, stylesOld, old, scripts, svgsprites, images, fonts, favs),
 	gulp.parallel(server));
 
-export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, scripts, svgsprites, images, fonts, favs);
+export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, stylesOld, old, scripts, svgsprites, images, fonts, favs);
 
 export default development;

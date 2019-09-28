@@ -1,3 +1,5 @@
+include ../../components/logo/logo
+
 header.header
     .container 
         .header__top
@@ -15,8 +17,7 @@ header.header
                     a(href='#').auth-link Вход
                     a(href='#').auth-link Регистрация
         .header__middle
-            a(href='#').logo
-                img(src='img/logo.svg')
+            +logo()
             .header__search.search
                 input.search__input(name='q' placeholder='Поиск...')
                 button(type='submit').button-search

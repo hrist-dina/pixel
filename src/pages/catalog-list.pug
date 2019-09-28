@@ -1,0 +1,57 @@
+extends ../views/layouts/default
+
+include ../blocks/components/product/product
+
+block variables
+	- var title = "Apple";
+	include ../data/catalog-list
+
+block content
+	.container
+		section.content-sidebar
+			.sidebar__box
+				include ../blocks/components/smartfilter/smartfilter
+			.content__box
+				.content__top
+					// Старый блок. Брать из бэка
+					.uni-panel-sort
+						.sort
+							.uni-aligner-vertical
+							.values
+								.value
+									a(rel='nofollow', href='/catalog/apple/?sort=name&order=asc')
+										| По названию
+										.icon.desc
+								.value
+									a(rel='nofollow', href='/catalog/apple/?sort=price&order=asc')
+										| По цене
+										.icon.desc
+								.value
+									a(rel='nofollow', href='/catalog/apple/?sort=pop&order=asc')
+										| По популярности
+										.icon.desc
+								.value.ui-state-active
+									a(rel='nofollow', href='/catalog/apple/?sort=none')
+										| В наличии
+							.clear
+						.view
+							.sort.sort-count
+								.uni-aligner-vertical
+								.values
+									.value
+										p Показать:
+									.value
+										a.ui-state-active(rel='nofollow', href='#') 30
+									.value
+										a(rel='nofollow', href='#') 60
+									.value
+										a(rel='nofollow', href='#') 90
+								.clear
+							.uni-aligner-vertical
+							.caption
+							.views
+								a.text(rel='nofollow', href='/catalog/apple/?view=text')
+								a.list(rel='nofollow', href='/catalog/apple/?view=list')
+								a.tile.ui-state-active(rel='nofollow', href='/catalog/apple/?view=tile')
+
+				+product-list(productList)

@@ -5,6 +5,7 @@
   background: #FFFFFF;
   box-shadow: 0 0 3px rgba(34, 46, 98, 0.132);
   .cards &  {
+    @include u-size(3, 9, $offset);
     height: 400px;
     margin-bottom: 28px;
     @include transition();

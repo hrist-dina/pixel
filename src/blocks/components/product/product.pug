@@ -1,3 +1,5 @@
+include ../../components/pagination/pagination
+
 mixin product(item)
     .product
         .product__img
@@ -39,6 +41,8 @@ mixin product-list(products)
     .product__list(class=products.type ? products.type : 'cards')
         for item in products.list
             +product(item)
+    +pagination()
+
 
 mixin product-section
     section.product-section

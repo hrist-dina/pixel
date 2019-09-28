@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__back,
+  &__next {
+    display: inline-block;
+    padding: 9px;
+    width: 4px;
+    height: 8px;
+    background-size: cover;
+    cursor: pointer;
+    background: url(icon-arrow-triangle-mini(CACACA)) no-repeat center;
+    @include rotate(0deg)
+  }
+
+  &__back {
+    @include rotate();
+  }
+
+  & ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 20px;
+
+    & li {
+
+      & a {
+        padding: 9px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #505050;
+        text-decoration: none;
+
+        &.active {
+          font-weight: bold;
+          color: #0FA0D9;
+        }
+      }
+    }
+  }
+}

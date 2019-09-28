@@ -46,6 +46,7 @@
     &-list {
       @include row-flex();
       margin-top: 20px;
+      margin-bottom: -30px;
 
       & .product {
         @include u-size(3, 9, $offset)
