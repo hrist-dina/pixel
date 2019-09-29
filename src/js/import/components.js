@@ -4,6 +4,7 @@ import {TabBase} from "../classes/TabBase";
 import {SliderSidebar} from "%components%/slider-sidebar/SliderSidebar";
 import {SliderBrands} from "%components%/slider-brands/SliderBrands";
 import {News} from "%components%/news/News";
+import {Product} from "%components%/product/Product";
 
 $(document).ready(function () {
     new SliderMain('.js-slider-main');
@@ -11,4 +12,5 @@ $(document).ready(function () {
     new SliderBrands('.js-slider-brands');
     new TabBase();
     new News();
+    new Product();
 });
