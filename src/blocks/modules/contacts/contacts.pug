@@ -1,0 +1,42 @@
+section.contacts
+    .contacts__left
+        .contacts__info
+            .contacts__row.contacts__address
+                span 6300091, г.Новосибирск, Красный проспект, 62
+            .contacts__row.contacts__phones
+                a(href='tel:+73833755505').contacts__phone-city + 7 (383) 375-55-05
+                a(href='tel:+79231455505').contacts__phone-social + 7 (923) 145-55-05
+            .contacts__row.contacts__time
+                span пн-пт: 9:00 - 20:00
+                span сб-вс: 11:00 - 17:00
+            .contacts__row.contacts__mail
+                a(href='mailto:info@pixel-house.ru') info@pixel-house.ru
+        .contacts__requisite
+            span ИП: Сыромятников Е. О.
+            span ИНН: 541000287530
+            span ОГРН: 311547625600056
+            span  Магазин: PIXEL-HOUSE
+        .contacts__form
+            .contacts__form-title Связаться с нами
+            form(action='' method='POST')
+                label.field
+                    span.field__title Имя
+                    input.field__input(type="text" name="name" tabindex="1")
+                label.field
+                    span.field__title Телефон
+                    input.field__input(type="text" name="phone" tabindex="2")
+                label.field
+                    span.field__title.field__required E-mail
+                    input.field__input(type="text" name="email" tabindex="3")
+                label.field
+                    span.field__title.field__required Сообщение
+                    textarea.field__textarea(name="message" tabindex="4")
+                .consent
+                    input(type="checkbox" id="consent" checked="" disabled="")
+                    p.label-line.gray-label Я согласен(а) на
+                    p.label-line
+                        a(href="/consent" target="_blank") обработку персональных данных
+
+
+    .contacts__right
+        include ../../components/map/map

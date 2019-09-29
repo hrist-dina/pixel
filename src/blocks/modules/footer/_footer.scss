@@ -97,25 +97,25 @@
   }
   &__placemark {
     &:before {
-      @extend .icon-placemark;
+      @include icon-placemark;
     }
   }
 
   &__phone {
     &:before {
-      @extend .icon-phone;
+      @include icon-phone;
     }
   }
 
   &__time {
     &:before {
-      @extend .icon-time;
+      @include icon-time;
     }
   }
 
   &__mail {
     &:before {
-      @extend .icon-mail;
+      @include icon-mail;
     }
   }
 

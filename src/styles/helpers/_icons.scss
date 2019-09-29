@@ -30,10 +30,22 @@
   background: url(icon-telegram()) no-repeat center;
 }
 
+.icon-telegram-transparent {
+  width: 15px;
+  height: 13px;
+  background: url(icon-telegram-transparent()) no-repeat center;
+}
+
 .icon-whatsapp {
   width: 14px;
   height: 14px;
   background: url(icon-whatsapp()) no-repeat center;
+}
+
+.icon-whatsapp-transparent {
+  width: 14px;
+  height: 14px;
+  background: url(icon-whatsapp-transparent()) no-repeat center;
 }
 
 .icon-present {
@@ -77,28 +89,28 @@
   @include icon-burger();
 }
 
-.icon-placemark {
+@mixin icon-placemark($fill:'fff') {
   width: 13px;
   height: 16px;
-  background: url(icon-placemark()) no-repeat center;
+  background: url(icon-placemark($fill)) no-repeat center;
 }
 
-.icon-phone {
+@mixin icon-phone($fill:'fff') {
   width: 17px;
   height: 17px;
-  background: url(icon-phone()) no-repeat center;
+  background: url(icon-phone($fill)) no-repeat center;
 }
 
-.icon-time {
+@mixin icon-time($fill:'fff') {
   width: 14px;
   height: 14px;
-  background: url(icon-time()) no-repeat center;
+  background: url(icon-time($fill)) no-repeat center;
 }
 
-.icon-mail {
+@mixin icon-mail($fill:'fff') {
   width: 18px;
   height: 13px;
-  background: url(icon-mail()) no-repeat center;
+  background: url(icon-mail($fill)) no-repeat center;
 }
 
 .icon-arrow-right {
