@@ -67,6 +67,10 @@
     text-decoration: none;
     @include transition(.5s, linear, all);
 
+    &:hover {
+      color: #fff;
+    }
+
     & span {
       box-sizing: border-box;
       display: inline-block;
@@ -121,7 +125,7 @@
   &__child {
     position: absolute;
     left: 0;
-    z-index: 5;
+    z-index: 999;
     width: 240px;
     visibility: hidden;
     opacity: 0;
@@ -168,7 +172,7 @@
       line-height: 19px;
       color: #0E398C;
       position: relative;
-      z-index: 10;
+      z-index: 1000;
     }
   }
 

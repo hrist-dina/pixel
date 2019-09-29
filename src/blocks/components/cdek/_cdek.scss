@@ -1,0 +1,40 @@
+.cdek {
+  margin-top: 30px;
+  padding: 20px 24px;
+  border: 2px solid #D6EDF7;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 10px;
+
+  &__logo {
+    width: 78px;
+    height: 40px;
+    margin-right: 45px;
+
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  & table {
+    text-align: left;
+    border: none;
+
+    & td,
+    & th {
+      min-width: 80px;
+      padding-right: 50px;
+      padding-bottom: 10px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #474747;
+    }
+
+    & th {
+      font-weight: 600;
+    }
+  }
+}

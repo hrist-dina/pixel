@@ -1,0 +1,310 @@
+extends ../views/layouts/default
+
+include ../blocks/components/product/product
+
+block variables
+	- var title = "Смартфон Apple iPhone XS 256 GB, черный";
+	include ../data/catalog-list
+
+block content
+	.container
+		// Старый блок, взять с бекенда, сейчас не работают скрипты. Выведен для примера. !!!Добавились блоки CDEK и инфографика под карточкой!!!
+		#bx_117848907_1936.item
+			.row
+				.image-slider
+					.image-box
+						.wrapper
+							.marks
+							#slider_images.slider-images
+								a.image.fancy(rel='images', href='img/catalog-detail/phone.jpg')
+									img(src='img/catalog-detail/phone.jpg', alt='Смартфон Apple iPhone XS 256 GB, черный ', title='Смартфон Apple iPhone XS 256 GB, черный ')
+									.valign
+					.clear
+					#slider.list
+						.buttons.hidden
+							.valign
+							.wrapper
+								#left.button.uni-slider-button-small.uni-slider-button-left(onclick="slider.scroll('right'); return false;")
+									.icon
+								#right.button.uni-slider-button-small.uni-slider-button-right(onclick="slider.scroll('left'); return false;")
+									.icon
+						.items
+				.information
+					.row
+						.article Модель: A1920
+						#quantity_available.state.available(style='')
+							.icon
+							|                            В наличии
+						#quantity_unavailable.state.unavailable(style='display: none;')
+							.icon
+							|                            Нет в наличии
+					.uni-indents-vertical.indent-25
+					.row
+						.price
+							#price.current 74 999 руб.
+						.uni-indents-vertical.indent-25
+						.order
+							.valign
+							.count
+								button#decrease.uni-button -
+								input(type='text', name='count', value='1')
+								button#increase.uni-button +
+							.uni-indents-horizontal.indent-10
+							.buy
+								a.uni-button.one-click-buy(href='javascript:void(0);', onclick="return add_to_onclick({'id':'1936','name':'Смартфон Apple iPhone XS 256 GB, черный ','iblock_type':'catalog','iblock_id':'4','new_price':'74 999 руб.','old_price':'','image':'/upload/iblock/037/0373b603e12d739b1ea677184ce47314.jpg','price_id':'1','price':'74999','delivery_id':'2','person_id':'1','payment_id':'1'})")
+									span Купить в 1 клик
+							.uni-indents-horizontal.indent-10
+							.buy
+								a#buy_1936.uni-button.solid_button.buy(rel='nofollow', onclick="return add_to_cart(1936,'Добавлено',this, counter.value,'/personal/cart/','1936','4','catalog');") В корзину
+								a#buyed_1936.uni-button.solid_button.buy.buy_added(rel='nofollow', href='https://pixel-house.ru/personal/cart/', style='display: none;')
+									| Добавлено
+							.uni-indents-horizontal.indent-20
+							.min-buttons
+								.min-button.compare
+									#textcomp_1936.add(onclick="add_to_compare(this,'catalog','4','CATALOG_COMPARE_LIST','/catalog/apple/1936/?action=ADD_TO_COMPARE_LIST&id=1936')", title='Добавить товар в сравнение')
+									#addedcomp_1936.remove(style='display:none', onclick="return delete_to_compare(this,'catalog','4','CATALOG_COMPARE_LIST','/catalog/compare.php?action=DELETE_FROM_COMPARE_RESULT&ID=1936')", title='Убрать товар из сравнения')
+								.min-button.like
+									#like_1936.add(onclick="add_to_like(this,'1936',1);", title='Добавить товар в список отложенных')
+										i.fa.fa-star-o
+									#liked_1936.remove(style='display:none', onclick="return delete_to_like(this,'1936',1);", title='Убрать товар из списка отложенных')
+										i.fa.fa-star-o
+				.information.with-menu
+					.uni-indents-vertical.indent-25
+					.row
+						.description.uni-text-default
+							| Смартфон Apple iPhone XS 256 GB, черный
+					.uni-indents-vertical.indent-40
+					.row
+						.properties
+							.property Ставки налогов — Без налога;
+							.property Производитель — Apple;
+							.property Модель Смартфона — Apple iPhone XS;
+							.property Версия ОС — iOS 12;
+							.property Тип — Смартфон;
+							.property Тип SIM-карты — nano SIM+eSIM;
+							a.all-properties(href='https://pixel-house.ru/catalog/apple/1936/#properties') Все характеристики
+						// Новый блок CDEK, добавть в компонент битрикса
+						include ../blocks/components/cdek/cdek
+				.clear
+			// Новый блок особенностей товара, добавть в компонент битрикса
+			include ../blocks/components/feature/feature
+			.uni-indents-vertical.indent-50
+			.row
+				#tabs.uni-tabs.ui-tabs.ui-widget.ui-widget-content.ui-corner-all(style='position: static;')
+					ul.tabs.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all(role='tablist')
+						li.tab.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active(role='tab', tabindex='0', aria-controls='properties', aria-labelledby='ui-id-1', aria-selected='true')
+							a#ui-id-1.ui-tabs-anchor(href='https://pixel-house.ru/catalog/apple/1936/#properties', role='presentation', tabindex='-1') Характеристики
+						li.tab.ui-state-default.ui-corner-top(role='tab', tabindex='-1', aria-controls='reviews', aria-labelledby='ui-id-2', aria-selected='false')
+							a#ui-id-2.ui-tabs-anchor(href='https://pixel-house.ru/catalog/apple/1936/#reviews', role='presentation', tabindex='-1') Отзывы
+						.bottom-line
+					.clear
+					#properties.item_description.ui-tabs-panel.ui-widget-content.ui-corner-bottom(aria-labelledby='ui-id-1', role='tabpanel', aria-expanded='true', aria-hidden='false', aria-live='polite')
+						.properties
+							.property
+								.name
+									| Ставки налогов
+								.value
+									| Без налога
+							.property
+								.name
+									| Производитель
+								.value
+									| Apple
+							.property
+								.name
+									| Модель Смартфона
+								.value
+									| Apple iPhone XS
+							.property
+								.name
+									| Версия ОС
+								.value
+									| iOS 12
+							.property
+								.name
+									| Тип
+								.value
+									| Смартфон
+							.property
+								.name
+									| Тип SIM-карты
+								.value
+									| nano SIM+eSIM
+							.property
+								.name
+									| Количество SIM-карт
+								.value
+									| 2
+							.property
+								.name
+									| Вес
+								.value
+									| 177 г
+							.property
+								.name
+									| Размеры (ШxВxТ)
+								.value
+									| 70.9x143.6x7.7 мм
+							.property
+								.name
+									| Тип экрана
+								.value
+									| цветной OLED, сенсорный
+							.property
+								.name
+									| Тип сенсорного экрана
+								.value
+									| мультитач, емкостный
+							.property
+								.name
+									| Диагональ
+								.value
+									| 5.8 дюйм.
+							.property
+								.name
+									| Размер изображения
+								.value
+									| 2436x1125
+							.property
+								.name
+									| Число пикселей на дюйм (PPI)
+								.value
+									| 463
+							.property
+								.name
+									| Соотношение сторон
+								.value
+									| 19.5:9
+							.property
+								.name
+									| Автоматический поворот экрана
+								.value
+									| есть
+							.property
+								.name
+									| Устойчивое к царапинам стекло
+								.value
+									| есть
+							.property
+								.name
+									| Тыловая фотокамера
+								.value
+									| двойная 12/12 МП
+							.property
+								.name
+									| Макс. разрешение видео
+								.value
+									| 3840x2160
+							.property
+								.name
+									| Фронт камера
+								.value
+									| есть, 7 млн пикс.
+							.property
+								.name
+									| Аудио
+								.value
+									| MP3, AAC, WAV, WMA, стереодинамики
+							.property
+								.name
+									| Стандарт
+								.value
+									| GSM 900/1800/1900, 3G, 4G LTE, LTE-A, VoLTE
+							.property
+								.name
+									| Интерфейсы
+								.value
+									| Wi-Fi 802.11ac, Bluetooth 5.0, NFC
+							.property
+								.name
+									| Спутниковая навигация
+								.value
+									| GPS/ГЛОНАСС
+							.property
+								.name
+									| Процессор
+								.value
+									| Apple A12 Bionic
+							.property
+								.name
+									| Количество ядер процессора
+								.value
+									| 6
+							.property
+								.name
+									| Объем встроенной памяти
+								.value
+									| 256 Гб
+							.property
+								.name
+									| Объем оперативной памяти
+								.value
+									| 4 Гб
+							.property
+								.name
+									| Емкость аккумулятора
+								.value
+									| 2658 мА⋅ч
+							.property
+								.name
+									| Тип разъема для зарядки
+								.value
+									| Lightning
+							.property
+								.name
+									| Функция быстрой зарядки
+								.value
+									| есть
+							.property
+								.name
+									| Функция беспроводной зарядки
+								.value
+									| есть
+							.property
+								.name
+									| Датчики
+								.value
+									| освещенности, приближения, гироскоп, компас, барометр
+							.property
+								.name
+									| Особенности
+								.value
+									| Face ID
+							.property
+								.name
+									| Гарантия
+								.value
+									| 1 год
+							.property
+								.name
+									| Цвет
+								.value
+									| черный
+					#reviews.item_description.ui-tabs-panel.ui-widget-content.ui-corner-bottom(aria-labelledby='ui-id-2', role='tabpanel', aria-expanded='false', aria-hidden='true', style='display: none;', aria-live='polite')
+						#review_1936.reviews-box
+							#showButton
+								button.uni-button.solid_button.button(onclick="return showHideForm('#review_1936');") Оставить отзыв
+								.uni-indents-vertical.indent-15
+							#message(style='height: 0px; overflow: hidden;') Ваш отзыв был отправлен!
+							.reviews
+								#form.form
+									.row
+										.label
+											| ФИО
+											span.needed *
+										.control
+											input#name.uni-input-text(type='text')
+									.row
+										.label
+											| Отзыв
+											span.needed *
+										.control
+											textarea#description.uni-input-textarea(style='height: 150px;')
+									.uni-indents-vertical.indent-20
+									.row
+										.label
+										.control
+											button.uni-button.solid_button.button.button(onclick="return review1936.Send(function(){ review1936.formHide(); displayReviewMessage('#review_1936'); $('#review_1936').find('#showButton').hide(); })") Отправить отзыв
+			.uni-indents-vertical.indent-50
+			.row
+
