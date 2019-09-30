@@ -155,32 +155,3 @@
     color: #000;
   }
 }
-
-
-.city {
-  margin-top: 40px;
-  background: #eee;
-}
-
-.location {
-  &__text {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    color: #7A8496;
-  }
-
-  &__item {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    color: #7A8496;
-    border-bottom: 1px dashed #7A8496;
-
-  }
-
-  &__list {
-    width: 169px;
-
-  }
-}
