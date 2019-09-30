@@ -2244,10 +2244,10 @@ COLOR
 
 
 /*.bx-filter .bx-filter-input-checkbox .image.image-checkbox {
-	background: url('local/templates/pixel-house/components/bitrix/catalog.smart.filter/adaptiv/images/checkbox.png');
+	background: url('../../local/templates/pixel-house/components/bitrix/catalog.smart.filter/adaptiv/images/checkbox.png');
 }
 .bx-filter .bx-filter-input-checkbox .image.image-radio {
-	background: url('local/templates/pixel-house/components/bitrix/catalog.smart.filter/adaptiv/images/radio.png');
+	background: url('../../local/templates/pixel-house/components/bitrix/catalog.smart.filter/adaptiv/images/radio.png');
 }
 .bx-filter .bx-filter-input-checkbox input[type=radio]:checked + .image,
 .bx-filter .bx-filter-input-checkbox input[type=checkbox]:checked + .image {
@@ -2806,7 +2806,7 @@ COLOR
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
-    background: url('local/templates/pixel-house/components/bitrix/system.pagenavigation/catalog/images/update.png');
+    background: url('../../local/templates/pixel-house/components/bitrix/system.pagenavigation/catalog/images/update.png');
     transition-property: transform;
     transition: 0.3s;
 }.paginator .ajax .button:hover .icon-wrapper .icon {
@@ -3237,6 +3237,196 @@ body .bx_ordercart_itemtitle a {
 body .uni-button-checkbox input:checked + .selector:before,
 body .uni-button-radio input:checked + .selector:before {
     background: #0d398c !important;
+}
+
+body .uni-tabs .tabs .tab.current,
+body .uni-tabs .tabs .tab.ui-state-hover,
+body .uni-tabs .tabs .tab:hover,
+body .uni-tabs .tabs .tab.ui-state-active,
+body .top_custom_menu li.active a,
+body .top_custom_menu li:hover a {
+    border-color: #0d398c;
+}
+body .svg_fill_solid {
+    fill: #0d398c;
+}
+body .hover_link:hover {
+    color: #0d398c !important;
+}
+body a,
+body .open_call,
+body .bx_vertical_menu_advanced .bx_hma_one_lvl.current>a {
+    color: #0d398c;
+}
+body .item .image-slider > .list .image.selected .wrapper > div > div,
+body .item .image-slider > .list .image:hover .wrapper > div > div {
+    border-color: #0d398c;
+}
+body .uni-slider-button-small:hover,
+body .uni-slider-button:hover {
+    background: #0d398c;
+}
+body .item .item_description > .properties .property:before,
+body .item > .properties .property:before,
+body .item .information .properties .property:before,
+body .top .bg_top_menu .min_menu,
+body .catalog_menu.solid {
+    background: #0d398c;
+}
+body .solid_text {
+    color: #0d398c !important;
+}
+body .solid_button,
+body .solid_element,
+body .catalog-button {
+    background-color: #0d398c !important;
+}
+body .min-button.delete:hover div:before,
+body .min-button div.remove:before {
+    background-color: #0d398c !important;
+}
+table.top_menu .child.submenu,
+body .menu-catalog-1,
+body .child.cat_menu,
+body .child.submenu {
+    border-color: #0d398c !important;
+}
+body .solid_button:hover,
+body .catalog-button:hover {
+    background-color: #0d489b !important;
+}
+body .buy_added,
+body .buy_added:hover {
+    background-color: #0e2c6c !important;
+}
+body .services-sections-list.menu .element:hover {
+    color: #0d398c;
+}
+body .services-sections-list.menu .element.selected {
+    background: #0d398c;
+    color: #ffffff;
+}
+body .differences_table .properties .property {
+    color: #0d398c;
+    border-color: #0d398c;
+}
+body .differences_table .properties .property:hover {
+    background-color: #0d398c;
+}
+body .under_catalog_menu .menu_item_l1.more .child.cat_menu a:hover {
+    color: #0d398c;
+}
+body .offers .offer .items .item.selected,
+body .offers .offer .items .item:hover,
+body .offers .offer .items .item:focus {
+    color: #0d398c;
+    border-color: #0d398c;
+}
+body .bx-filter .bx-filter-popup-result.right:before {
+    border-right-color: #0d398c !important;
+}
+body .bx-filter .bx-filter-popup-result a,
+.under_catalog_menu .menu_item_l1 .submenu a:hover {
+    color: #0d398c !important;
+}
+.bx-filter .bx-filter-parameters-box.bx-active .bx-filter-parameters-box-title div.bx-filter-parameters-box-hint,
+.bx-filter .bx-filter-parameters-box:hover .bx-filter-parameters-box-title div.bx-filter-parameters-box-hint,
+.bx-filter .bx-filter-parameters-box:focus .bx-filter-parameters-box-title div.bx-filter-parameters-box-hint {
+    color: #0d398c !important;
+}
+.bx-filter .bx-filter-param-label.bx-active .bx-filter-param-btn,
+.bx-filter .bx-filter-param-btn:hover,
+.bx-filter.bx-blue .bx-filter-param-btn:active,
+.bx-filter .bx-filter-param-btn:focus {
+    border-color: #0d398c;
+}
+body .bx_ordercart_itemtitle a {
+    color: #0d398c !important;
+}
+body .uni-button-checkbox input:checked + .selector:before,
+body .uni-button-radio input:checked + .selector:before {
+    background: #0d398c !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager .bx-pager-item a:hover,
+.bx-wrapper .bx-pager.bx-default-pager .bx-pager-item a.active {
+    background: #0d398c !important;
+}
+.min-button.like .add:hover {
+    color: #0d398c !important;
+}
+.min-button.compare .add:hover {
+    background-color: #0d398c !important;
+}
+.slider-main-1-item-part-text-button {
+    background: #0d398c !important;
+    transition: all 0.4s;
+    color: #ffffff !important;
+}
+.slider-main-1-item-part-text-button:hover {
+    background: #0d489b !important;
+    color: #ffffff !important;
+}
+.personal_cabinet:hover {
+    color: #0d398c !important;
+}
+.header_wrap_information table.top_menu td:hover span.arrow {
+    color: #0d398c !important;
+}
+.header_wrap_information table.top_menu td.current  span.arrow {
+    border-bottom: 2px solid #0d489b !important;
+}
+.review_text .read_more {
+    color: #0d398c !important;
+}
+.reviews .see_all a:hover {
+    color: #0d398c !important;
+}
+.tabs_block #tabs_block ul.nav li.ui-tabs-active a {
+    border-bottom: 2px solid #0d398c;
+}
+.tabs_block #tabs_block ul.nav li a {
+    color: #0d398c !important;
+}
+.basket-small-fly > .header .opener .text {
+    background: #0d398c !important;
+}
+ul.breadcrumb-navigation li .bn_space {
+    border-bottom: 6px solid #0d398c;
+}
+ul.breadcrumb-navigation li .dropdown {
+    border-top: 1px solid #0d398c;
+}
+.paginator .static .buttons .button {
+    border: 1px solid #0d398c;
+    color: #0d398c;
+}
+.paginator .static .buttons .button:hover,
+.paginator .static .buttons .button.ui-state-current {
+    background: #0d398c;
+    color: #ffffff;
+}
+.services-section.extend .element .content .name {
+    color: #0d398c !important;
+}
+table.top_menu .child.submenu a:hover,
+.under_catalog_menu .menu_item_l1 .submenu a:hover {
+    background: #0d398c !important;
+    color: #ffffff !important;
+}
+.service.landing .service-header .service-header-menu .service-header-menu-item.ui-state-active {
+    border-color: #0d398c !important;
+    color: #0d398c !important;
+}
+.contact .section .description:before {
+    background-color: #0d398c !important;
+}
+.login_page .rememberme input[type=checkbox]:checked + label:after {
+    background-color: #0d398c;
+}
+.characteristics.landing-1 .characteristics-buttons-more:hover .characteristics-buttons-more-text {
+    background: #0d398c;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .uni-button-checkbox {
@@ -4545,7 +4735,7 @@ a:hover {
 .uni-slider-button .icon {
     position: absolute;
 
-    background: url('local/templates/pixel-house/images/uni-slider-buttons.png') no-repeat;
+    background: url('../../local/templates/pixel-house/images/uni-slider-buttons.png') no-repeat;
 }
 .uni-slider-button-small .icon {
     top: 4px;
@@ -4725,12 +4915,12 @@ a:hover {
     background-image: url('../../local/templates/pixel-house/images/compare.png');
 }
 .min-button.compare .add:hover {
-    background-image: url('local/templates/pixel-house/images/compare.png');
+    background-image: url('../../local/templates/pixel-house/images/compare.png');
     background-position: 0 -48px;
 }
 /*�������*/
 .min-button.delete div {
-    background-image: url('local/templates/pixel-house/images/delete.png');
+    background-image: url('../../local/templates/pixel-house/images/delete.png');
 }
 .min-button.delete div:before {
     border-radius: 4px;
