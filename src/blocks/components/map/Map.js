@@ -51,7 +51,7 @@ export class Map {
             map.behaviors.disable('scrollZoom');
 
             let placemark = new ymaps.Placemark([55.03937756965834,82.91865999999987], {
-                hintContent: "г. Москва, Профсоюзная ул., 23",
+                hintContent: "г.Новосибирск, Красный проспект, 62",
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.

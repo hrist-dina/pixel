@@ -19,9 +19,8 @@ header.header
                     a(href='#').auth-link Регистрация
         .header__middle
             +logo()
-            .header__search.search
-                input.search__input(name='q' placeholder='Поиск...')
-                button(type='submit').button-search
+            .header__search
+                include ../../components/search/search
             .header__contanct
                 a(href='tel:83833755505').phone-city
                     span 8 (383)

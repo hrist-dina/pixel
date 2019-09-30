@@ -1,0 +1,51 @@
+-
+    var searchResult = [
+        {
+            img: 'img/search/item.png',
+            name: 'Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)',
+            price: '68 999'
+        },
+        {
+            img: 'img/search/item.png',
+            name: 'Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)',
+            price: '20 999'
+        },
+        {
+            img: 'img/search/item.png',
+            name: 'Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)',
+            price: '10 900'
+        },
+        {
+            img: 'img/search/item.png',
+            name: 'Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)',
+            price: '7 199'
+        }
+    ]
+
+.search.js-search
+    form(action='' method='POST').search__inner
+        input.search__input(name='q' placeholder='Поиск...')
+        button(type='submit').button-search
+    .search__result
+        .search__result-inner
+            for item in searchResult
+                .search__result-item
+                    a(href='#').search__result-left
+                        .search__result-img
+                            img(src=item.img alt=item.name title=item.name)
+                        .search__result-name=item.name
+                    .search__result-rigth
+                        .search__result-price !{item.price} ₽
+                        .product__actions
+                            a(href='javascript:void(0)').product__compare
+                            a(href='javascript:void(0)').product__favorite
+                            a(href='javascript:void(0)').product__basket
+
+
+        .search__result-bottom
+            a(href='#').search__result-all
+             span.search__result-icon
+             p Показать все результаты поиска
+
+
+

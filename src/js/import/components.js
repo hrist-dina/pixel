@@ -8,6 +8,7 @@ import {Product} from "%components%/product/Product";
 import {Map} from "%components%/map/Map";
 import {Field} from "../classes/Field";
 import {Location} from "%components%/location/Location";
+import {Search} from "%components%/search/Search";
 
 $(document).ready(function () {
     new SliderMain('.js-slider-main');
@@ -19,4 +20,5 @@ $(document).ready(function () {
     new Map();
     new Field();
     new Location();
+    new Search();
 });
