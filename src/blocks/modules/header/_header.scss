@@ -1,12 +1,16 @@
 .header {
 
   &__top {
+    display: none;
     padding: 10px 0;
     border-bottom: 1.01296px solid #F4F4F4;
     box-sizing: border-box;
-    display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include md-block {
+      display: flex;
+    }
   }
 
   &__action {
@@ -23,29 +27,66 @@
   }
 
   &__middle {
-    padding: 15px 0 30px;
+    padding: 2px 0 8px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include md-block {
+      padding: 15px 0 30px;
+    }
   }
 
   &__search {
+    display: none;
     position: relative;
     height: 52px;
     box-sizing: border-box;
     width: 100%;
-    max-width: 647px;
-    margin-left: 80px;
-    margin-right: 69px;
+    max-width: 320px;
+    margin-left: 20px;
+    margin-right: 9px;
+
+    @include md-block {
+      display: block;
+    }
+
+    @include lg-block {
+      max-width: 500px;
+      margin-left: 40px;
+      margin-right: 29px;
+    }
+
+    @include xl-block {
+      max-width: 647px;
+      margin-left: 80px;
+      margin-right: 55px;
+    }
   }
 
   &__contanct {
-    text-align: right;
-    max-width: 195px;
+    width: 70%;
+    padding-left: 25px;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md-block {
+      padding-left: 0;
+      margin-top: 0;
+      display: block;
+      width: 100%;
+      text-align: right;
+      max-width: 195px;
+    }
 
     & .phone-city {
       margin-bottom: 4px;
+      order: 1;
     }
   }
 }

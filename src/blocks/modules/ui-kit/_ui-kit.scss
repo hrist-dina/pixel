@@ -34,11 +34,30 @@
   position: relative;
   display: inline-block;
   font-weight: bold;
-  font-size: 19px;
-  line-height: 26px;
+  font-size: 15px;
+  line-height: 20px;
   color: #0E398C;
   text-decoration: none;
-  padding-left: 40px;
+  padding-left: 25px;
+
+  & span {
+    display: none;
+  }
+
+  @include sm-block {
+    font-size: 16px;
+    line-height: 24px;
+
+    & span {
+      display: inline;
+    }
+  }
+
+  @include md-block {
+    font-size: 19px;
+    line-height: 26px;
+    padding-left: 40px;
+  }
 
   &:before {
     content: '';
@@ -55,11 +74,20 @@
 .phone-social {
   position: relative;
   display: inline-block;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 0;
   color: #7A8496;
   text-decoration: none;
   padding-left: 50px;
+
+  @include sm-block {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include md-block {
+    font-size: 16px;
+    line-height: 22px;
+  }
 
   &:before {
     content: '';
@@ -70,6 +98,10 @@
     right: auto;
     margin: auto;
     @extend .icon-telegram;
+
+    @include to($break_sm) {
+      background: url(icon-telegram(0E398C)) center no-repeat;
+    }
   }
 
   &:after {
@@ -81,6 +113,11 @@
     right: auto;
     margin: auto;
     @extend .icon-whatsapp;
+
+    @include to($break_sm) {
+      left: 30px;
+      background: url(icon-whatsapp(0E398C)) center no-repeat;
+    }
   }
 }
 

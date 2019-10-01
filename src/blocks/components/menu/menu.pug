@@ -2,11 +2,13 @@
     .container
         nav.menu__inner
             ul.menu__list
-                li.menu__item.menu_catalog
+                li.menu__item.menu_catalog.js-mobile-menu
                     a(href='#')
-                        span.icon-burger
-                        span Каталог
-                    ul.menu__child
+                        span.icon-burger.icon-catalog-mobile
+                        p Каталог
+                            |&nbsp;
+                            span товаров
+                    ul.menu__child.js-mobile-menu-list
                         li.menu__child-item.has-child
                             a(href='#') Смартфоны
                             ul.menu__child

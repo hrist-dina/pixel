@@ -4,8 +4,17 @@
   &__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
-    height: 55px;
+    height: 32px;
+    margin-left: -12px;
+    margin-right: -12px;
+
+    @include md-block {
+      height: 55px;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &__list {
@@ -18,12 +27,21 @@
   }
 
   &__item {
+    display: none;
     height: 100%;
     position: relative;
     box-sizing: border-box;
 
+    @include md-block {
+      display: inline-block;
+
+      &:before {
+        content: '';
+      }
+    }
+
     &:before {
-      content: '';
+      content: none;
       position: absolute;
       height: 20px;
       width: 1px;
@@ -38,34 +56,60 @@
     & > a {
       display: block;
       height: 100%;
-      font-size: 14px;
+      font-size: 11px;
       line-height: 19px;
       color: #fff;
       text-decoration: none;
-      padding: 17px 30px;
+      padding: 17px 10px;
       box-sizing: border-box;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: 2010px;
+      max-width: 215px;
       position: relative;
       z-index: 10;
+
+      @include lg-block {
+        font-size: 13px;
+        padding: 17px 20px;
+      }
+
+      @include xl-block {
+        font-size: 14px;
+        padding: 17px 30px;
+      }
     }
   }
 
   &__action {
     display: inline-flex;
     align-items: center;
-    padding: 16px 36px 17px 40px;
-    box-sizing: border-box;
-    height: auto;
+    padding: 6px 22px;
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
+    box-sizing: border-box;
+    height: 100%;
     color: #fff;
     background: #0FA0D9;
     text-decoration: none;
     @include transition(.5s, linear, all);
+
+    @include md-block {
+      padding: 16px 14px 17px 15px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 19px;
+    }
+
+    @include lg-block {
+      padding: 16px 24px 17px 25px;
+    }
+
+    @include xl-block {
+      font-size: 14px;
+      padding: 16px 36px 17px 40px;
+    }
 
     &:hover {
       color: #fff;
@@ -74,17 +118,31 @@
     & span {
       box-sizing: border-box;
       display: inline-block;
+
       &:first-child {
-        margin-right: 9px;
+        margin-right: 14px;
+
+        @include md-block {
+          margin-right: 9px;
+        }
       }
     }
   }
 
   &__basket {
+    display: none;
     position: relative;
     @extend .icon-basket;
-    margin-left: 30px;
+    margin-left: 10px;
     box-sizing: border-box;
+
+    @include md-block {
+      display: inline-block;
+    }
+
+    @include lg-block {
+      margin-left: 25px;
+    }
 
     &:before {
       content: attr(data-quantity);
@@ -106,15 +164,73 @@
   }
 
   &_catalog {
-    &:hover {
-      & .icon-burger {
-        @include icon-burger(#0E398C)
+    display: inline-block;
+    margin-left: 16px;
+
+    @include md-block {
+      &:hover {
+        & .icon-burger {
+          @include icon-burger(#0E398C)
+        }
       }
     }
+
+    & .icon-catalog-mobile {
+      @include to($break_md - 1px) {
+        width: 0;
+        height: 0;
+        background: transparent;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          left: auto;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 0;
+          height: 0;
+          background: transparent;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #fff;
+        }
+
+        &:after {
+          content: none;
+        }
+
+      }
+    }
+
     & > a {
       display: flex;
       align-items: center;
-      padding: 0 30px 0 26px;
+      padding: 0 10px 0 12px;
+
+      @include to($break_md) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      @include lg-block {
+        padding: 0 20px 0 16px;
+      }
+
+      @include xl-block {
+        padding: 0 30px 0 26px;
+      }
+
+      & > p {
+
+        & > span {
+          @include md-block {
+            display: none;
+          }
+        }
+      }
     }
 
     & .icon-burger {
@@ -164,28 +280,29 @@
     }
   }
 
-  &__item:hover {
-    box-shadow: 0 4.05186px 49px rgba(32, 42, 91, 0.07);
-    & > a {
-      background: #fff;
-      font-size: 14px;
-      line-height: 19px;
-      color: #0E398C;
-      position: relative;
-      z-index: 1000;
+  @include md-block {
+    &__item:hover {
+      box-shadow: 0 4.05186px 49px rgba(32, 42, 91, 0.07);
+
+      & > a {
+        background: #fff;
+        color: #0E398C;
+        position: relative;
+        z-index: 1000;
+      }
     }
-  }
 
-  &__item:hover > &__child,
-  &__child-item:hover > &__child {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0px);
+    &__item:hover > &__child,
+    &__child-item:hover > &__child {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
 
-  }
+    }
 
-  &__child-item:hover {
-    z-index: -1;
+    &__child-item:hover {
+      z-index: -1;
+    }
   }
 
   &__child-item > &__child {
@@ -193,6 +310,7 @@
     left: 223px; // с учетом padding родителя
     z-index: -1;
     box-shadow: inset 4px 0 25px -7px rgba(32, 42, 91, 0.07);
+
     &:before {
       content: '';
       position: absolute;
@@ -221,12 +339,32 @@
         @include transition(.5s, ease-in-out, all);
       }
     }
+
     &:hover {
       & > a {
         &:before {
           background-image: url(icon-arrow-triangle('0E398C'));
         }
       }
+    }
+  }
+
+  @include to($break_md) {
+    &__child {
+      position: fixed;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    &_catalog {
+      position: relative;
+      z-index: 100;
+    }
+
+    &__item.active-mobile > &__child {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 }

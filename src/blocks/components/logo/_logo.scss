@@ -1,9 +1,15 @@
 .logo {
   display: inline-block;
-  max-width: 179px;
-  height: 62px;
+  max-width: 90px;
+  height: 32px;
+
+  @include sm-block {
+    max-width: 179px;
+    height: 62px;
+  }
 
   & img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
