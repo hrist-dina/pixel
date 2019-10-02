@@ -8,8 +8,9 @@ mixin slider-main(item)
                 .slider-main__item-desc=item.desc
                 a(href='#').slider-main__item-more Подробнее
             if item.img
-                .slider-main__item-pic
-                    img(src=item.img)
+                .slider-main__item-left
+                    .slider-main__item-pic
+                        img(src=item.img)
 
 .slider-main.js-slider-main
     for item in slider

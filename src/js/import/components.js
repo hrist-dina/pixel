@@ -10,12 +10,16 @@ import {Field} from "../classes/Field";
 import {Location} from "%components%/location/Location";
 import {Search} from "%components%/search/Search";
 import {Menu} from "%components%/menu/Menu";
+import {SliderTopList} from "%components%/top-list/SliderTopList";
+import {TabsTopList} from "%components%/top-list/TabsTopList";
 
 $(document).ready(function () {
     new SliderMain('.js-slider-main');
     new SliderSidebar('.js-slider-sidebar');
     new SliderBrands('.js-slider-brands');
+    new SliderTopList('.js-slider-top-list');
     new TabBase();
+    new TabsTopList('.js-topList-tab');
     new News();
     new Product();
     new Map();

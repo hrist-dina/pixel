@@ -1,6 +1,9 @@
 .slider-sidebar {
   width: 100%;
-  max-width: 270px;
+
+  @include md-block {
+    max-width: 270px;
+  }
 
   &_mt {
     margin-top: 38px;
@@ -55,8 +58,11 @@
       font-size: 12px;
       line-height: 16px;
       color: #474747;
-      text-align: left;
       text-decoration: none;
+
+      @include md-block {
+        text-align: left;
+      }
     }
 
     &-pic {
@@ -66,6 +72,7 @@
       & img {
         max-width: 100%;
         max-height: 100%;
+        margin: auto;
       }
     }
 

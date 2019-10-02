@@ -168,6 +168,7 @@
     margin-left: 16px;
 
     @include md-block {
+      margin-left: 0;
       &:hover {
         & .icon-burger {
           @include icon-burger(#0E398C)
@@ -264,7 +265,7 @@
       }
 
       & a {
-        display: block;
+        display: inline-block;
         font-size: 12px;
         line-height: 14px;
         color: #474747;
@@ -311,6 +312,10 @@
     z-index: -1;
     box-shadow: inset 4px 0 25px -7px rgba(32, 42, 91, 0.07);
 
+    &.active-mobile {
+      top: 0;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -324,27 +329,23 @@
   }
 
   & .has-child {
-    & > a {
-      position: relative;
+    position: relative;
 
-      &:before {
-        content: '';
-        position: absolute;
-        @extend .icon-arrow-triangle;
-        right: 0;
-        left: auto;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        @include transition(.5s, ease-in-out, all);
-      }
+    &:before {
+      content: '';
+      position: absolute;
+      @extend .icon-arrow-triangle;
+      right: 0;
+      left: auto;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      @include transition(.5s, ease-in-out, all);
     }
 
     &:hover {
-      & > a {
-        &:before {
-          background-image: url(icon-arrow-triangle('0E398C'));
-        }
+      &:before {
+        background-image: url(icon-arrow-triangle('0E398C'));
       }
     }
   }
@@ -353,7 +354,8 @@
     &__child {
       position: fixed;
       width: 100%;
-      min-height: 100%;
+      min-height: #{calc(100% - 74px)};
+      overflow-y: auto;
     }
 
     &_catalog {
@@ -366,5 +368,32 @@
       opacity: 1;
       transform: translateY(0px);
     }
+
+    &__child-item.has-child  &__child {
+      display: none;
+    }
+    &__child-item.has-child  &__child.active-mobile {
+      display: block;
+      left: 0;
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0px);
+      z-index: 100;
+      min-height: 100%;
+      overflow-y: auto;
+    }
   }
+}
+
+.icon-back {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 20px;
+  margin-bottom: 10px;
+  background: url(icon-arrow-right-mini(0D398C)) no-repeat center;
+  background-size: contain;
+  @include rotate();
 }

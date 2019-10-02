@@ -1,7 +1,7 @@
 include ../product/product
 
 .top-list
-    ul.tab-list.js-tab-list
+    ul.tab-list.js-topList-tab-list
         li.tab(data-tab='discounts').active
             a(href='javascript:void(0)') Скидки дня
         li.tab(data-tab='new-items')
@@ -10,33 +10,33 @@ include ../product/product
             a(href='javascript:void(0)') Хиты продаж
         li.tab(data-tab='recommend')
             a(href='javascript:void(0)') Рекомендуем
-    .top-list__content.js-tab-content
+    .top-list__content.js-topList-tab-content
         .top-list__item.active(data-tab-content='discounts')
             .top-list__item-head
                 .top-list__item-title Скидки
                 a(href='discounts').top-list__item-more.link-arrow-right Смотреть все
-            .top-list__product-list(class=productsDiscount.type)
+            .top-list__product-list.js-slider-top-list(class=productsDiscount.type)
                 for item in productsDiscount.list
                     +product(item)
         .top-list__item(data-tab-content='new-items')
             .top-list__item-head
                 .top-list__item-title Новинки
                 a(href='new-items').top-list__item-more.link-arrow-right  Смотреть все
-            .top-list__product-list(class=productsNew.type)
+            .top-list__product-list.js-slider-top-list(class=productsNew.type)
                 for item in productsNew.list
                     +product(item)
         .top-list__item(data-tab-content='bestsellers')
             .top-list__item-head
                 .top-list__item-title Хиты продаж
                 a(href='bestsellers').top-list__item-more.link-arrow-right  Смотреть все
-            .top-list__product-list(class=productsHit.type)
+            .top-list__product-list.js-slider-top-list(class=productsHit.type)
                 for item in productsHit.list
                     +product(item)
         .top-list__item(data-tab-content='recommend')
             .top-list__item-head
                 .top-list__item-title Рекомендуем
                 a(href='recommend').top-list__item-more.link-arrow-right  Смотреть все
-            .top-list__product-list(class=productsRecommend.type)
+            .top-list__product-list.js-slider-top-list(class=productsRecommend.type)
                 for item in productsRecommend.list
                     +product(item)
 

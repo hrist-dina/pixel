@@ -1,12 +1,18 @@
 .feature {
-  @include row-flex();
-  margin-top: 20px;
-  margin-bottom: 20px;
+  @include u-row-flex(12px);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  @include lg-block {
+    @include row-flex();
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   &__item {
     position: relative;
-    @include col();
-    @include size(4);
+    @include u-col(12px);
+    @include size-lg(4);
+    @include u-size(4, $columns, 12px);
     background: #F3F5F6;
     border: 1px solid #F3F5F6;
     box-sizing: border-box;
@@ -14,6 +20,19 @@
     align-items: center;
     justify-content: space-between;
     height: 114px;
+
+    @include lg-block {
+      @include col();
+    }
+
+    @include to($break_md) {
+      @include u-size(12, $columns, 12px);
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &:before {
       content: '';
@@ -58,17 +77,36 @@
 
   &__text {
     width: #{calc(100% - 113px)};
-    padding: 27px 24px 27px 15px;
+    padding: 27px 15px 27px 0;
     box-sizing: border-box;
     text-align: right;
+
+    @include lg-block {
+      padding: 27px 24px 27px 15px;
+    }
   }
 
   &__title {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     text-align: right;
     color: #0E398C;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+
+    @include lg-block {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 14px;
+    @include lg-block {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 }

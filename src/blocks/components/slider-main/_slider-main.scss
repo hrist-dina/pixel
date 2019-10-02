@@ -1,21 +1,32 @@
 .slider-main {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  @include md-block {
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &__item {
     display: none;
     width: 100%;
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 24px 25px 25px 30px;
     box-sizing: border-box;
-    max-height: 247px;
+    max-height: 169px;
     height: 100%;
     z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include md-block {
+      padding: 10px 0 20px;
+      max-height: 247px;
+    }
 
     &:before {
       content: '';
@@ -39,49 +50,100 @@
 
     &-text {
       @include col();
+      @include size-lg(6);
+      @include shift-lg-left(2);
+      @include size-sm(7);
+      @include shift-sm-left(1);
       @include size(6);
-      @include shift-left(2);
+    }
+
+    &-left {
+      @include col();
+      @include size-sm(4);
+      @include size(6);
     }
 
     &-pic {
-      @include col();
-      @include size(4);
+      max-width: 122px;
+      width: 100%;
+      height: 122px;
+      margin-left: auto;
+
+      @include md-block {
+        margin-right: auto;
+        margin-left: 0;
+        max-width: 100%;
+        width: 216px;
+        height: 216px;
+      }
 
       & img {
-        width: auto;
-        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
 
     &-title {
       font-weight: 800;
-      font-size: 40px;
-      line-height: 54px;
+      font-size: 16px;
+      line-height: 22px;
       color: #fff;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       max-width: 550px;
+      max-height: 90px;
+      overflow: hidden;
+
+      @include sm-block {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 6px;
+      }
+
+      @include md-block {
+        font-size: 36px;
+        line-height: 45px;
+      }
+
+      @include xl-block {
+        font-size: 40px;
+        line-height: 54px;
+        max-height: 105px;
+      }
     }
 
     &-desc {
+      display: none;
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
       color: #fff;
       margin-bottom: 17px;
       max-width: 450px;
+      max-height: 44px;
+      overflow: hidden;
+
+      @include md-block {
+        display: block;
+      }
     }
 
     &-more {
       display: inline-block;
-      padding: 12px 35px;
+      padding: 6px 10px;
       background: #fff;
       box-sizing: border-box;
       font-weight: bold;
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 10px;
+      line-height: 14px;
       text-transform: uppercase;
       color: #0FA0D9;
       text-decoration: none;
+
+      @include md-block {
+        padding: 12px 35px;
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
   }
 
@@ -126,6 +188,21 @@
 
     & button {
       display: none;
+    }
+  }
+
+  & .slider-button {
+
+    &.next {
+      @include to($break_md) {
+        right: 0;
+      }
+    }
+
+    &.prev {
+      @include to($break_md) {
+        left: 0;
+      }
     }
   }
 }

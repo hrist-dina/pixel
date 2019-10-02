@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6, ul {
 	margin: 0;
 }
 
+.o-hidden {
+	overflow: hidden;
+}
+
 .container {
 	padding-left: 12px;
 	padding-right: 12px;
@@ -43,7 +47,10 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .main {
-	padding-top: 29px;
+	padding-top: 10px;
+	@include md-block {
+		padding-top: 29px;
+	}
 }
 
 
@@ -52,7 +59,10 @@ h1, h2, h3, h4, h5, h6, ul {
 	@include row-flex();
 
 	&_mt-50 {
-		margin-top: 58px;
+		margin-top: 28px;
+		@include lg-block {
+			margin-top: 58px;
+		}
 	}
 
 	& .content__box {
