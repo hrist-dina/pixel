@@ -1,78 +1,131 @@
 .catalog-main {
+  $mobileOffset: 5px;
 
   &__list {
-    @include row-flex();
+    @include u-row-flex($mobileOffset);
+    @include md-block {
+      @include row-flex();
+    }
   }
 
   &__haed {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    @include lg-block {
+      padding: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     position: relative;
-    @include col();
-    @include u-size(3, 9, $offset);
-    height: 397px;
+    @include u-col($mobileOffset);
+    @include u-size(4.5, 9, $mobileOffset);
+    height: 231px;
     background: #fff;
     box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);
     text-decoration: none;
     display: block;
-    margin-bottom: 27px;
+    margin-bottom: 5px;
     z-index: 0;
+    text-align: center;
+
+    @include md-block {
+      @include col();
+      @include u-size(3, 9, $offset);
+      height: 397px;
+      margin-bottom: 27px;
+    }
 
     &.big {
-      @include u-size(5, 9, $offset);
+      @include u-size(9, 9, $mobileOffset);
 
+      @include md-block {
+        @include u-size(5, 9, $offset);
+      }
     }
 
     &.middle {
-      @include u-size(4, 9, $offset);
+      @include u-size(4.5, 9, $mobileOffset);
+      height: 397px;
+      @include md-block {
+        @include u-size(4, 9, $offset);
+      }
     }
 
     &.big,
     &.middle {
-      height: 338px;
+      height: 229px;
+      @include md-block {
+        height: 338px;
+      }
     }
   }
 
   &__item.big &__pic,
   &__item.middle &__pic {
-    height: 293px;
+    height: 199px;
+    @include md-block {
+      height: 293px;
+    }
   }
 
 
   &__icon {
-    width: 73px;
+    width: 42px;
+
+    @include md-block {
+      width: 73px;
+    }
+
     &:before {
       content: '';
       position: absolute;
       bottom: 0;
       right: 0;
-      border: 36.5px solid transparent;
-      border-bottom: 36.5px solid #0E398C;
-      border-right: 36.5px solid #0E398C;
+      border: 21px solid transparent;
+      border-bottom: 21px solid #0E398C;
+      border-right: 21px solid #0E398C;
       z-index: 1;
+
+      @include md-block {
+        border-width: 36.5px;
+        border-bottom-width: 36.5px;
+        border-right-width: 36.5px;
+      }
     }
 
     &:after {
       content: '';
       position: absolute;
-      right: 11px;
-      bottom: 18px;
-      width: 22px;
-      height: 10px;
+      right: 6.4px;
+      bottom: 10.7px;
+      width: 12.8px;
+      height: 5.82px;
       background: url(icon-arrow-right-mini(CACACA)) no-repeat center;
       background-size: cover;
       z-index: 2;
+
+      @include md-block {
+        right: 11px;
+        bottom: 18px;
+        width: 22px;
+        height: 10px;
+      }
     }
   }
 
   &__pic {
-    height: 352px;
     background-color: #eeeeee;
+    height: 205px;
+    @include md-block {
+      height: 352px;
+    }
+
 
     & img {
       max-width: 100%;
@@ -81,16 +134,31 @@
   }
 
   &__bottom {
-    height: 45px;
+    height: 20px;
+    @include md-block {
+      height: 45px;
+
+    }
   }
 
   &__name {
     font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: 16px;
     color: #474747;
-    width: #{calc(100% - 75px)};
-    padding: 13px 20px;
+    width: #{calc(100% - 42px)};
+    padding: 8px 14px;
     box-sizing: border-box;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include md-block {
+      width: #{calc(100% - 75px)};
+      font-size: 14px;
+      line-height: 19px;
+      padding: 13px 20px;
+    }
   }
 }

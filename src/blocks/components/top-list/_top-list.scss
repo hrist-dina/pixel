@@ -1,24 +1,30 @@
 .top-list {
 
   &__section {
-    @include to($break_md) {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
+    //@include to($break_md) {
+    //  margin-left: -15px;
+    //  margin-right: -15px;
+    //  overflow: hidden;
+    //}
 
     & .content__box {
       @include size-md(8);
       @include size(12);
-      @include to($break_md) {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-      }
+      //@include to($break_md) {
+      //  width: 100%;
+      //  margin-left: 0;
+      //  margin-right: 0;
+      //}
     }
 
     & .sidebar__box {
       @include size-md(4);
       @include size(12);
+      //@include to($break_md) {
+      //  width: 100%;
+      //  margin-left: 0;
+      //  margin-right: 0;
+      //}
     }
   }
 
@@ -69,7 +75,7 @@
     }
 
     &-title {
-      font-family: Ubuntu;
+      font-family:'Ubuntu', 'OPen Sans', 'PT Sans', Verdana, Arial, sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
@@ -88,6 +94,11 @@
       padding: 9px 10px;
       background: #FFFFFF;
       box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);
+
+      @include md-block {
+        padding: 0;
+        box-shadow: none;
+      }
     }
 
     .top-list &-more {
@@ -98,11 +109,10 @@
       @include md-block {
         position: absolute;
         right: 0;
-        top: -35px;
+        top: -15px;
       }
 
       @include lg-block {
-        top: -40px;
         font-size: 14px;
         line-height: 19px;
       }
@@ -133,18 +143,18 @@
           height: 163px;
 
           &__img {
-            width: 135px;
-            margin-right: 20px;
+            width: 130px;
+            margin-right: 15px;
           }
 
           &__middle {
-            width: #{calc(100% - 155px)};
+            width: #{calc(100% - 150px)};
             padding: 30px 11px 12px 0;
           }
 
           &__title {
             font-size: 14px;
-            padding-right: 10px;
+            padding-right: 25px;
           }
 
           &__price {
@@ -196,7 +206,7 @@
   & .slick-dots {
     padding: 12px 11px;
     box-sizing: border-box;
-    width: #{calc(100% - 30px)};
+    width: 100%;
     height: 34px;
     background: #FFFFFF;
     box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);

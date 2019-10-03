@@ -1,11 +1,21 @@
 .about {
   @include row-flex();
   align-items: center;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  @include md-block {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 
   &__img {
     @include col();
-    @include size(7);
+    @include size(12);
+    @include size-md(7);
+    order: 1;
+    @include md-block {
+      order: 0;
+    }
 
     & img {
       width: 100%;
@@ -14,23 +24,46 @@
 
   &__info {
     @include col();
-    @include size(5);
+    @include size(12);
+    @include size-md(5);
+    padding: 0 10px;
+    @include md-block {
+      padding: 0;
+    }
   }
 
   &__title {
-    margin-bottom: 40px;
-    font-weight: 600;
-    font-size: 25px;
+    font-family:'Ubuntu', 'OPen Sans', 'PT Sans', Verdana, Arial, sans-serif;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 16px;
     color: #474747;
+
+    @include md-block {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 25px;
     color: #474747;
 
+    @include md-block {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
     & p {
-      margin-bottom: 22px;
+      margin-bottom: 14px;
+      @include md-block {
+        margin-bottom: 22px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

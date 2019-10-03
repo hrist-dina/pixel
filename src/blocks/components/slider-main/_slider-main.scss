@@ -1,13 +1,9 @@
 .slider-main {
   display: flex;
   align-items: center;
-  margin-left: -12px;
-  margin-right: -12px;
 
   @include md-block {
     margin-top: 5px;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   &__item {
@@ -45,22 +41,22 @@
     }
 
     &-inner {
-      @include row-flex();
+      @include row-flex(false);
     }
 
     &-text {
-      @include col();
+      @include col(false);
       @include size-lg(6);
       @include shift-lg-left(2);
       @include size-sm(7);
       @include shift-sm-left(1);
-      @include size(6);
+      @include size(6, false);
     }
 
     &-left {
-      @include col();
+      @include col(false);
       @include size-sm(4);
-      @include size(6);
+      @include size(6, false);
     }
 
     &-pic {

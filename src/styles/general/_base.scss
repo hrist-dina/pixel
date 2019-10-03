@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6, ul {
 		@include container();
 		@include xl(max-width, 1170px);
 	}
+
+	&_no-padding-mobile {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .img-responsive {
@@ -54,6 +59,7 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 
+
 .content-sidebar {
 	margin-top: 30px;
 	@include row-flex();
@@ -67,7 +73,8 @@ h1, h2, h3, h4, h5, h6, ul {
 
 	& .content__box {
 		@include col();
-		@include size(9);
+		@include size-lg(9);
+		@include size(12);
 	}
 
 	& .content__top {
@@ -76,7 +83,8 @@ h1, h2, h3, h4, h5, h6, ul {
 
 	& .sidebar__box {
 		@include col();
-		@include size(3);
+		@include size-lg(3);
+		@include size(12);
 	}
 }
 
@@ -92,9 +100,13 @@ h1,
 h3,
 .h3 {
 	font-weight: 600;
-	font-size: 25px;
-	line-height: 25px;
+	font-size: 16px;
+	line-height: 16px;
 	color: #474747;
+	@include md-block {
+		font-size: 25px;
+		line-height: 25px;
+	}
 }
 
 body .bx_vertical_menu_advanced > ul,

@@ -6,7 +6,10 @@
   }
 
   &_mt {
-    margin-top: 38px;
+    margin-top: 10px;
+    @include md-block {
+      margin-top: 38px;
+    }
   }
 
   &__item {

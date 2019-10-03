@@ -44,10 +44,16 @@ $fields: 15px;
     @include container-full();
 }
 
-@mixin row-flex(){
+@mixin row-flex($needMd:true){
     display: flex;
     flex-wrap: wrap;
-    @include row-offsets();
+    @if $needMd {
+        @include md-block {
+            @include row-offsets();
+        }
+    } @else {
+        @include row-offsets();
+    }
 }
 
 @mixin row-float(){
@@ -59,10 +65,16 @@ $fields: 15px;
     @include row-offsets();
 }
 
-@mixin col(){
+@mixin col($needMd:true){
     box-sizing: border-box;
     word-wrap: break-word;
-    @include col-offsets(margin);
+    @if $needMd {
+        @include md-block {
+            @include col-offsets(margin);
+        }
+    } @else {
+        @include col-offsets(margin);
+    }
 }
 
 @mixin col-float(){
@@ -79,9 +91,17 @@ $fields: 15px;
     @include col-offsets(padding);
 }
 
-@mixin size($n){
+@mixin size($n, $needMd:true){
     $val: 100% / $columns * $n;
-    width: #{calc(#{$val} - #{$offset})};
+
+    @if $needMd {
+        @include md-block {
+            width: #{calc(#{$val} - #{$offset})};
+        }
+        width: 100%;
+    } @else {
+        width: #{calc(#{$val} - #{$offset})};
+    }
 }
 
 @mixin size-xs($n){
@@ -382,19 +402,26 @@ $fields: 15px;
 @mixin u-row-flex($offset){
     display: flex;
     flex-wrap: wrap;
-    margin-left: ($offset / -2);
-    margin-right: ($offset / -2);
+    @include md-block {
+        margin-left: ($offset / -2);
+        margin-right: ($offset / -2);
+    }
 }
 
 @mixin u-col($offset){
     box-sizing: border-box;
     word-wrap: break-word;
-    margin-left: ($offset / 2);
-    margin-right: ($offset / 2);
+    @include md-block {
+        margin-left: ($offset / 2);
+        margin-right: ($offset / 2);
+    }
 }
 
 @mixin u-size($n, $columns, $offset){
-    width: #{calc(100% / #{$columns} * #{$n} - #{$offset})};
+   @include md-block {
+       width: #{calc(100% / #{$columns} * #{$n} - #{$offset})};
+   }
+    width: 100%;
 }
 
 @mixin reset(){

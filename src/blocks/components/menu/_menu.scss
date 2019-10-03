@@ -350,7 +350,7 @@
     }
   }
 
-  @include to($break_md) {
+  @include to($break_md - 1px) {
     &__child {
       position: fixed;
       width: 100%;

@@ -322,10 +322,10 @@ export const favs = () => gulp.src(paths.favicons.src)
 		"title": "Favicons"
 	}));
 
-export const development = gulp.series(cleanFiles, smartGrid,
+export const development = gulp.series(cleanFiles,
 	gulp.parallel(views, styles, stylesOld, old, scripts, svgsprites, images, fonts, favs),
 	gulp.parallel(server));
 
-export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, stylesOld, old, scripts, svgsprites, images, fonts, favs);
+export const prod = gulp.series(cleanFiles, serverConfig, views, styles, stylesOld, old, scripts, svgsprites, images, fonts, favs);
 
 export default development;
