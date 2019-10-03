@@ -1,22 +1,35 @@
 .product {
   position: relative;
-  @include col();
-  @include size(12);
+  @include col(false);
+  @include size(12, false);
   background: #fff;
   box-shadow: 0 0 3px rgba(34, 46, 98, 0.132);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 212px;
+  height: 250px;
+
+  @include md-block {
+    height: 212px;
+  }
 
   .cards &  {
-    @include u-size(3, 9, $offset);
+    @include u-size(9, 9, $offset, false);
     display: block;
     height: 400px;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
     @include transition(.3s,ease-in-out, box-shadow);
     &:hover {
       box-shadow: 0 4px 59px rgba(34, 46, 98, 0.132);
+    }
+
+    @include sm-block {
+      margin-bottom: 28px;
+      @include u-size(4.5, 9, $offset, false);
+    }
+
+    @include md-block {
+      @include u-size(3, 9, $offset, false);
     }
   }
 
@@ -29,10 +42,14 @@
     &:first-child {
       border-top: 0;
     }
+    flex-wrap: wrap;
+    @include md-block {
+      flex-wrap: nowrap;
+    }
   }
 
   &__list {
-    @include row-flex();
+    @include row-flex(false);
     padding: 15px 0;
   }
 
@@ -59,6 +76,11 @@
       height: auto;
       min-height: auto;
       padding: 0;
+      width: 100%;
+      @include md-block {
+        width: 65%;
+
+      }
     }
   }
 
@@ -128,6 +150,10 @@
 
     .text & {
       max-height: 39px;
+      width: 100%;
+      @include sm-block {
+        width: auto;
+      }
     }
   }
 
@@ -381,6 +407,11 @@
       height: auto;
       padding: 0;
       flex-direction: row;
+      width: 100%;
+
+      @include md-block {
+        width: auto;
+      }
     }
   }
 

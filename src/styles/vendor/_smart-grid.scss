@@ -399,29 +399,43 @@ $fields: 15px;
     }
 }
 
-@mixin u-row-flex($offset){
+@mixin u-row-flex($offset, $needMd:true){
     display: flex;
     flex-wrap: wrap;
-    @include md-block {
+    @if $needMd {
+        @include md-block {
+            margin-left: ($offset / -2);
+            margin-right: ($offset / -2);
+        }
+    } @else {
         margin-left: ($offset / -2);
         margin-right: ($offset / -2);
     }
 }
 
-@mixin u-col($offset){
+@mixin u-col($offset, $needMd:true){
     box-sizing: border-box;
     word-wrap: break-word;
-    @include md-block {
+    @if $needMd {
+        @include md-block {
+            margin-left: ($offset / 2);
+            margin-right: ($offset / 2);
+        }
+    } @else {
         margin-left: ($offset / 2);
         margin-right: ($offset / 2);
     }
 }
 
-@mixin u-size($n, $columns, $offset){
-   @include md-block {
-       width: #{calc(100% / #{$columns} * #{$n} - #{$offset})};
-   }
-    width: 100%;
+@mixin u-size($n, $columns, $offset, $needMd:true){
+    @if $needMd {
+        @include md-block {
+            width: #{calc(100% / #{$columns} * #{$n} - #{$offset})};
+        }
+        width: 100%;
+    } @else {
+        width: #{calc(100% / #{$columns} * #{$n} - #{$offset})};
+    }
 }
 
 @mixin reset(){

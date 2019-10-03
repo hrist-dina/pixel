@@ -126,8 +126,43 @@ body .uni-panel-sort {
 	border: none;
 	box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);
 
+	& .sort {
+		@include to($break_md) {
+			padding-left: 0;
+
+			& .values .value {
+				margin-left: 5px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	& .view {
+		@include to($break_md) {
+			padding-right: 10px;
+		}
+
+		& .views {
+			@include to($break_md) {
+				width: calc(40% - 10px);
+				text-align: right;
+			}
+		}
+	}
+
 	& .sort-count {
-		margin-right: 70px;
+		display: inline-block;
+		padding: 0;
+		width: 60%;
+		margin-right: 10px;
+		@include sm-block {
+			width: auto;
+		}
+		@include md-block {
+			margin-right: 70px;
+		}
 
 		& .values {
 			font-weight: 500;
