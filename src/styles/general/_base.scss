@@ -91,10 +91,15 @@ h1, h2, h3, h4, h5, h6, ul {
 h1,
 .h1 {
 	font-weight: 600;
-	font-size: 25px;
-	line-height: 29px;
+	font-size: 22px;
+	line-height: 25px;
 	color: #474747;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+	@include md-block {
+		margin-bottom: 40px;
+		font-size: 25px;
+		line-height: 29px;
+	}
 }
 
 h3,

@@ -6,18 +6,24 @@
   }
 
   &__item {
+    @include size(12);
     @include col();
-    @include size(3);
+    @include size-lg(3);
+    @include size-md(6);
     box-shadow: 0 0 3px rgba(34, 46, 98, 0.132);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     height: 397px;
     text-decoration: none;
+    @include md-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__img {
     background: #eeeeee;
     width: 100%;
     height: 352px;
+    text-align: center;
 
     & img {
       max-width: 100%;
