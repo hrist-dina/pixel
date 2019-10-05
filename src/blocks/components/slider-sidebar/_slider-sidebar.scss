@@ -1,7 +1,7 @@
 .slider-sidebar {
   width: 100%;
 
-  @include md-block {
+  @include lg-block {
     max-width: 270px;
   }
 

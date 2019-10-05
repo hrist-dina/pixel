@@ -2,8 +2,14 @@
   @return "data:image/svg+xml,%3Csvg width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 15V8.44681M5.35484 15V5.46809M10 15V1' stroke='%23#{$fill}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
 }
 
-@function icon-favorite($fill:'7A8496') {
-  @return "data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.58119 14.9508L14.8115 8.37772C16.3962 6.70579 16.3962 3.99506 14.8115 2.32314C13.2267 0.651214 10.6574 0.651215 9.07269 2.32314L8.58119 2.84169M8.5145 15L2.20257 8.36637C0.601326 6.68352 0.598825 3.94897 2.19699 2.26286C3.77475 0.598283 6.32635 0.5765 7.92943 2.21392L8.51452 2.81155' stroke='%23#{$fill}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
+@function icon-favorite($stroke: '7A8496', $fill:false) {
+  @if ($fill) {
+    $fill: '%230FA0D9';
+    $stroke: '0FA0D9';
+  } @else {
+    $fill: 'none';
+  }
+  @return "data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='#{$fill}' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.58119 14.9508L14.8115 8.37772C16.3962 6.70579 16.3962 3.99506 14.8115 2.32314C13.2267 0.651214 10.6574 0.651215 9.07269 2.32314L8.58119 2.84169M8.5145 15L2.20257 8.36637C0.601326 6.68352 0.598825 3.94897 2.19699 2.26286C3.77475 0.598283 6.32635 0.5765 7.92943 2.21392L8.51452 2.81155' stroke='%23#{$stroke}' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"
 }
 
 @function icon-search($fill: '0B2C72') {

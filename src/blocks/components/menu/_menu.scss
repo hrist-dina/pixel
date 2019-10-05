@@ -31,6 +31,7 @@
     height: 100%;
     position: relative;
     box-sizing: border-box;
+    @include transition();
 
     @include md-block {
       display: inline-block;
@@ -93,7 +94,11 @@
     color: #fff;
     background: #0FA0D9;
     text-decoration: none;
-    @include transition(.5s, linear, all);
+    @include transition();
+
+    &:hover {
+      box-shadow: 0 4.05186px 49px rgba(15, 160, 217, 0.15);
+    }
 
     @include md-block {
       padding: 16px 14px 17px 15px;
@@ -108,7 +113,7 @@
 
     @include xl-block {
       font-size: 14px;
-      padding: 16px 36px 17px 40px;
+      padding: 16px 38px 17px 40px;
     }
 
     &:hover {

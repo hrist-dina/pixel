@@ -36,9 +36,9 @@ mixin product(item)
                     span.product__price-old !{item.priceOld} ₽
                 span !{item.price} ₽
             .product__actions
-                a(href='javascript:void(0)').product__compare
-                a(href='javascript:void(0)').product__favorite
-                a(href='javascript:void(0)').product__basket
+                a(href='javascript:void(0)' class=item.isCompare ? 'active' : '').product__compare
+                a(href='javascript:void(0)' class=item.isFavorite ? 'active' : '').product__favorite
+                a(href='javascript:void(0)' class=item.inBasket ? 'active' : '').product__basket
 
 
 mixin product-list(products)

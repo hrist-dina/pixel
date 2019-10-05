@@ -44,6 +44,11 @@
       font-size: 16px;
       color: #474747;
       text-decoration: none;
+      @include transition();
+
+      &:hover {
+        color: #0E398C;
+      }
 
       @include to($break_lg) {
         font-size: 13px;
@@ -175,6 +180,15 @@
             &-discount {
               margin-right: 0;
               font-size: 18px;
+
+              @include to($break_sm) {
+                font-size: 16px;
+                &:before {
+                  border-width: 36px;
+                  border-width-top: 36px;
+                  border-width-right: 36px;
+                }
+              }
             }
           }
 

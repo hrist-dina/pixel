@@ -106,6 +106,7 @@
       line-height: 16px;
       color: #7A8496;
       text-decoration: none;
+      @include transition();
       &:hover {
         text-decoration: underline;
       }

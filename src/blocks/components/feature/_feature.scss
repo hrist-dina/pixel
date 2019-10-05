@@ -45,6 +45,29 @@
       box-sizing: border-box;
       z-index: 1;
     }
+
+
+    &:hover {
+      & .icon-guarantee {
+        &-round {
+          transform-origin: center;
+          animation: round-guarantee 1.5s;
+        }
+      }
+
+      & .icon-product-return {
+        &-svg {
+          transform-origin: center;
+          animation: round-product-return 1s;
+        }
+      }
+      & .icon-rocket {
+        &-svg {
+          position: relative;
+          animation: move-rocket 1s;
+        }
+      }
+    }
   }
 
   &__icon {
@@ -108,5 +131,43 @@
       font-size: 14px;
       line-height: 16px;
     }
+  }
+
+}
+
+@keyframes round-guarantee {
+  from {
+    @include rotate(0);
+  }
+
+  to {
+    @include rotate(360deg);
+  }
+}
+
+@keyframes round-product-return {
+  from {
+    @include rotate(0);
+  }
+
+  to {
+    @include rotate(360deg);
+  }
+}
+
+@keyframes move-rocket {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  50% {
+    top: -20px;
+    right: -20px;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
   }
 }

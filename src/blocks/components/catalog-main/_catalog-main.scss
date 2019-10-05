@@ -33,6 +33,11 @@
     margin-bottom: 5px;
     z-index: 0;
     text-align: center;
+    @include transition();
+
+    &:hover {
+      box-shadow: 0 4px 40px rgba(34, 46, 98, 0.132);
+    }
 
     @include md-block {
       @include col();

@@ -5,24 +5,9 @@ class SliderMain extends SliderBase {
         super.bindOptions(...options, {
             nextArrow: "<div class=\"slider-button next\"></div>",
             prevArrow: "<div class=\"slider-button prev\"></div>",
-            // responsive: [
-            //     {
-            //         breakpoint: 992,
-            //         settings: {
-            //
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 786,
-            //         settings: {
-            //         }
-            //     },
-            //     {
-            //         breakpoint: 480,
-            //         settings: {
-            //
-            //         }
-            //     }]
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
         });
     }
 

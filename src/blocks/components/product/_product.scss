@@ -1,7 +1,7 @@
 .product {
   position: relative;
-  @include col(false);
-  @include size(12, false);
+  @include col();
+  @include size(12);
   background: #fff;
   box-shadow: 0 0 3px rgba(34, 46, 98, 0.132);
   display: flex;
@@ -17,7 +17,7 @@
   }
 
   .cards &  {
-    @include u-size(9, 9, $offset, false);
+    @include u-size(9, 9, $offset);
     display: block;
     height: 400px;
     margin-bottom: 12px;
@@ -28,11 +28,12 @@
 
     @include sm-block {
       margin-bottom: 28px;
+      @include col(false);
       @include u-size(4.5, 9, $offset, false);
     }
 
     @include md-block {
-      @include u-size(3, 9, $offset, false);
+      @include u-size(3, 9, $offset);
     }
   }
 
@@ -52,7 +53,7 @@
   }
 
   &__list {
-    @include row-flex(false);
+    @include row-flex();
     padding: 15px 0;
   }
 
@@ -131,6 +132,9 @@
     }
 
     & > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       width: 100%;
       height: 100%;
@@ -480,6 +484,10 @@
     height: 14px;
     background: url(icon-compare(222E62)) no-repeat center;
     background-size: contain;
+
+    &.active {
+      background-image: url(icon-compare(0FA0D9));
+    }
   }
 
   &__favorite {
@@ -488,6 +496,10 @@
     height: 16px;
     background: url(icon-favorite(222E62)) no-repeat center;
     background-size: contain;
+
+    &.active {
+      background-image: url(icon-favorite(0FA0D9, true));
+    }
   }
 
   &__basket {
@@ -496,5 +508,9 @@
     height: 16px;
     background: url(icon-basket-mini(222E62)) no-repeat center;
     background-size: contain;
+
+    &.active {
+      background-image: url(icon-basket-mini(0FA0D9));
+    }
   }
 }

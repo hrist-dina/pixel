@@ -311,7 +311,6 @@
       }
     }
 
-
     &__custom {
       margin-top: 5px;
       position: relative;
@@ -320,6 +319,7 @@
       border: 1px solid #999999;
       box-sizing: border-box;
       @include transition();
+      cursor: pointer;
     }
 
     &__text {
@@ -348,5 +348,10 @@
     line-height: 16px;
     color: #fff;
     padding: 11px 30px;
+    @include transition();
+
+    &:hover {
+      opacity: .8;
+    }
   }
 }

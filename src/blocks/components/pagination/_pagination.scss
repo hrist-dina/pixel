@@ -7,12 +7,21 @@
   &__next {
     display: inline-block;
     padding: 9px;
-    width: 4px;
-    height: 8px;
+    width: 37px;
+    height: 37px;
+    box-sizing: border-box;
     background-size: cover;
     cursor: pointer;
     background: url(icon-arrow-triangle-mini(CACACA)) no-repeat center;
-    @include rotate(0deg)
+    background-size: 6px 10px;
+    border-radius: 50%;
+    @include rotate(0deg);
+    @include transition();
+
+    &:hover {
+      background-color: #0d398b;
+      background-image: url(icon-arrow-triangle-mini(fff));
+    }
   }
 
   &__back {
@@ -22,7 +31,7 @@
   & ul {
     list-style: none;
     display: inline-flex;
-    margin: 20px;
+    margin: 20px 10px;
 
     & li {
 
@@ -32,6 +41,20 @@
         line-height: 19px;
         color: #505050;
         text-decoration: none;
+        @include transition();
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: 37px;
+        height: 37px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -3px;
+
+        &:not(.active):hover {
+          color: #fff;
+          background: #0d398b;
+        }
 
         &.active {
           font-weight: bold;

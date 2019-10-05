@@ -165,34 +165,61 @@
   background: url(icon-arrow-right()) no-repeat center;
 }
 
+@mixin icon-social-hover() {
+  @include transition();
+
+  &:hover {
+    @content;
+  }
+}
+
 .icon-vk {
   width: 24px;
   height: 14px;
   background: url(icon-vk()) no-repeat center;
+
+  @include icon-social-hover {
+    background-image: url(icon-vk('0FA0D9'));
+  }
 }
 
 .icon-insta {
   width: 15px;
   height: 15px;
   background: url(icon-insta()) no-repeat center;
+
+  @include icon-social-hover {
+    background-image: url(icon-insta('0FA0D9'));
+  }
 }
 
 .icon-fb {
   width: 15px;
   height: 15px;
   background: url(icon-fb()) no-repeat center;
+
+  @include icon-social-hover {
+    background-image: url(icon-fb('0FA0D9'));
+  }
 }
 
 .icon-tw {
   width: 17px;
   height: 17px;
   background: url(icon-tw()) no-repeat center;
+  @include icon-social-hover {
+    background-image: url(icon-tw('0FA0D9'));
+  }
 }
 
 .icon-flamp {
   width: 21px;
   height: 18px;
   background: url(icon-flamp()) no-repeat center;
+
+  @include icon-social-hover {
+    background-image: url(icon-flamp('0FA0D9'));
+  }
 }
 
 .icon-arrow-triangle {

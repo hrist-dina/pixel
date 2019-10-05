@@ -13,7 +13,11 @@
     font-size: 12px;
     line-height: 16px;
     color: #7A8496;
+    @include transition();
 
+    &:hover {
+      color: #0E398C;
+    }
   }
 
   &__item:not(:last-child):after {

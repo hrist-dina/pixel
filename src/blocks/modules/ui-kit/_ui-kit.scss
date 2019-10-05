@@ -12,11 +12,38 @@
 .compare-link {
   display: inline-block;
   @extend .icon-compare;
+  &.active {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background: #0FA0D9;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      right: -5px;
+      bottom: 0;
+    }
+  }
 }
 
 .favorite-link {
   display: inline-block;
   @extend .icon-favorite;
+
+  &.active {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background: #0FA0D9;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
 
 .button {
@@ -78,6 +105,11 @@
   color: #7A8496;
   text-decoration: none;
   padding-left: 50px;
+  @include transition();
+
+  &:hover {
+    color: #0E398C;
+  }
 
   @include sm-block {
     font-size: 14px;
@@ -183,7 +215,7 @@
   @include transition();
 
   &:hover {
-    opacity: .8;
+    background: rgba(15, 160, 217, .2);
     color: #000;
   }
 

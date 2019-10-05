@@ -32,7 +32,13 @@
 
     & > a {
       @include item;
-      display: block;
+      display: inline-block;
+      @include transition();
+      box-sizing: border-box;
+
+      &:hover {
+        color: #0FA0D9;
+      }
     }
     & > span {
       display: block;

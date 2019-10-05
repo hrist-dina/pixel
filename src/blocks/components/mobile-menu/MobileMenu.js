@@ -21,6 +21,7 @@ export class MobileMenu {
             $(self.content).fadeToggle(300);
             $(this).toggleClass('active');
             $(self.list).fadeToggle(300);
+            $('html').toggleClass('o-hidden');
         });
     }
 }

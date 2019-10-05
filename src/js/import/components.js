@@ -13,6 +13,7 @@ import {Menu} from "%components%/menu/Menu";
 import {SliderTopList} from "%components%/top-list/SliderTopList";
 import {TabsTopList} from "%components%/top-list/TabsTopList";
 import {MobileMenu} from "%components%/mobile-menu/MobileMenu";
+import {InputMask} from "../classes/InputMask";
 
 $(document).ready(function () {
     new SliderMain('.js-slider-main');
@@ -23,10 +24,11 @@ $(document).ready(function () {
     new TabsTopList('.js-topList-tab');
     new News();
     new Product();
-    new Map();
     new Field();
     new Location();
     new Search();
     new Menu();
     new MobileMenu();
+    new InputMask().phone();
+    new Map();
 });

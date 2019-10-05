@@ -69,6 +69,11 @@
       color: #474747;
       text-decoration: none;
       margin-bottom: 4px;
+      @include transition();
+
+      &:hover {
+        color: #0D398C;
+      }
     }
 
     & span {

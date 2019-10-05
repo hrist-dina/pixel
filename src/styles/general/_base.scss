@@ -125,8 +125,26 @@ body .uni-panel-sort {
 	background: #fff;
 	border: none;
 	box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: auto;
+
+	@include md-block {
+		height: 44px;
+		flex-wrap: nowrap;
+	}
 
 	& .sort {
+		width: 100%;
+		padding: 5px;
+		float: none;
+		@include md-block {
+			width: 55%;
+			box-sizing: border-box;
+		}
+
 		@include to($break_md) {
 			padding-left: 0;
 
@@ -140,6 +158,16 @@ body .uni-panel-sort {
 		}
 	}
 	& .view {
+		width: 100%;
+		padding: 5px;
+		float: none;
+		@include md-block {
+			width: 45%;
+			box-sizing: border-box;
+			padding-right: 15px;
+			text-align: right;
+		}
+
 		@include to($break_md) {
 			padding-right: 10px;
 		}
@@ -158,12 +186,9 @@ body .uni-panel-sort {
 		width: 60%;
 		margin-right: 10px;
 
-		@include sm-block {
-			width: auto;
-		}
-
 		@include md-block {
-			margin-right: 50px;
+			width: auto;
+			margin-right: 10px;
 		}
 
         @include lg-block {

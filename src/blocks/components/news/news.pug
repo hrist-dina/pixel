@@ -1,3 +1,5 @@
+include ../pagination/pagination
+
 mixin news-item(item)
     if item.group
         .news__group
@@ -32,3 +34,5 @@ mixin news(news, needCategory=false)
             if news.list
                 for item in news.list
                     +news-item(item)
+        +pagination()
+
