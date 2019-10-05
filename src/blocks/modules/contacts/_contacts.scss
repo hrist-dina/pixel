@@ -1,25 +1,44 @@
 .contacts {
   display: flex;
-  margin-bottom: 100px;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  @include lg-block {
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
 
   &__left {
-    width: 400px;
-    margin-right: 80px;
+    @include lg-block {
+      width: 400px;
+      margin-right: 80px;
+    }
   }
 
   &__right {
-    width: #{calc(100% - 480px)};
+    @include lg-block {
+      width: #{calc(100% - 480px)};
+    }
   }
 
   &__info {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
+    @include lg-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__row {
     margin-bottom: 11px;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
     color: #26282D;
+
+    @include lg-block {
+      font-size: 16px;
+      line-height: 28px;
+    }
 
     & a {
       text-decoration: none;
@@ -53,6 +72,11 @@
     position: relative;
     padding-left: 45px;
     color: #0D398C;
+    display: block;
+
+    @include lg-block {
+      display: inline-block;
+    }
 
     &:before {
       content: '';
@@ -85,15 +109,25 @@
 
   &__phone-city {
     margin-right: 30px;
+    display: block;
+    margin-bottom: 11px;
+    @include lg-block {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
     &:before {
       @include icon-phone(474747);
     }
   }
 
   &__time {
-
     & span {
       margin-right: 35px;
+      display: block;
+      @include sm-block {
+        display: inline-block;
+      }
     }
 
     &:before {
@@ -113,27 +147,48 @@
   }
 
   &__requisite {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
     color: #474747;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include lg-block {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 50px;
+    }
 
     & span {
-      display: inline-block;
+      display: block;
       box-sizing: border-box;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
-      &:nth-child(odd) {
-        margin-right: 20px;
+      @include sm-block {
+        display: inline-block;
+      }
+      margin-right: 20px;
+      @include lg-block {
+        margin-bottom: 20px;
+
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
       }
     }
   }
 
   &__form {
     position: relative;
-    padding: 50px 45px 60px;
+    padding: 20px 25px 30px;
     background: #fff;
     box-shadow: 0 4px 59px rgba(34, 46, 98, 0.132);
+    margin-bottom: 30px;
+
+    @include md-block {
+      padding: 50px 45px;
+      margin-bottom: 0;
+    }
 
 
     &::before {
@@ -141,20 +196,31 @@
       position: absolute;
       top: 0;
       right: 0;
-      border: 40px solid transparent;
-      border-top: 40px solid #0FA0D9;
-      border-right: 40px solid #0FA0D9;
+      border: 20px solid transparent;
+      border-top: 20px solid #0FA0D9;
+      border-right: 20px solid #0FA0D9;
       z-index: 1;
+
+      @include lg-block {
+        border: 40px solid transparent;
+        border-top: 40px solid #0FA0D9;
+        border-right: 40px solid #0FA0D9;
+      }
     }
 
     &-title {
       font-family:'Ubuntu', 'OPen Sans', 'PT Sans', Verdana, Arial, sans-serif;
       font-weight: 500;
-      font-size: 25px;
-      line-height: 29px;
+      font-size: 20px;
+      line-height: 25px;
       color: #26282D;
       padding-left: 28px;
       margin-bottom: 25px;
+
+      @include lg-block {
+        font-size: 25px;
+        line-height: 29px;
+      }
     }
   }
 }
@@ -202,6 +268,13 @@
       line-height: 21px;
       color: #b50404;
     }
+
+    .focused & {
+      &:after {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
   }
 
   &__textarea {
@@ -212,5 +285,68 @@
     height: 143px;
     padding: 9px 16px;
     box-sizing: border-box;
+  }
+
+  &-checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+
+    &__input {
+      display: none;
+    }
+
+    &__input:checked ~ &__custom {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        right: 0;
+        bottom: 0;
+        width: 6px;
+        height: 6px;
+        box-sizing: border-box;
+        background: #0D398C;
+      }
+    }
+
+
+    &__custom {
+      margin-top: 5px;
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border: 1px solid #999999;
+      box-sizing: border-box;
+      @include transition();
+    }
+
+    &__text {
+      width: #{calc(100% - 20px)};
+      font-size: 12px;
+      line-height: 21px;
+      color: #999999;
+      margin-left: 10px;
+
+      & a {
+        display: inline;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 21px;
+        color: #999999;
+      }
+    }
+  }
+}
+
+.button {
+  &-submit {
+    margin-top: 20px;
+    background: #0D398C;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    padding: 11px 30px;
   }
 }

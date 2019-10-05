@@ -27,8 +27,8 @@ export class Map {
     controlOptions() {
         return {
             position: {
-                top: this.isMobile() ? 60 : 45,
-                right: '35px'
+                top: this.isMobile() ? 25 : 45,
+                right: this.isMobile() ? 15 : 35
             },
         };
     }

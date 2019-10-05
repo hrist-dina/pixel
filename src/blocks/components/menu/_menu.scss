@@ -196,13 +196,17 @@
           border-left: 5px solid transparent;
           border-right: 5px solid transparent;
           border-top: 5px solid #fff;
+          @include transition();
         }
 
         &:after {
           content: none;
         }
-
       }
+    }
+
+    &.active-mobile .icon-catalog-mobile:before {
+      @include rotate();
     }
 
     & > a {

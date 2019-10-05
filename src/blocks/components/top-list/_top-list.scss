@@ -134,27 +134,31 @@
         @include to($break_lg) {
           margin-bottom: 2px;
           box-shadow: 0 0 3px rgba(34, 46, 98, 0.132);
+          padding-bottom: 0;
         }
 
         @include to($break_md) {
           display: flex;
           align-items: flex-start;
-          box-shadow: none;
+          margin-left: 0;
+          margin-right: 0;
           height: 163px;
 
           &__img {
-            width: 130px;
+            width: 125px;
             margin-right: 15px;
           }
 
           &__middle {
-            width: #{calc(100% - 150px)};
-            padding: 30px 11px 12px 0;
+            width: #{calc(100% - 140px)};
+            padding: 25px 11px 12px 0;
           }
 
           &__title {
             font-size: 14px;
-            padding-right: 25px;
+            line-height: 16px;
+            padding-right: 20px;
+            max-height: 50px;
           }
 
           &__price {
@@ -178,10 +182,11 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: #{calc(100% - 155px)};
+            width: #{calc(100% - 140px)};
             align-self: flex-end;
             padding: 0 11px 12px 0;
             box-sizing: border-box;
+            align-items: flex-end;
           }
 
           &__compare {

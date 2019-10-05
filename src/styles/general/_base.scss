@@ -157,12 +157,18 @@ body .uni-panel-sort {
 		padding: 0;
 		width: 60%;
 		margin-right: 10px;
+
 		@include sm-block {
 			width: auto;
 		}
+
 		@include md-block {
-			margin-right: 70px;
+			margin-right: 50px;
 		}
+
+        @include lg-block {
+          margin-right: 70px;
+        }
 
 		& .values {
 			font-weight: 500;
@@ -187,4 +193,11 @@ body .uni-panel-sort {
 			}
 		}
 	}
+}
+
+@include to(750px) {
+  .adaptiv .item > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

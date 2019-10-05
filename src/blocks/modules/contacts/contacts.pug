@@ -31,11 +31,14 @@ section.contacts
                 label.field
                     span.field__title.field__required Сообщение
                     textarea.field__textarea(name="message" tabindex="4")
-                .consent
-                    input(type="checkbox" id="consent" checked="" disabled="")
-                    p.label-line.gray-label Я согласен(а) на
-                    p.label-line
+                label.field-checkbox
+                    input.field-checkbox__input(type="checkbox" name='agree' checked)
+                    .field-checkbox__custom
+                    .field-checkbox__text
+                        | Я согласен(а) на
+                        |
                         a(href="/consent" target="_blank") обработку персональных данных
+                button.button.button-submit Отправить
 
 
     .contacts__right

@@ -1,15 +1,34 @@
 .cdek {
   margin-top: 30px;
-  padding: 20px 24px;
+  padding: 5px 9px;
   border: 2px solid #D6EDF7;
   box-sizing: border-box;
   display: flex;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+
+  @include sm-block {
+    padding: 10px 14px;
+    flex-wrap: nowrap;
+  }
+
+  @include lg-block {
+    padding: 20px 24px;
+  }
 
   &__logo {
     width: 78px;
     height: 40px;
     margin-right: 45px;
+    margin-bottom: 0;
+
+    @include to($break_sm) {
+      margin-bottom: 10px;
+    }
+
+    @include to($break_lg) {
+      margin-right: 25px;
+    }
 
     & img {
       max-width: 100%;
@@ -21,6 +40,33 @@
     text-align: left;
     border: none;
 
+    @include to($break_sm) {
+      width: 100%;
+    }
+
+    & tr {
+      @include to($break_sm) {
+        display: block;
+
+        & td {
+          position: relative;
+          width: 100%;
+          padding-right: 0;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            display: inline-block;
+            content: attr(data-th);
+            font-weight: 600;
+            position: relative;
+            width: 45%;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
     & td,
     & th {
       min-width: 80px;
@@ -31,10 +77,20 @@
       font-size: 14px;
       line-height: 16px;
       color: #474747;
+
+      @include to($break_lg) {
+        padding-right: 25px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
 
     & th {
       font-weight: 600;
+      @include to($break_sm) {
+        display: none;
+      }
     }
   }
 }

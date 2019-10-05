@@ -12,6 +12,7 @@ import {Search} from "%components%/search/Search";
 import {Menu} from "%components%/menu/Menu";
 import {SliderTopList} from "%components%/top-list/SliderTopList";
 import {TabsTopList} from "%components%/top-list/TabsTopList";
+import {MobileMenu} from "%components%/mobile-menu/MobileMenu";
 
 $(document).ready(function () {
     new SliderMain('.js-slider-main');
@@ -27,4 +28,5 @@ $(document).ready(function () {
     new Location();
     new Search();
     new Menu();
+    new MobileMenu();
 });

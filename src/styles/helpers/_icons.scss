@@ -85,8 +85,54 @@
   }
 }
 
+@mixin icon-mobile-burger($color: #0FA0D9) {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  position: relative;
+  width: 19px;
+  height: 2px;
+  background: $color;
+  border-right: 2px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 2px;
+    background: $color;
+    border-right: 2px;
+  }
+
+  &:before {
+    top: 7px;
+  }
+
+  &:after {
+    bottom: 7px;
+  }
+}
+
 .icon-burger {
   @include icon-burger();
+}
+
+.icon-mobile-burger {
+  @include icon-mobile-burger();
+  @include transition();
+  cursor: pointer;
+  &.active {
+    @include rotate(-45deg);
+
+    &:before {
+      top: 0;
+      @include rotate(90deg);
+    }
+    &:after {
+      content: none;
+    }
+  }
 }
 
 @mixin icon-placemark($fill:'fff') {
@@ -184,6 +230,27 @@
   width: 17px;
   height: 17px;
   background: url(icon-location()) no-repeat center;
+}
+
+.icon-mobile-search {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(icon-mobile-search()) no-repeat center;
+}
+
+.icon-personal-area {
+  display: inline-block;
+  width: 15px;
+  height: 17px;
+  background: url(icon-personal-area()) no-repeat center;
+}
+
+.icon-mobile-basket {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(icon-mobile-basket()) no-repeat center;
 }
 
 

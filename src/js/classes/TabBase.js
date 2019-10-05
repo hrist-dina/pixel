@@ -5,7 +5,6 @@ export class TabBase {
         this.tabList = $(`${selector}-list`).children();
         this.tabContent = $(`${selector}-content`).children();
 
-        console.log(this.tabList);
         this.init();
     }
 

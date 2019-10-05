@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 export class Menu {
-    constructor(selector = '.js-mobile-menu') {
+    constructor(selector = '.js-menu-catalog') {
 
         this.menu = selector;
         this.menuList = `${selector}-list`;
@@ -39,7 +39,7 @@ export class Menu {
                 if ($(this).hasClass('has-child') || child) {
                     $(child).addClass('active-mobile');
                     if (!$(child).find(self.menuBack)[0]) {
-                        $(child).prepend($(`<div class="icon-back js-mobile-menu-back"></div>`));
+                        $(child).prepend($(`<div class="icon-back js-menu-catalog-back"></div>`));
                     }
                 }
             });

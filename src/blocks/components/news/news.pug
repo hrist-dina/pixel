@@ -6,8 +6,7 @@ mixin news-item(item)
                     +news-item(itemGroup)
     else
         a(href="#" class=item.type ? item.type : '').news__item
-            .news__img
-                img(src=item.img alt=item.title title=item.title)
+            .news__img(style=`background-image: url(${src=item.img})` alt=item.title title=item.title)
             .news__bottom
                 .news__title=item.title
                 if item.desc
