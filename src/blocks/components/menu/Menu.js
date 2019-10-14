@@ -31,6 +31,8 @@ export class Menu {
                 }
                 $(this).toggleClass('active-mobile');
                 $('html').toggleClass('o-hidden');
+                console.log($(this).parents('.header'));
+                $(this).parents('.header').toggleClass('fixed');
 
             });
 

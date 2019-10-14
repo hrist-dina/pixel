@@ -393,6 +393,12 @@
       overflow-y: auto;
     }
   }
+
+  & .icon-back {
+    @include md-block {
+      display: none;
+    }
+  }
 }
 
 .icon-back {

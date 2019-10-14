@@ -169,11 +169,11 @@
 
 .slider-button {
   position: absolute;
-  width: 12px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
   background: url(icon-arrow-triangle('fff')) no-repeat center;
-  background-size: cover;
+  background-size: 12px 24px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -181,19 +181,13 @@
 
   &.prev {
     right: auto;
-    left: 20px;
+    left: 4px;
     @include rotate();
-    @include to(1440px) {
-      left: 20px;
-    }
   }
 
   &.next {
     left: auto;
-    right: 20px;
-    @include to(1440px) {
-      right: 20px;
-    }
+    right: 4px;
   }
 }
 
