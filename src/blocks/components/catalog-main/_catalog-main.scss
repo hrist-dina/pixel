@@ -3,6 +3,7 @@
 
   &__list {
     @include u-row-flex($mobileOffset);
+    justify-content: space-between;
     @include md-block {
       @include row-flex();
     }
@@ -24,7 +25,7 @@
   &__item {
     position: relative;
     @include u-col($mobileOffset);
-    @include u-size(4.5, 9, $mobileOffset);
+    @include u-size(4.5, 9, $mobileOffset, false);
     height: 231px;
     background: #fff;
     box-shadow: 1px 1px 2px rgba(34, 46, 98, 0.132);
@@ -55,7 +56,7 @@
     }
 
     &.middle {
-      @include u-size(4.5, 9, $mobileOffset);
+      @include u-size(4.5, 9, $mobileOffset, false);
       height: 397px;
       @include md-block {
         @include u-size(4, 9, $offset);
@@ -68,14 +69,6 @@
       @include md-block {
         height: 338px;
       }
-    }
-  }
-
-  &__item.big &__pic,
-  &__item.middle &__pic {
-    height: 199px;
-    @include md-block {
-      height: 293px;
     }
   }
 
@@ -125,8 +118,11 @@
   }
 
   &__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #eeeeee;
-    height: 205px;
+    height: 199px;
     @include md-block {
       height: 352px;
     }
@@ -135,6 +131,15 @@
     & img {
       max-width: 100%;
       max-height: 100%;
+    }
+  }
+
+
+  &__item.big &__pic,
+  &__item.middle &__pic {
+    height: 199px;
+    @include md-block {
+      height: 293px;
     }
   }
 

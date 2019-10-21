@@ -1,7 +1,11 @@
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+
+  @include md-block {
+    justify-content: flex-end;
+  }
 
   &__back,
   &__next {

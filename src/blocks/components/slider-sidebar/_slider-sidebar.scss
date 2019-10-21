@@ -52,8 +52,12 @@
     }
 
     &-inner {
-      padding: 17px 45px 45px;
+      padding: 17px;
       box-sizing: border-box;
+
+      @include lg-block {
+        padding: 17px 45px 45px;
+      }
     }
 
     &-desc {
@@ -62,15 +66,30 @@
       line-height: 16px;
       color: #474747;
       text-decoration: none;
+      max-width: 105px;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
 
-      @include md-block {
-        text-align: left;
+      @include lg-block {
+        display: block;
+        max-width: 100%;
       }
     }
 
     &-pic {
+      max-width: 140px;
+      margin-right: 24px;
+      display: inline-block;
+      vertical-align: middle;
       width: 100%;
       height: 100%;
+
+      @include lg-block {
+        display: block;
+        margin-right: 0;
+        max-width: 100%;
+      }
 
       & img {
         max-width: 100%;
@@ -81,11 +100,17 @@
 
     &-title {
       font-weight: 600;
-      font-size: 22px;
-      line-height: 25px;
+      font-size: 16px;
+      line-height: 18px;
       color: #474747;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
       text-decoration: none;
+
+      @include md-block {
+        margin-bottom: 45px;
+        font-size: 22px;
+        line-height: 25px;
+      }
     }
   }
 
