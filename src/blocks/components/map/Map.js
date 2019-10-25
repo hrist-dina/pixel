@@ -1,10 +1,12 @@
 import $ from "jquery";
 
 export class Map {
-    constructor(id = "map") {
+    constructor(id = "map", options = {}) {
         this.map = id;
         this.idZoomIn = "zoom-in";
         this.idZoomOut = "zoom-out";
+
+        this.options = options;
 
         this.init();
     }
@@ -24,6 +26,22 @@ export class Map {
             "</div>";
     }
 
+    get zoom() {
+        return this.options && this.options.zoom ? this.options.zoom : 17;
+    }
+
+    get location() {
+        return  this.options && this.options.location ? this.options.location : [55.03937756965834, 82.91865999999987];
+    }
+
+    get center() {
+        return  this.options && this.options.center ? this.options.center : [55.03937756965834, 82.91865999999987];
+    }
+
+    get hint() {
+        return  this.options && this.options.hint ? this.options.hint : "г.Новосибирск, Красный проспект, 62";
+    }
+
     controlOptions() {
         return {
             position: {
@@ -33,25 +51,19 @@ export class Map {
         };
     }
 
-    getCenter() {
-        if (this.isMobile()) {
-            return [55.03937756965834,82.91865999999987];
-        }
-        return [55.03937756965834,82.91865999999987];
-    }
-
     initMap() {
+        console.log(this.center);
         ymaps.ready().then(() => {
             let map = new ymaps.Map(this.map, {
-                center: this.getCenter(),
-                zoom: 17,
+                center: this.center,
+                zoom: this.zoom,
                 controls: []
             });
 
             map.behaviors.disable('scrollZoom');
 
-            let placemark = new ymaps.Placemark([55.03937756965834,82.91865999999987], {
-                hintContent: "г.Новосибирск, Красный проспект, 62",
+            let placemark = new ymaps.Placemark(this.location, {
+                hintContent: this.hint,
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.

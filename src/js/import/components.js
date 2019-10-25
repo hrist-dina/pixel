@@ -30,5 +30,11 @@ $(document).ready(function () {
     new Menu();
     new MobileMenu();
     new InputMask().phone();
-    new Map();
+    if (window.mapContacts) {
+        window.mapContacts.forEach(function (item) {
+            new Map('map', item);
+        });
+    } else {
+        new Map();
+    }
 });
