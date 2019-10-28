@@ -15,7 +15,7 @@ export class Product {
     }
 
     init() {
-        this.onClickView();
+        // this.onClickView();
     }
 
     onClickView() {
