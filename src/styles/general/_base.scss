@@ -216,6 +216,51 @@ body .uni-panel-sort {
 	}
 }
 
+
+body .min-button.compare {
+	& .add {
+		@extend .icon-compare;
+		background-color: transparent !important;
+		background-size: contain;
+
+		&:hover {
+			@extend .icon-compare;
+			background-color: transparent !important;
+			background-size: contain;
+		}
+	}
+
+	& .remove {
+		background: url(icon-compare(0FA0D9)) no-repeat center;
+		&:before {
+			content: none;
+		}
+	}
+}
+
+body .min-button.like {
+	margin-left: 16px !important;
+	&  .fa.fa-star-o {
+		display: none;
+	}
+
+	& .add {
+		width: 17px;
+		height: 16px;
+		background: url(icon-favorite(222E62)) no-repeat center;
+		background-size: contain;
+	}
+
+	& .remove {
+		background: url(icon-favorite(0FA0D9, true)) no-repeat center;
+
+		&:before {
+			content: none;
+		}
+	}
+
+}
+
 @include to(750px) {
   .adaptiv .item > .row {
     margin-left: 0;
