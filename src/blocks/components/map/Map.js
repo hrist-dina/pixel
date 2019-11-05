@@ -52,7 +52,6 @@ export class Map {
     }
 
     initMap() {
-        console.log(this.center);
         ymaps.ready().then(() => {
             let map = new ymaps.Map(this.map, {
                 center: this.center,

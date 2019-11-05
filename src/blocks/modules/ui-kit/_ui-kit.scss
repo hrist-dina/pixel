@@ -104,7 +104,6 @@
   font-size: 0;
   color: #7A8496;
   text-decoration: none;
-  padding-left: 50px;
   @include transition();
 
   &:hover {
@@ -120,36 +119,38 @@
     font-size: 16px;
     line-height: 22px;
   }
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: auto;
-    margin: auto;
-    @extend .icon-telegram;
+.link-ws {
+  @extend .icon-whatsapp;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 11px;
+  @include transition();
 
-    @include to($break_sm) {
-      background: url(icon-telegram(0E398C)) center no-repeat;
-    }
+  &:hover {
+    background: url(icon-whatsapp(0E398C)) center no-repeat;
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 24px;
-    top: 0;
-    bottom: 0;
-    right: auto;
-    margin: auto;
-    @extend .icon-whatsapp;
+  @include to($break_sm) {
+    left: 30px;
+    background: url(icon-whatsapp(0E398C)) center no-repeat;
+  }
+}
 
-    @include to($break_sm) {
-      left: 30px;
-      background: url(icon-whatsapp(0E398C)) center no-repeat;
-    }
+.link-tg {
+  @extend .icon-telegram;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 8px;
+  @include transition();
+
+  &:hover {
+    background: url(icon-telegram(0E398C)) center no-repeat;
+  }
+
+  @include to($break_sm) {
+    background: url(icon-telegram(0E398C)) center no-repeat;
   }
 }
 

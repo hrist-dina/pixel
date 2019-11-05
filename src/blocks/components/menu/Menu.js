@@ -22,6 +22,10 @@ export class Menu {
         if (this.isMobile()) {
             const self = this;
             $(this.menu).on('click', function (e) {
+                if(self.isMobile()) {
+                    e.preventDefault();
+                }
+
                 if (
                     $(self.menuList)[0] === $(e.target).parents(self.menuList)[0]
                     ||
@@ -31,12 +35,11 @@ export class Menu {
                 }
                 $(this).toggleClass('active-mobile');
                 $('html').toggleClass('o-hidden');
-                console.log($(this).parents('.header'));
                 $(this).parents('.header').toggleClass('fixed');
 
             });
 
-            $(this.menuList + ' li').on('click', function (e) {
+            $(this.menuList + ' li').on('click', function () {
                 let child = $(this).find('> ul')[0];
                 if ($(this).hasClass('has-child') || child) {
                     $(child).addClass('active-mobile');
@@ -47,7 +50,6 @@ export class Menu {
             });
 
             $(document).on('click', this.menuBack, function () {
-                console.log(this);
                 $(this).parent('.active-mobile').removeClass('active-mobile');
             });
         }
