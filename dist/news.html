@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Новости</title>
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!-- Старые стили и скрипты, большая часть из компонентов битрикса-->
+    <link rel="stylesheet" href="./styles/old/template.css">
+    <!-- Новые стили-->
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <!-- Класс adaptiv - со старых стилей, пришлось оставить для совместимости-->
+  <body class="adaptiv">
+    <div class="wrapper">
+      <div class="main-content">
+        <header class="header">
+          <div class="container"> 
+            <div class="header__top">
+              <div class="location js-location"><a class="location__link js-location-link" href="javascript:void(0)"><span class="icon-location"></span><span class="location__text">Москва</span></a>
+                <div class="location__list"><a class="location__item" href="javascript:void(0)">Новосибирск</a><a class="location__item" href="javascript:void(0)">Санкт-Петербург</a></div>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="header__action-list"><a class="header__action compare-link active" href="#"></a><a class="header__action favorite-link active" href="#"></a>
+                <div class="header__auth auth"><a class="auth-link" href="#">Вход</a><a class="auth-link" href="#">Регистрация</a></div>
+              </div>
+            </div>
+            <div class="header__middle"><a class="logo" href="/"><img src="img/logo.svg"></a>
+              <div class="header__search">
+                <div class="search js-search">
+                  <form class="search__inner" action="" method="POST">
+                    <input class="search__input" name="q" placeholder="Поиск...">
+                    <button class="button-search" type="submit"></button>
+                  </form>
+                  <div class="search__result">
+                    <div class="search__result-inner">
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)" title="Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)"></div>
+                          <div class="search__result-name">Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">68 999 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)" title="Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">20 999 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)" title="Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">10 900 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)" title="Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">7 199 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__result-bottom"><a class="search__result-all" href="#"><span class="search__result-icon"></span>
+                        <p>Показать все результаты поиска</p></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__contanct"><a class="phone-city" href="tel:83833755505"><span>8 (383)</span>
+                  375-55-05</a>
+                <div class="header__social"><a class="link-tg" href="https://t.me/Pixelhouse_ru" target="_blank"></a><a class="link-ws" href="https://wa.me/79231455505" target="_blank"></a><a class="phone-social" href="tel:+79231455505"><span>+ 7 (923) 145-55-05</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="container">
+              <nav class="menu__inner">
+                <ul class="menu__list">
+                  <li class="menu__item menu_catalog js-menu-catalog"><a href="#"><span class="icon-burger icon-catalog-mobile"></span>
+                      <p>
+                        Каталог&nbsp;<span>товаров</span></p></a>
+                    <ul class="menu__child js-menu-catalog-list">
+                      <li class="menu__child-item has-child"><a href="#">Смартфоны</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item has-child"><a href="#">Бытовая техника, дом</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item has-child"><a href="#">Телевизоры и аудио</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item"><a href="#">Фото и видео</a></li>
+                      <li class="menu__child-item"><a href="#">Игры и развлечения</a></li>
+                      <li class="menu__child-item"><a href="#">Гаджеты</a></li>
+                      <li class="menu__child-item"><a href="#">Аксессуары</a></li>
+                      <li class="menu__child-item"><a href="#">Ноутбуки и планшеты</a></li>
+                      <li class="menu__child-item"><a href="#">Путешествия</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#">Смартфоны</a>
+                    <ul class="menu__child">
+                      <li class="menu__child-item"><a href="#">Apple</a></li>
+                      <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                      <li class="menu__child-item"><a href="#">Samsung</a></li>
+                      <li class="menu__child-item"><a href="#">Huawei</a></li>
+                      <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                      <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#">Ноутбуки и планшеты</a></li>
+                  <li class="menu__item"><a href="#">Фото и видео</a></li>
+                  <li class="menu__item"><a href="#">Техника для дома</a></li>
+                  <li class="menu__item"><a href="#">Аксессуары</a></li>
+                </ul><a class="menu__action" href="#"><span>Акции</span><span class="icon-present"></span></a><a class="menu__basket" href="#" data-quantity="0"></a>
+              </nav>
+            </div>
+          </div>
+          <div class="mobile-menu js-mobile-menu">
+            <div class="mobile-menu__content js-mobile-menu-content">
+              <div class="mobile-menu__list js-mobile-menu-list">
+                <div class="container">
+                  <ul>
+                    <li><a href="test">Смартфоны</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Игры и развлечения</a></li>
+                    <li><a href="#">Гаджеты</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                    <li><a href="#">Ноутбуки и планшеты</a></li>
+                    <li><a href="#">Путешествия</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-menu__panel"><a class="mobile-menu__open icon-mobile-burger js-mobile-menu-open" href="javascript:void(0)"></a>
+              <div class="mobile-menu__action-list"><a class="mobile-menu__action icon-mobile-search" href="#"></a><a class="mobile-menu__action icon-personal-area" href="#"></a><a class="mobile-menu__action icon-mobile-basket" href="#"></a></div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container">
+                        <ul class="breadcrumbs">
+                          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a>
+                          </li>
+                          <li class="breadcrumbs__item"><span>Новости</span>
+                          </li>
+                        </ul>
+            <h1 class="h1">Новости</h1>
+          </div>
+          <div class="container">
+            <section class="news">
+              <div class="news__list"><a class="giant news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img1.jpg)" alt="Поступление электрогрилей" title="Поступление электрогрилей"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление электрогрилей</div>
+                    <div class="news__desc">Готовить вкусно и быстро, это возможно!</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a>
+                <div class="news__group">
+                  <div class="news__group-inner"><a class="news__item" href="#">
+                      <div class="news__img" style="background-image: url(img/news/news__img2.jpg)" alt="Поступление Xiaomi" title="Поступление Xiaomi"></div>
+                      <div class="news__bottom">
+                        <div class="news__title">Поступление Xiaomi</div>
+                        <div class="news__date">19.04.2019</div>
+                      </div></a><a class="news__item" href="#">
+                      <div class="news__img" style="background-image: url(img/news/news__img3.jpg)" alt="Поступление детский часов с GPS" title="Поступление детский часов с GPS"></div>
+                      <div class="news__bottom">
+                        <div class="news__title">Поступление детский часов с GPS</div>
+                        <div class="news__date">19.04.2019</div>
+                      </div></a><a class="news__item" href="#">
+                      <div class="news__img" style="background-image: url(img/news/news__img2.jpg)" alt="Поступление Xiaomi" title="Поступление Xiaomi"></div>
+                      <div class="news__bottom">
+                        <div class="news__title">Поступление Xiaomi</div>
+                        <div class="news__date">19.04.2019</div>
+                      </div></a><a class="news__item" href="#">
+                      <div class="news__img" style="background-image: url(img/news/news__img3.jpg)" alt="Поступление детский часов с GPS" title="Поступление детский часов с GPS"></div>
+                      <div class="news__bottom">
+                        <div class="news__title">Поступление детский часов с GPS</div>
+                        <div class="news__date">19.04.2019</div>
+                      </div></a>
+                  </div>
+                </div><a class="big news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img6.jpg)" alt="Поступление аксессуаров для Sony Playstation" title="Поступление аксессуаров для Sony Playstation"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление аксессуаров для Sony Playstation</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a><a class="middle news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img7.jpg)" alt="Поступление смарфонов Samsung" title="Поступление смарфонов Samsung"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление смарфонов Samsung</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a><a class="news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img8.jpg)" alt="Поступление акустики JBL" title="Поступление акустики JBL"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление акустики JBL</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a><a class="news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img2.jpg)" alt="Поступление Xiaomi" title="Поступление Xiaomi"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление Xiaomi</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a><a class="news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img3.jpg)" alt="Поступление детский часов с GPS" title="Поступление детский часов с GPS"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление детский часов с GPS</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a><a class="half news__item" href="#">
+                  <div class="news__img" style="background-image: url(img/news/news__img10.jpg)" alt="Поступление квадрокоптеров DJI" title="Поступление квадрокоптеров DJI"></div>
+                  <div class="news__bottom">
+                    <div class="news__title">Поступление квадрокоптеров DJI</div>
+                    <div class="news__date">19.04.2019</div>
+                  </div></a>
+              </div><a class="button-show-more" href="javascript:void(0)">Показать еще</a>
+              <div class="pagination"><a class="pagination__back" href="#"></a>
+                <ul>
+                  <li><a class="active" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul><a class="pagination__next" href="#"></a>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__info"><a class="logo-footer" href="/"><img src="img/logo-footer.svg"></a>
+              <div class="footer__copyrights">
+                <div class="footer__copy">2018 © - Pixel-House интернет-магазин электроники в Новосибирске.</div>
+                <div class="footer__rights">Все права защищены. Не является публичной офертой</div>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__title js-footer-title">Контакты</div>
+              <div class="footer__block js-footer-block">
+                <div class="footer__item footer__placemark">6300091, г.Новосибирск Красный проспект, 62</div>
+                <div class="footer__item footer__phone"><a href="tel:+73833755505">+ 7 (383) 375-55-05</a><a href="tel:+79231455505">+ 7 (923) 145-55-05</a></div>
+                <div class="footer__item footer__time"><span>пн-пт: 9:00 - 20:00</span><span>сб-вс: 11:00 - 17:00</span></div>
+                <div class="footer__item footer__mail"><a href="mailto:info@pixel-house.ru">info@pixel-house.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__title js-footer-title">Информация</div>
+              <ul class="footer__block js-footer-block">
+                      <li class="footer__item"><a href="#">О компании</a></li>
+                      <li class="footer__item"><a href="#">Новости</a></li>
+                      <li class="footer__item"><a href="#">Блог</a></li>
+                      <li class="footer__item"><a href="#">Вакансии</a></li>
+                      <li class="footer__item"><a href="#">Сотрудничество</a></li>
+                      <li class="footer__item"><a href="#">Обратная связь</a></li>
+              </ul>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__title js-footer-title">Ассортимент</div>
+              <ul class="footer__block js-footer-block">
+                      <li class="footer__item"><a href="#">Каталог</a></li>
+                      <li class="footer__item"><a href="#">Акции</a></li>
+                      <li class="footer__item"><a href="#">Бренды</a></li>
+                      <li class="footer__item"><a href="#">Отзывы</a></li>
+                      <li class="footer__item"><a href="#">Оплата и доставка</a></li>
+              </ul>
+            </div>
+            <div class="footer__subscribe">
+              <div class="footer__title">Подписаться на новостную рассылку</div>
+              <div class="footer__block">
+                <div class="footer__form-wrap">
+                  <p>Зарегистрируйтесь, чтобы быть в курсе всех новинок</p>
+                  <form class="footer__form" action="/" method="post">
+                    <input type="text" name="subscribe" placeholder="Введите свой e-mail">
+                    <button class="button button-arrow-right" type="submit"></button>
+                  </form>
+                </div>
+              </div>
+              <ul class="social">
+                <li class="social__item"><a class="social__link icon-vk" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-in" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-fb" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-tw" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-flamp" href="#" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Главная</title>
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!-- Старые стили и скрипты, большая часть из компонентов битрикса-->
+    <link rel="stylesheet" href="./styles/old/template.css">
+    <!-- Новые стили-->
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <!-- Класс adaptiv - со старых стилей, пришлось оставить для совместимости-->
+  <body class="adaptiv">
+    <div class="wrapper">
+      <div class="main-content">
+        <header class="header">
+          <div class="container"> 
+            <div class="header__top">
+              <div class="location js-location"><a class="location__link js-location-link" href="javascript:void(0)"><span class="icon-location"></span><span class="location__text">Москва</span></a>
+                <div class="location__list"><a class="location__item" href="javascript:void(0)">Новосибирск</a><a class="location__item" href="javascript:void(0)">Санкт-Петербург</a></div>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="header__action-list"><a class="header__action compare-link active" href="#"></a><a class="header__action favorite-link active" href="#"></a>
+                <div class="header__auth auth"><a class="auth-link" href="#">Вход</a><a class="auth-link" href="#">Регистрация</a></div>
+              </div>
+            </div>
+            <div class="header__middle"><a class="logo" href="/"><img src="img/logo.svg"></a>
+              <div class="header__search">
+                <div class="search js-search">
+                  <form class="search__inner" action="" method="POST">
+                    <input class="search__input" name="q" placeholder="Поиск...">
+                    <button class="button-search" type="submit"></button>
+                  </form>
+                  <div class="search__result">
+                    <div class="search__result-inner">
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)" title="Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)"></div>
+                          <div class="search__result-name">Смартфон Apple iPhone XS 64 GB, серебристый (Ростест)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">68 999 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)" title="Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Mi8, 64GB/6, синий, (Global Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">20 999 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)" title="Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Redmi Note 5, 32GB/3, черный (China Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">10 900 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                      <div class="search__result-item"><a class="search__result-left" href="#">
+                          <div class="search__result-img"><img src="img/search/item.png" alt="Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)" title="Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)"></div>
+                          <div class="search__result-name">Смартфон Xiaomi Redmi 5, 32GB/3, розовый, (Global Version)</div></a>
+                        <div class="search__result-rigth">
+                          <div class="search__result-price">7 199 ₽</div>
+                          <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="search__result-bottom"><a class="search__result-all" href="#"><span class="search__result-icon"></span>
+                        <p>Показать все результаты поиска</p></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__contanct"><a class="phone-city" href="tel:83833755505"><span>8 (383)</span>
+                  375-55-05</a>
+                <div class="header__social"><a class="link-tg" href="https://t.me/Pixelhouse_ru" target="_blank"></a><a class="link-ws" href="https://wa.me/79231455505" target="_blank"></a><a class="phone-social" href="tel:+79231455505"><span>+ 7 (923) 145-55-05</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="container">
+              <nav class="menu__inner">
+                <ul class="menu__list">
+                  <li class="menu__item menu_catalog js-menu-catalog"><a href="#"><span class="icon-burger icon-catalog-mobile"></span>
+                      <p>
+                        Каталог&nbsp;<span>товаров</span></p></a>
+                    <ul class="menu__child js-menu-catalog-list">
+                      <li class="menu__child-item has-child"><a href="#">Смартфоны</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item has-child"><a href="#">Бытовая техника, дом</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item has-child"><a href="#">Телевизоры и аудио</a>
+                        <ul class="menu__child">
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                          <li class="menu__child-item"><a href="#">Apple</a></li>
+                          <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                          <li class="menu__child-item"><a href="#">Samsung</a></li>
+                          <li class="menu__child-item"><a href="#">Huawei</a></li>
+                          <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                          <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__child-item"><a href="#">Фото и видео</a></li>
+                      <li class="menu__child-item"><a href="#">Игры и развлечения</a></li>
+                      <li class="menu__child-item"><a href="#">Гаджеты</a></li>
+                      <li class="menu__child-item"><a href="#">Аксессуары</a></li>
+                      <li class="menu__child-item"><a href="#">Ноутбуки и планшеты</a></li>
+                      <li class="menu__child-item"><a href="#">Путешествия</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#">Смартфоны</a>
+                    <ul class="menu__child">
+                      <li class="menu__child-item"><a href="#">Apple</a></li>
+                      <li class="menu__child-item"><a href="#">Xiaomi</a></li>
+                      <li class="menu__child-item"><a href="#">Samsung</a></li>
+                      <li class="menu__child-item"><a href="#">Huawei</a></li>
+                      <li class="menu__child-item"><a href="#">Аксессуары для смартфонов</a></li>
+                      <li class="menu__child-item"><a href="#">Смарт часы и браслеты</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a href="#">Ноутбуки и планшеты</a></li>
+                  <li class="menu__item"><a href="#">Фото и видео</a></li>
+                  <li class="menu__item"><a href="#">Техника для дома</a></li>
+                  <li class="menu__item"><a href="#">Аксессуары</a></li>
+                </ul><a class="menu__action" href="#"><span>Акции</span><span class="icon-present"></span></a><a class="menu__basket" href="#" data-quantity="0"></a>
+              </nav>
+            </div>
+          </div>
+          <div class="mobile-menu js-mobile-menu">
+            <div class="mobile-menu__content js-mobile-menu-content">
+              <div class="mobile-menu__list js-mobile-menu-list">
+                <div class="container">
+                  <ul>
+                    <li><a href="test">Смартфоны</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Игры и развлечения</a></li>
+                    <li><a href="#">Гаджеты</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                    <li><a href="#">Ноутбуки и планшеты</a></li>
+                    <li><a href="#">Путешествия</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-menu__panel"><a class="mobile-menu__open icon-mobile-burger js-mobile-menu-open" href="javascript:void(0)"></a>
+              <div class="mobile-menu__action-list"><a class="mobile-menu__action icon-mobile-search" href="#"></a><a class="mobile-menu__action icon-personal-area" href="#"></a><a class="mobile-menu__action icon-mobile-basket" href="#"></a></div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container container_no-padding-mobile">
+            <div class="slider-main js-slider-main">
+                          <div class="slider-main__item" style="background-image: url('img/slider/bg-sony.png')">
+                            <div class="slider-main__item-inner">
+                              <div class="slider-main__item-text">
+                                <div class="slider-main__item-title">Новые возможности SONY&nbsp;PS 4 PRO</div>
+                                <div class="slider-main__item-desc">Последняя версия PS4: быстрее, мощнее, поддерживает игры в 4K</div><a class="slider-main__item-more" href="#">Подробнее</a>
+                              </div>
+                              <div class="slider-main__item-left">
+                                <div class="slider-main__item-pic"><img src="img/slider/sony.png"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="slider-main__item" style="background-image: url('img/slider/bg-sony.png')">
+                            <div class="slider-main__item-inner">
+                              <div class="slider-main__item-text">
+                                <div class="slider-main__item-title">Новые возможности SONY&nbsp;PS 4 PRO 222</div>
+                                <div class="slider-main__item-desc">Последняя версия PS4: быстрее, мощнее, поддерживает игры в 4K 222</div><a class="slider-main__item-more" href="#">Подробнее</a>
+                              </div>
+                              <div class="slider-main__item-left">
+                                <div class="slider-main__item-pic"><img src="img/slider/sony.png"></div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+            <div class="feature">
+              <div class="feature__item">
+                <div class="feature__icon icon-rocket"><svg class="icon-rocket-svg" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.59609 42.5886C9.07087 42.0636 8.21926 42.0636 7.69393 42.5886L4.93164 45.3509C4.40641 45.8761 4.40641 46.7277 4.93164 47.253C5.19425 47.5155 5.53846 47.647 5.88266 47.647C6.22698 47.647 6.57129 47.5156 6.8338 47.253L9.59609 44.4907C10.1213 43.9655 10.1213 43.1139 9.59609 42.5886Z" fill="#0E398C"/>
+<path d="M13.5033 46.4958C12.9783 45.9708 12.1265 45.9708 11.6014 46.4958L2.39343 55.7039C1.86821 56.2291 1.86821 57.0807 2.39343 57.606C2.65593 57.8685 3.00025 58 3.34445 58C3.68866 58 4.03287 57.8686 4.29548 57.606L13.5033 48.398C14.0286 47.8726 14.0285 47.021 13.5033 46.4958Z" fill="#0E398C"/>
+<path d="M17.4107 50.4034C16.8854 49.8781 16.0339 49.878 15.5088 50.4033L10.9048 55.0072C10.3796 55.5325 10.3795 56.3841 10.9048 56.9094C11.1674 57.1719 11.5116 57.3034 11.8558 57.3034C12.2001 57.3034 12.5443 57.172 12.8069 56.9094L17.4108 52.3056C17.9358 51.7803 17.9361 50.9287 17.4107 50.4034Z" fill="#0E398C"/>
+<circle cx="37" cy="23" r="7" fill="#0FA0D9"/>
+<path d="M42.7746 17.2254C41.2083 15.6591 39.1257 14.7964 36.9105 14.7964C34.6952 14.7964 32.6127 15.659 31.0462 17.2254C29.4799 18.7917 28.6172 20.8744 28.6172 23.0897C28.6172 25.305 29.4799 27.3876 31.0462 28.954C32.6125 30.5203 34.6951 31.383 36.9105 31.383C39.1257 31.383 41.2082 30.5203 42.7746 28.954C46.0081 25.7202 46.0081 20.459 42.7746 17.2254ZM40.8725 27.0519C39.8142 28.1102 38.4071 28.6931 36.9104 28.6931C35.4136 28.6931 34.0065 28.1102 32.9483 27.0519C31.8898 25.9936 31.3071 24.5865 31.3071 23.0897C31.3071 21.5929 31.8898 20.1859 32.9483 19.1276C34.0065 18.0693 35.4136 17.4864 36.9104 17.4864C38.407 17.4864 39.8142 18.0693 40.8725 19.1276C43.0571 21.3123 43.0571 24.8672 40.8725 27.0519Z" fill="#0E398C"/>
+<path d="M12 36.5C12.6667 35 14 31.8 14 31L28.5 46L23 48L12 36.5Z" fill="#0FA0D9"/>
+<path d="M47 4L42 5L55 18.5L56 10.5L55 4.5L47 4Z" fill="#0FA0D9"/>
+<path d="M57.0626 3.89001C56.9383 3.42516 56.5753 3.06225 56.1104 2.93789C51.5112 1.70839 46.6424 1.68816 42.0308 2.87927C41.312 3.06499 40.6034 3.28319 39.9042 3.52579C39.8437 3.5423 39.7841 3.56309 39.7259 3.58813C35.8859 4.95085 32.3735 7.1585 29.4629 10.0608C29.4612 10.0624 29.4595 10.0641 29.458 10.0656C29.4505 10.0732 29.4427 10.0803 29.4351 10.0878C29.4228 10.1002 29.4122 10.1135 29.4005 10.1261C29.3892 10.1383 29.3771 10.1495 29.366 10.1623L25.2465 14.9568C18.766 14.8853 12.468 17.4459 7.87603 22.0378C6.38294 23.5309 5.0946 25.2043 4.04688 27.0114C3.83546 27.376 3.80724 27.8187 3.97065 28.2073C4.13406 28.596 4.47017 28.8854 4.87858 28.9892L12.3541 30.8923L10.8914 34.8646C10.1691 36.8265 10.6576 39.0492 12.1358 40.5274L19.4733 47.8649C20.498 48.8895 21.8801 49.4387 23.2854 49.4387C23.9075 49.4387 24.5342 49.3309 25.1363 49.1093L29.109 47.6466L31.0124 55.1225C31.1161 55.5309 31.4058 55.8671 31.7943 56.0305C31.9614 56.1008 32.1388 56.1355 32.3156 56.1355C32.5494 56.1355 32.7825 56.0746 32.9902 55.9541C34.797 54.9065 36.4702 53.6182 37.9637 52.1249C42.556 47.5327 45.1154 41.2337 45.0446 34.7535L49.8386 30.6344C49.8511 30.6236 49.862 30.6117 49.8741 30.6006C49.8871 30.5886 49.9007 30.5777 49.9133 30.5652C49.921 30.5576 49.9281 30.5496 49.9357 30.5422C49.9371 30.5405 49.9388 30.5391 49.9403 30.5375C52.8426 27.627 55.0503 24.1148 56.413 20.2749C56.4377 20.2164 56.4587 20.1566 56.4752 20.0957C56.7178 19.3968 56.936 18.6883 57.1216 17.9696C58.3124 13.3581 58.2921 8.48939 57.0626 3.89001ZM7.34348 26.8412C8.0646 25.8098 8.87956 24.8385 9.77808 23.9399C13.2956 20.4223 17.9395 18.2484 22.8429 17.7543L13.655 28.4479L7.34348 26.8412ZM13.4153 35.7941L14.6671 32.3946L16.402 34.1295L13.7797 38.3261C13.2462 37.6056 13.1002 36.6502 13.4153 35.7941ZM15.7158 40.3038L18.3541 36.0815L20.1857 37.9129L16.7553 41.3432L15.7158 40.3038ZM18.6572 43.2452L22.0876 39.815L23.919 41.6464L19.6967 44.2847L18.6572 43.2452ZM24.2064 46.5852C23.3502 46.9002 22.395 46.7543 21.6745 46.2208L25.871 43.5985L27.6059 45.3334L24.2064 46.5852ZM36.0613 50.2231C35.1626 51.1216 34.1913 51.9364 33.16 52.6577L31.5529 46.3456L42.2468 37.1572C41.7531 42.0606 39.5787 46.7052 36.0613 50.2231ZM48.0391 28.634L30.113 44.0363L15.9643 29.8877L26.845 17.224C26.8556 17.2123 26.8657 17.2 26.876 17.1879L31.3665 11.9615C33.814 9.52212 36.732 7.6274 39.92 6.38543L53.615 20.0805C52.3733 23.2686 50.4786 26.1866 48.0391 28.634ZM54.5401 17.2015L42.7993 5.46044C46.6808 4.47419 50.7606 4.43558 54.6548 5.3457C55.5649 9.23971 55.5264 13.3197 54.5401 17.2015Z" fill="#0E398C"/>
+</svg>
+</div>
+                <div class="feature__text">
+                  <div class="feature__title">Доставка в день заказа</div>
+                  <div class="feature__desc">для Новосибирска</div>
+                </div>
+              </div>
+              <div class="feature__item">
+                <div class="feature__icon icon-guarantee"><svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="icon-guarantee-round" d="M54.983 24.3315V24.3311C54.8932 23.4734 54.4493 22.6829 53.7653 22.1591L50.6349 19.7196L51.8115 15.8335C52.0625 15.0043 51.9584 14.0983 51.5258 13.3473C51.0927 12.5967 50.3609 12.0536 49.5179 11.8562L45.5798 10.9359L45.0771 6.91959C44.9692 6.05937 44.506 5.27391 43.8061 4.76567C43.1053 4.25534 42.2153 4.05666 41.3656 4.22048L37.3939 4.98283L35.3021 1.518C34.4696 0.139045 32.7214 -0.381792 31.2368 0.305377C31.1323 0.35368 31.0316 0.411644 30.9439 0.473809L27.4968 2.87722L24.178 0.563275C23.4676 0.0684797 22.5751 -0.111713 21.7283 0.0680596C20.8815 0.247833 20.1388 0.77707 19.691 1.51884L17.6001 4.98325L13.628 4.22048C12.7774 4.0575 11.8882 4.25618 11.1887 4.76525C10.488 5.27475 10.0247 6.06021 9.91728 6.91959L9.41458 10.9363L5.24945 11.9095L5.05391 11.9734L4.98174 12.0049C3.46859 12.6673 2.7116 14.2777 3.18241 15.8335L4.3586 19.7196L1.09397 22.2616L0.904726 22.4263L0.851435 22.4846C-0.244188 23.6826 -0.286989 25.4946 0.749468 26.7059L3.30536 29.7654L1.23371 33.5285L1.15104 33.7167L1.12712 33.7868C0.610574 35.3321 1.31427 37.0114 2.76363 37.6922L6.42438 39.4118L6.08155 43.445C6.00812 44.309 6.2985 45.1738 6.87757 45.8173C7.45664 46.4612 8.28539 46.8405 9.15148 46.8581L13.1945 46.9388L14.5205 50.7623C14.8042 51.5814 15.4206 52.2534 16.2111 52.6054C17.0017 52.9578 17.9127 52.9671 18.7116 52.6306L22.4383 51.0584L25.3634 54.183L25.5166 54.3196L25.5758 54.3637C26.1536 54.7908 26.8287 55 27.4976 55C28.344 55 29.1799 54.6648 29.7912 54.0117L32.5565 51.0584L36.2836 52.631C37.0808 52.9671 37.9914 52.9578 38.782 52.6058C39.5734 52.2534 40.1898 51.5814 40.4735 50.7627L41.7999 46.9388L46.0766 46.8535L46.2797 46.8313L46.3527 46.8166C47.9473 46.491 49.0479 45.0415 48.9124 43.4454L48.57 39.4118L52.2311 37.6922C53.0146 37.3243 53.6176 36.6405 53.8853 35.816C54.1526 34.9919 54.0666 34.0838 53.6486 33.3248L51.689 29.7654L54.2453 26.7059C54.8038 26.0528 55.0728 25.1884 54.983 24.3315ZM48.6405 28.3819C48.134 28.9804 48.0476 29.841 48.4265 30.5286L50.7818 34.8071L46.3636 36.8824C45.6473 37.2193 45.2114 37.9758 45.2781 38.765L45.6914 43.6323L40.8121 43.7298C40.0211 43.7457 39.3149 44.259 39.0556 45.0075L37.4551 49.6224L32.9585 47.7251C32.2292 47.4176 31.3757 47.5987 30.834 48.177L27.4968 51.7414L24.1595 48.1766C23.7941 47.786 23.2859 47.5768 22.7698 47.5768C22.5218 47.5768 22.2721 47.6251 22.0359 47.7251L17.5384 49.6224L15.9384 45.0087C15.6795 44.2598 14.9733 43.7457 14.1814 43.7298L9.3017 43.6323L9.71503 38.765C9.78217 37.9758 9.34576 37.2193 8.62948 36.8824L4.21174 34.8071L6.56705 30.5291C6.94639 29.8406 6.85953 28.9804 6.35263 28.3814L3.25249 24.6705L7.05087 21.7126C7.67275 21.2325 7.93711 20.4076 7.70883 19.6557L6.29388 14.9808L11.0469 13.8694C11.8169 13.6892 12.4006 13.0407 12.4996 12.2544L13.1064 7.40724L17.9001 8.32753C18.6772 8.47622 19.4737 8.12087 19.8832 7.44337L22.4068 3.26239L26.4112 6.05391C27.0608 6.5067 27.9336 6.50712 28.5827 6.05391L32.5871 3.26197L35.1112 7.44211C35.5199 8.12045 36.318 8.47622 37.0951 8.32711L41.888 7.40682L42.4948 12.2535C42.5929 13.0394 43.1766 13.6888 43.9479 13.8694L48.7005 14.9804L47.2851 19.6553C47.0573 20.4089 47.322 21.2334 47.9439 21.713L51.7406 24.6722L48.6405 28.3819Z" fill="#0E398C"/>
+<circle cx="27.5" cy="27.5" r="11.5" fill="#0FA0D9"/>
+<path d="M27.668 13.7803C20.1161 13.7803 13.972 19.9239 13.972 27.4762C13.972 35.0281 20.1161 41.1721 27.668 41.1721C35.2202 41.1721 41.3643 35.0281 41.3643 27.4762C41.3643 19.9239 35.2198 13.7803 27.668 13.7803ZM27.668 37.9469C21.8944 37.9469 17.1968 33.2497 17.1968 27.4762C17.1968 21.7022 21.8944 17.005 27.668 17.005C33.4419 17.005 38.1391 21.7022 38.1391 27.4762C38.1391 33.2497 33.4419 37.9469 27.668 37.9469Z" fill="#0E398C"/>
+<path d="M31.6048 23.2237L25.2429 29.5851L23.5166 27.8584C22.8868 27.229 21.8659 27.229 21.2364 27.8584C20.6066 28.4883 20.6066 29.5092 21.2364 30.139L24.1028 33.0054C24.4175 33.3206 24.8305 33.4779 25.2429 33.4779C25.6554 33.4779 26.0683 33.3206 26.383 33.0054L33.885 25.5039C34.5144 24.8741 34.5144 23.8532 33.885 23.2237C33.2551 22.5939 32.2342 22.5939 31.6048 23.2237Z" fill="#0E398C"/>
+</svg>
+</div>
+                <div class="feature__text">
+                  <div class="feature__title">Гарантия</div>
+                  <div class="feature__desc">на все товары</div>
+                </div>
+              </div>
+              <div class="feature__item">
+                <div class="feature__icon icon-product-return"><svg class="icon-product-return-svg" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 27L19.5 21.5H40.5L45 27V51C45 51 35.859 56.1273 29.5 56C23.5114 55.8801 15 51 15 51V27Z" fill="#0FA0D9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.5754 4.50216C24.7627 4.42503 19.112 6.41723 14.633 10.1228C11.1154 13.0329 8.50052 16.8508 7.04922 21.1284L8.48288 20.0133C9.02781 19.5895 9.81316 19.6876 10.237 20.2326C10.6608 20.7775 10.5627 21.5629 10.0177 21.9867L5.51773 25.4867C5.21572 25.7216 4.82277 25.8052 4.45128 25.7137C4.07979 25.6222 3.77067 25.3656 3.61235 25.0173L1.11235 19.5173C0.826676 18.8888 1.10458 18.1477 1.73305 17.862C2.36153 17.5764 3.10259 17.8543 3.38826 18.4827L4.49108 20.9089C6.04595 15.9586 9.00358 11.5354 13.0394 8.19654C17.9755 4.11287 24.2028 1.91738 30.6086 2.00238C37.0143 2.08738 43.1812 4.44734 48.0072 8.66055C52.8332 12.8738 56.0038 18.6657 56.9526 25.0014L54.4801 25.3716C53.6192 19.6226 50.7422 14.3669 46.363 10.5438C41.9839 6.72073 36.388 4.57929 30.5754 4.50216ZM29.6271 54.9978C34.7798 55.0662 39.8052 53.5085 44 50.5726V28.25H15.5V50.2835C19.5914 53.2725 24.5258 54.9301 29.6271 54.9978ZM16.6044 25.75L19.7493 22.25H39.7507L42.8956 25.75H16.6044ZM46.5 26.5V48.5671C49.5498 45.774 51.833 42.263 53.1533 38.3716L51.7196 39.4867C51.1747 39.9105 50.3894 39.8124 49.9655 39.2674C49.5417 38.7225 49.6398 37.9371 50.1848 37.5133L54.6848 34.0133C54.9868 33.7784 55.3797 33.6948 55.7512 33.7863C56.1227 33.8778 56.4318 34.1344 56.5902 34.4827L59.0902 39.9827C59.3758 40.6112 59.0979 41.3523 58.4695 41.638C57.841 41.9236 57.0999 41.6457 56.8143 41.0173L55.7114 38.5911C54.1566 43.5414 51.1989 47.9646 47.1631 51.3035C42.2271 55.3871 35.9997 57.5826 29.594 57.4976C23.1882 57.4126 17.0213 55.0527 12.1953 50.8395C7.36935 46.6262 4.1987 40.8343 3.24994 34.4986L5.72237 34.1284C6.527 39.5016 9.09278 44.4438 13 48.1882V26.5V26.0209L13.3202 25.6645L18.2622 20.1645L18.6347 19.75H19.192H40.308H40.8653L41.2378 20.1645L46.1798 25.6645L46.5 26.0209V26.5ZM21.25 36.75C21.25 36.0596 21.8096 35.5 22.5 35.5H37C37.6904 35.5 38.25 36.0596 38.25 36.75C38.25 37.4404 37.6904 38 37 38H22.5C21.8096 38 21.25 37.4404 21.25 36.75ZM24.5 40.5C23.8096 40.5 23.25 41.0596 23.25 41.75C23.25 42.4404 23.8096 43 24.5 43H35C35.6904 43 36.25 42.4404 36.25 41.75C36.25 41.0596 35.6904 40.5 35 40.5H24.5Z" fill="#0E398C"/>
+</svg>
+</div>
+                <div class="feature__text">
+                  <div class="feature__title">Возврат товара</div>
+                  <div class="feature__desc">в течение 2 недель</div>
+                </div>
+              </div>
+            </div>
+            <section class="content-sidebar content-sidebar_mt-50 top-list__section">
+              <div class="content__box">
+                <div class="top-list">
+                  <ul class="tab-list js-topList-tab-list">
+                    <li class="tab active" data-tab="discounts"><a href="javascript:void(0)">Скидки дня</a></li>
+                    <li class="tab" data-tab="new-items"><a href="javascript:void(0)">Новинки</a></li>
+                    <li class="tab" data-tab="bestsellers"><a href="javascript:void(0)">Хиты продаж</a></li>
+                    <li class="tab" data-tab="recommend"><a href="javascript:void(0)">Рекомендуем</a></li>
+                  </ul>
+                  <div class="top-list__content js-topList-tab-content">
+                    <div class="top-list__item active" data-tab-content="discounts">
+                      <div class="top-list__item-head">
+                        <div class="top-list__item-title">Скидки</div><a class="top-list__item-more link-arrow-right" href="discounts">Смотреть все</a>
+                      </div>
+                      <div class="top-list__product-list js-slider-top-list cards">
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-discount">50%</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span class="product__price-old">1999 ₽</span><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-discount">50%</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span class="product__price-old">1999 ₽</span><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-discount">50%</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span class="product__price-old">1999 ₽</span><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                      </div>
+                    </div>
+                    <div class="top-list__item" data-tab-content="new-items">
+                      <div class="top-list__item-head">
+                        <div class="top-list__item-title">Новинки</div><a class="top-list__item-more link-arrow-right" href="new-items"> Смотреть все</a>
+                      </div>
+                      <div class="top-list__product-list js-slider-top-list cards">
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-new">new</div>
+                                                <div class="product__mark product__mark-hit">хит</div>
+                                                <div class="product__mark">Рекомендуем</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-new">new</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-new">new</div>
+                                                <div class="product__mark">Рекомендуем</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                      </div>
+                    </div>
+                    <div class="top-list__item" data-tab-content="bestsellers">
+                      <div class="top-list__item-head">
+                        <div class="top-list__item-title">Хиты продаж</div><a class="top-list__item-more link-arrow-right" href="bestsellers"> Смотреть все</a>
+                      </div>
+                      <div class="top-list__product-list js-slider-top-list cards">
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-hit">хит</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-hit">хит</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-hit">хит</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                      </div>
+                    </div>
+                    <div class="top-list__item" data-tab-content="recommend">
+                      <div class="top-list__item-head">
+                        <div class="top-list__item-title">Рекомендуем</div><a class="top-list__item-more link-arrow-right" href="recommend"> Смотреть все</a>
+                      </div>
+                      <div class="top-list__product-list js-slider-top-list cards">
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark">Рекомендуем</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-hit">хит</div>
+                                                <div class="product__mark">Рекомендуем</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                                        <div class="product">
+                                          <div class="product__img"><a href="#"><img src="img/home/card-image.jpg" alt="Держатель-ремень для наушников, синий" title="Держатель-ремень для наушников, синий"></a></div>
+                                          <div class="product__middle">
+                                            <div class="product__top">
+                                              <div class="product__article"><span>Артикул: A2097</span></div><a class="product__title" href="#">Держатель-ремень для наушников, синий</a>
+                                              <ul class="product__option-list">
+                                                <li class="product__option"><span>Гарантия: 1 год</span></li>
+                                                <li class="product__option"><span>Тип разъема зарядки: Lightning</span></li>
+                                                <li class="product__option"><span>Версия ОС: iOs 10</span></li>
+                                              </ul>
+                                            </div>
+                                            <div class="product__down"><a class="product__detail link-arrow-right" href="#">Подробнее</a>
+                                              <div class="product__mark-list">
+                                                <div class="product__mark product__mark-new">new</div>
+                                                <div class="product__mark">Рекомендуем</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="product__bottom">
+                                            <div class="product__price"><span>999 ₽</span>
+                                            </div>
+                                            <div class="product__actions"><a class="product__compare" href="javascript:void(0)"></a><a class="product__favorite" href="javascript:void(0)"></a><a class="product__basket" href="javascript:void(0)"></a></div>
+                                          </div>
+                                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar__box">
+                <div class="slider-sidebar slider-sidebar_mt js-slider-sidebar"><a class="slider-sidebar__item" href="#">
+                                    <div class="slider-sidebar__item-inner">
+                                      <div class="slider-sidebar__item-title">Успей купить!</div>
+                                      <div class="slider-sidebar__item-pic"><img src="img/slider-sidebar/slide-1.png"></div>
+                                      <div class="slider-sidebar__item-desc">Умные часы Suunto spartan ultra, белый</div>
+                                    </div></a><a class="slider-sidebar__item" href="#">
+                                    <div class="slider-sidebar__item-inner">
+                                      <div class="slider-sidebar__item-title">Успей купить! 2</div>
+                                      <div class="slider-sidebar__item-pic"><img src="img/slider-sidebar/slide-1.png"></div>
+                                      <div class="slider-sidebar__item-desc">Умные часы Suunto spartan ultra, белый 2</div>
+                                    </div></a><a class="slider-sidebar__item" href="#">
+                                    <div class="slider-sidebar__item-inner">
+                                      <div class="slider-sidebar__item-title">Успей купить! 3</div>
+                                      <div class="slider-sidebar__item-pic"><img src="img/slider-sidebar/slide-1.png"></div>
+                                      <div class="slider-sidebar__item-desc">Умные часы Suunto spartan ultra, белый 3</div>
+                                    </div></a>
+                </div>
+              </div>
+            </section>
+            <section class="content-sidebar content-sidebar_mt-50">
+              <div class="content__box">
+                <section class="catalog-main">
+                  <div class="catalog-main__haed">
+                    <h3 class="h3 catalog-main__title">Каталог</h3><a class="link-arrow-right" href="#">Перейти в каталог</a>
+                  </div>
+                  <div class="catalog-main__list"><a class="big catalog-main__item" href="#">
+                                      <div class="catalog-main__pic"><img src="img/catalog-main/appliances.png" alt="Малая бытовая техника" title="Малая бытовая техника"></div>
+                                      <div class="catalog-main__bottom">
+                                        <div class="catalog-main__name">Малая бытовая техника</div><span class="catalog-main__icon"></span>
+                                      </div></a><a class="middle catalog-main__item" href="#">
+                                      <div class="catalog-main__pic"><img src="img/catalog-main/quadcopters.png" alt="Квадрокоптеры" title="Квадрокоптеры"></div>
+                                      <div class="catalog-main__bottom">
+                                        <div class="catalog-main__name">Квадрокоптеры</div><span class="catalog-main__icon"></span>
+                                      </div></a><a class="catalog-main__item" href="#">
+                                      <div class="catalog-main__pic"><img src="img/catalog-main/smartphones.png" alt="Смартфоны" title="Смартфоны"></div>
+                                      <div class="catalog-main__bottom">
+                                        <div class="catalog-main__name">Смартфоны</div><span class="catalog-main__icon"></span>
+                                      </div></a><a class="catalog-main__item" href="#">
+                                      <div class="catalog-main__pic"><img src="img/catalog-main/headphones.png" alt="Наушники" title="Наушники"></div>
+                                      <div class="catalog-main__bottom">
+                                        <div class="catalog-main__name">Наушники</div><span class="catalog-main__icon"></span>
+                                      </div></a><a class="catalog-main__item" href="#">
+                                      <div class="catalog-main__pic"><img src="img/catalog-main/photo-and-video.png" alt="Фото и видео" title="Фото и видео"></div>
+                                      <div class="catalog-main__bottom">
+                                        <div class="catalog-main__name">Фото и видео</div><span class="catalog-main__icon"></span>
+                                      </div></a>
+                  </div>
+                </section>
+              </div>
+              <div class="sidebar__box">
+                <div class="sidebar-block news">
+                  <div class="sidebar-block__inner">
+                    <h3 class="sidebar-block__title">Новости</h3>
+                    <ul class="sidebar-block__list">
+                      <li class="sidebar-block__item"><a href="#">Новое поступление Xioami</a><span>19.02.2018</span></li>
+                      <li class="sidebar-block__item"><a href="#">Поступление электрогрилей</a><span>19.02.2018</span></li>
+                      <li class="sidebar-block__item"><a href="#">Поступление детских часов</a><span>19.02.2018</span></li>
+                    </ul>
+                  </div><a class="sidebar-block__all link-arrow-right" href="#">Все новости</a>
+                </div>
+                <div class="sidebar-block blog">
+                  <div class="sidebar-block__inner">
+                    <h3 class="sidebar-block__title">Блог</h3>
+                    <ul class="sidebar-block__list">
+                      <li class="sidebar-block__item"><a href="#">Беспроводная VR-гарнитура</a><span>13.12.2018</span></li>
+                      <li class="sidebar-block__item"><a href="#">Презентация нового “яблочка” iPhone</a><span>19.02.2018</span></li>
+                    </ul>
+                  </div><a class="sidebar-block__all link-arrow-right" href="#">Все статьи</a>
+                </div>
+              </div>
+            </section>
+            <section class="slider-brands js-slider-brands"><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/panasonic.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/canon.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/sony.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/nikon.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/bosch.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/nordica.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/panasonic.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/canon.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/sony.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/nikon.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/bosch.png" alt="" title=""></div></a><a class="slider-brands__item" href="#">
+                            <div class="slider-brands__item-pic"><img src="img/slider-brands/nordica.png" alt="" title=""></div></a>
+            </section>
+            <section class="about">
+              <div class="about__img"><img src="img/home/home-about.jpg" alt=""></div>
+              <div class="about__info">
+                <div class="about__title">О нас</div>
+                <div class="about__text">
+                  <p>
+                    С 2010-го года работаем с Китайским рынком
+                    современной техники. С 2018-го открываем новый
+                    интернет магазин с выставочным залом в самом центре города
+                    Новосибирск. В ассортимент добавлена линейка товаров из Европы.
+                  </p>
+                  <p>
+                    На нашем сайте представлен широкий ассортимент бытовой
+                    техники, техники для красоты, телевизоры и аудио системы,
+                    товары для фитнеса и здоровья, мобильные устройства и
+                    аксессуары к ним. Мы знаем толк в инновационных
+                    технологиях, которые смогут сделать ваш обычный быт теплым и уютным.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__info"><a class="logo-footer" href="/"><img src="img/logo-footer.svg"></a>
+              <div class="footer__copyrights">
+                <div class="footer__copy">2018 © - Pixel-House интернет-магазин электроники в Новосибирске.</div>
+                <div class="footer__rights">Все права защищены. Не является публичной офертой</div>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__title js-footer-title">Контакты</div>
+              <div class="footer__block js-footer-block">
+                <div class="footer__item footer__placemark">6300091, г.Новосибирск Красный проспект, 62</div>
+                <div class="footer__item footer__phone"><a href="tel:+73833755505">+ 7 (383) 375-55-05</a><a href="tel:+79231455505">+ 7 (923) 145-55-05</a></div>
+                <div class="footer__item footer__time"><span>пн-пт: 9:00 - 20:00</span><span>сб-вс: 11:00 - 17:00</span></div>
+                <div class="footer__item footer__mail"><a href="mailto:info@pixel-house.ru">info@pixel-house.ru</a></div>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__title js-footer-title">Информация</div>
+              <ul class="footer__block js-footer-block">
+                      <li class="footer__item"><a href="#">О компании</a></li>
+                      <li class="footer__item"><a href="#">Новости</a></li>
+                      <li class="footer__item"><a href="#">Блог</a></li>
+                      <li class="footer__item"><a href="#">Вакансии</a></li>
+                      <li class="footer__item"><a href="#">Сотрудничество</a></li>
+                      <li class="footer__item"><a href="#">Обратная связь</a></li>
+              </ul>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__title js-footer-title">Ассортимент</div>
+              <ul class="footer__block js-footer-block">
+                      <li class="footer__item"><a href="#">Каталог</a></li>
+                      <li class="footer__item"><a href="#">Акции</a></li>
+                      <li class="footer__item"><a href="#">Бренды</a></li>
+                      <li class="footer__item"><a href="#">Отзывы</a></li>
+                      <li class="footer__item"><a href="#">Оплата и доставка</a></li>
+              </ul>
+            </div>
+            <div class="footer__subscribe">
+              <div class="footer__title">Подписаться на новостную рассылку</div>
+              <div class="footer__block">
+                <div class="footer__form-wrap">
+                  <p>Зарегистрируйтесь, чтобы быть в курсе всех новинок</p>
+                  <form class="footer__form" action="/" method="post">
+                    <input type="text" name="subscribe" placeholder="Введите свой e-mail">
+                    <button class="button button-arrow-right" type="submit"></button>
+                  </form>
+                </div>
+              </div>
+              <ul class="social">
+                <li class="social__item"><a class="social__link icon-vk" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-in" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-fb" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-tw" href="#" target="_blank"></a></li>
+                <li class="social__item"><a class="social__link icon-flamp" href="#" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>
